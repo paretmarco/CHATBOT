@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifica libro</title>
+
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5lD1zq3ZOMBnig9X59hUq4pJrNT6+gW6AZnXwXtX" crossorigin="anonymous"></script>
+
+    <!-- Include DataTables -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <script type="text/javascript" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+
+    <style>
+        .record { display: none; }
+        .record.active { display: block; }
+        #index-container { width: 50%; float: left; }
+        #record-container { width: 50%; float: right; }
+    </style>
+</head>
+<body>
+    <h1>Modifica libro</h1>
+    <div id="index-container"></div>
+    <div id="record-container"></div>
+
+    <script>
+        const indexContainer = document.getElementById("index-container");
+        const recordContainer = document.getElementById("record-container");
+
+        // Load JSON data
+        fetch("/book_data")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Error loading JSON data: " + response.status);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log("Data loaded:", data);
+                data.forEach((record, index) => {
+                    // Create a link for each record
+                    const indexLink = document.createElement("a");
+                    indexLink.href = "#";
+                    indexLink.textContent = record.titolo;
+                    indexLink.onclick = function() {
+                        showRecord(index);
+                        return false;
+                    };
+                    indexContainer.appendChild(indexLink);
+                    indexContainer.appendChild(document.createTextNode(" "));
+
+                    // Create a div to contain the record details
+                    const recordDiv = document.createElement("div");
+                    recordDiv.classList.add("record");
+                    recordDiv.innerHTML = `
+                        <h2>Record ${index + 1}</h2>
+                        <label>Titolo: <input type="text" value="${record.titolo}" data-key="titolo"></label><br>
+                        <label>Prima Parte: <textarea data-key="prima_parte">${record.prima_parte}</textarea></label><br>
+                        <label>Seconda Parte: <textarea data-key="seconda_parte">${record.seconda_parte}</textarea></label>
+                        <button onclick="salvaModifica(this)">Salva modifiche</button>
+                    `;
+                    recordDiv.dataset.index = index;
+                    recordContainer.appendChild(recordDiv);
+                });
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
+
+        // Show the selected record
+        function showRecord(index) {
+            const records = recordContainer.querySelectorAll(".record");
+            records.forEach(record => {
+                if (record.dataset.index == index) {
+                    record.classList.add("active");
+                } else {
+                    record.classList.remove("active");
+                }
+            });
+        }
+
+        // Save the changes made to the record
+        function salvaModifica(button) {
+            const recordDiv = button.parentElement;
+            const index = recordDiv.dataset.index;
+            const inputs = recordDiv.querySelectorAll("input, textarea");
+            const newRecord = {};
+
+            inputs.forEach(input => {
+                const key = input.dataset.key;
+                newRecord[key] = input.value;
+            });
+
+            // Send the modified single record to the Flask server
+            fetch(`/salva/${index}`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(newRecord)
+            })
+            .then(response => response.json())
+            .then(data => alert(data.message))
+            .catch(error => alert("An error occurred: " + error));
+        }
+    </script>
+</body>
+</html>

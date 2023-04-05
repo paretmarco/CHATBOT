@@ -1,0 +1,4 @@
+Query: What is the origin of the word fascinate?
+Chatbot response: The origin of the word "fascinate" is believed to come from the Latin word "fascinare," which means "to bewitch" or "to cast a spell." It is thought to have been derived from the Latin word "fascis," which means "bundle of sticks" and was used to refer to the power of a spell or charm.
+Search snippet response: [{'response': '\nThe origin of the word "fascinate" is believed to come from the Latin word "fascinare," which means "to bewitch" or "to cast a spell." It is thought to have been derived from the Latin word "fascis," which means "bundle of sticks" and was used to refer to the power of a spell or charm.'}]
+

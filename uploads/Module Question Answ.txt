@@ -1,0 +1,128 @@
+Module 2: Function 1 - Question Answering and Book Generation
+Design and implementation of a natural language processing (NLP) module for user queries
+Integration of LlamaIndex for retrieving relevant information based on user queries
+Construction of GPT prompts using retrieved information for generating book content
+
+A. Variables:
+
+B. Flowchart:
+(Start) -> User inputs query -> Retrieve relevant information using LlamaIndex -> Construct GPT prompt
+using relevant information -> Generate book content using GPT -> (End)
+
+Directory: C:\D\documenti\AI\program22
+app.py - This is the main file that will run the Flask app and interact with the following files.
+secrets_manager.py file will be used to retrieve the OpenAI API key
+llama_index_utils.py file will contain the functions for formatting, indexing, and searching the files using LlamaIndex.
+templates/index.html - This is the HTML template file for the index page.
+templates/results.html - This is the HTML template file for the results page.
+static/style.css - This is the CSS file for styling the web app.
+static/index.js - This is the JavaScript file for handling user interactions on the index page.
+static/results.js - This is the JavaScript file for handling user interactions on the results page.
+requirements.txt - This is the file containing all the necessary Python libraries required to run the application.
+
+Flask==2.1.2
+llama-index
+openai==0.12.3
+
+this has been done
+
+III. Module 2: continuing - Question Answering and Book Generation
+
+Design and implementation of a natural language processing (NLP) module for user queries
+Integration of LlamaIndex for retrieving relevant information based on user queries
+Construction of GPT prompts using retrieved information for generating book content
+
+Design and implementation of a natural language processing (NLP) module for user queries
+
+Integration of LlamaIndex for retrieving relevant information based on user queries
+
+Construction of GPT prompts using retrieved information for generating book content
+
+A. Variables:
+
+user_query: string variable representing the user's question or query
+relevant_info: list of documents or information relevant to the user's query
+book_content: string variable representing the content of the book generated from the relevant information
+
+
+I give you info again on llamaindex:
+
+The workflow is straightforward and takes only a few steps:
+Build an index of your document data with LlamaIndex
+Query the index with natural language
+LlamaIndex will retrieve the relevant parts and pass them to the GPT prompt
+Ask GPT with the relevant context and construct a response
+What LlamaIndex does is convert your original document data into a vectorized index, which is very efficient to query. It will use this index to find the most relevant parts based on the similarity of the query and the data. Then, it will plug in what’s retrieved into the prompt it will send to GPT so that GPT has the context for answering your question.
+
+Setting Up
+
+We’ll need to install the libraries first. Simply run the following command in your terminal or on Google Colab notebook. These commands will install both LlamaIndex and OpenAI.
+
+!pip install llama-index
+!pip install openai
+Next, we'll import the libraries in python and set up your OpenAI API key in a new .py file.
+
+# Import necessary packages
+from llama_index import GPTSimpleVectorIndex, Document, SimpleDirectoryReader
+import os
+
+os.environ['OPENAI_API_KEY'] = 'sk-YOUR-API-KEY'
+Constructing the index and saving it
+
+After we installed the required libraries and import them, we will need to construct an index of your document.
+
+To load your document, you can use the SimpleDirectoryReader method provided by LllamaIndex or you can load it from strings.
+
+# Loading from a directory
+documents = SimpleDirectoryReader('your_directory').load_data()
+
+# Loading from strings, assuming you saved your data to strings text1, text2, ...
+text_list = [text1, text2, ...]
+documents = [Document(t) for t in text_list]
+LlamaIndex also provides a variety of data connectors, including Notion, Asana, Google Drive, Obsidian, etc. You can find the available data connectors at https://llamahub.ai/.
+
+After loading the documents, we can then construct the index simply with
+
+# Construct a simple vector index
+index = GPTSimpleVectorIndex(documents)
+If you want to save the index and load it for future use, you can use the following methods
+
+# Save your index to a index.json file
+index.save_to_disk('index.json')
+# Load the index from your saved index.json file
+index = GPTSimpleVectorIndex.load_from_disk('index.json')
+Querying the index and getting a response
+
+Querying the index is simple
+
+# Querying the index
+response = index.query("What features do users want to see in the app?")
+print(response)
+
+An example response.
+And voilà! You will get your answer printed. Under the hood, LlamaIndex will take your prompt, search for relevant chunks in the index, and pass your prompt and the relevant chunks to GPT.
+
+Some notes for advanced usage
+
+The steps above show only a very simple starter usage for question answering with LlamaIndex and GPT. But you can do much more than that. In fact, you can configure LlamaIndex to use a different large language model (LLM), use a different type of index for different tasks, update existing indices with a new index, etc. If you’re interested, you can read their doc at https://gpt-index.readthedocs.io/en/latest/index.html.
+PROMPT use 
+I give you also the following article
+As per the llama_index doc: https://gpt-index.readthedocs.io/en/latest/reference/prompts.html#gpt_index.prompts.prompts.RefinePrompt
+
+You can ask follow up question by:
+
+from llama_index.prompts.default_prompts import DEFAULT_REFINE_PROMPT
+
+follow_up_query = “<your_follow_up_question>”
+
+response = index.query(
+
+follow_up_query,
+
+refine_template=DEFAULT_REFINE_PROMPT,
+
+similarity_top_k=5
+
+)
+
+Or you can write a wrapper yourself to concatenate your previous queries and the responses to make it the context of the new query.

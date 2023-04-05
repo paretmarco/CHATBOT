@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index Input</title>
+</head>
+<body>
+    <h1>Enter book index and additional details</h1>
+    <form action="/submit_index" method="post">
+        <label for="author_name">Author Name:</label>
+        <input type="text" id="author_name" name="author_name" required><br><br>
+        <label for="book_format">Book Format:</label>
+        <input type="text" id="book_format" name="book_format" required><br><br>
+        <label for="book_style">Book Style:</label>
+        <input type="text" id="book_style" name="book_style" required><br><br>
+        <label for="background_info">Background Information:</label>
+        <textarea id="background_info" name="background_info" rows="4" cols="50" required></textarea><br><br>
+        <label for="index_content">Book Index:</label>
+        <textarea id="index_content" name="index_content" rows="20" cols="50" required></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

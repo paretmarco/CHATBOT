@@ -1,0 +1,4 @@
+Query: What is the definition of fascinate?
+Chatbot response: Fascinate means to capture and hold the attention of someone or something, typically through an interesting or mysterious quality. It can also mean to hypnotize or mesmerize someone by staring at them intensely.
+Search snippet response: [{'response': '\nFascinate is a technique used to influence the behavior of another person through the power of the gaze. It is a form of hypnosis or mesmerism that can be used to induce a trance-like state in the subject, allowing them to be more open to suggestion. It can also be used for healing purposes, as demonstrated by the example of Prof. Erminio from Pisa.'}]
+

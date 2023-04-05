@@ -1,0 +1,25 @@
+Module 2: Function 1 - Question Answering and Book Generation
+Design and implementation of a natural language processing (NLP) module for user queries
+Integration of LlamaIndex for retrieving relevant information based on user queries
+Construction of GPT prompts using retrieved information for generating book content
+
+A. Variables:
+
+B. Flowchart:
+(Start) -> User inputs query -> Retrieve relevant information using LlamaIndex -> Construct GPT prompt
+using relevant information -> Generate book content using GPT -> (End)
+
+Directory: C:\D\documenti\AI\program22
+app.py - This is the main file that will run the Flask app and interact with the following files.
+secrets_manager.py file will be used to retrieve the OpenAI API key
+llama_index_utils.py file will contain the functions for formatting, indexing, and searching the files using LlamaIndex.
+templates/index.html - This is the HTML template file for the index page.
+templates/results.html - This is the HTML template file for the results page.
+static/style.css - This is the CSS file for styling the web app.
+static/index.js - This is the JavaScript file for handling user interactions on the index page.
+static/results.js - This is the JavaScript file for handling user interactions on the results page.
+requirements.txt - This is the file containing all the necessary Python libraries required to run the application.
+
+Flask==2.1.2
+llama-index
+openai==0.12.3

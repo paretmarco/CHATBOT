@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Snippets</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("form").submit(function(event) {
+                event.preventDefault();
+
+                const formData = new FormData(this);
+                const query = formData.get("query");
+                const max_tokens = parseInt(formData.get("max_tokens"));
+                const user_personality = formData.get("user_personality");
+                const additional_context = formData.get("additional_context");
+
+                // Search for relevant snippets
+                $.ajax({
+                    url: "/search",
+                    type: "POST",
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    dataType: "json",
+                    success: function(response) {
+                        const snippets = response.snippets;
+                        let resultsHTML = '<ol>';
+                        snippets.forEach(snippet => {
+                            resultsHTML += `<li>${snippet.response}</li>`;
+                        });
+                        resultsHTML += '</ol>';
+                        $("#results").html(resultsHTML);
+                    }
+                });
+
+                // Get the chatbot's response
+                $.ajax({
+                    url: "http://localhost:5001/api/chatbot",
+                    type: "POST",
+                    contentType: "application/json",
+                    dataType: "json",
+                    data: JSON.stringify({
+                        user_input: query,
+                        max_tokens: max_tokens,
+                        user_personality: user_personality,
+                        additional_context: additional_context
+                    }),
+                    success: function(response) {
+                        $("#chatbot_response").html(response.response);
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Search Snippets</h1>
+    <form>
+        <label for="query">Enter your query:</label><br>
+        <textarea id="query" name="query" rows="4" cols="50"></textarea><br>
+        <label for="max_tokens">Response length:</label>
+        <input type="number" id="max_tokens" name="max_tokens" value="300" min="1"><br>
+        <label for="user_personality">User personality:</label>
+        <input type="text" id="user_personality" name="user_personality" value="You are talking to an expert in non-verbal communication."><br>
+        <label for="additional_context">Additional context:</label>
+        <input type="text" id="additional_context" name="additional_context"><br>
+        <input type="submit" value="Search">
+    </form>
+    <div id="results"></div>
+    <h2>Chatbot Response</h2>
+    <div id="chatbot_response"></div>
+</body>
+</html>
