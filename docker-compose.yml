@@ -5,10 +5,12 @@ services:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - SEARCH_URL=http://app:5000/api/search
       - FLASK_HOST=0.0.0.0
+      - FLASK_PORT=5002  # Add this line
     ports:
       - "5000:5000"
       - "5001:5001"
       - "8000:5002"
+
 
 
 

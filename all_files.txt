@@ -46,7 +46,7 @@ def search_snippets(query):
     # Log the query
     logging.info(f"Searching snippets for query: {query}")
 
-    search_url = "http://127.0.0.1:5000/api/search"
+    search_url = os.environ.get("SEARCH_URL", "http://127.0.0.1:5000/api/search")
 
     response = requests.post(search_url, json={"query": query})
 

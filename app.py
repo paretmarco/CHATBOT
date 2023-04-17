@@ -15,4 +15,5 @@ def send_static(path):
 
 if __name__ == '__main__':
     host = os.environ.get("FLASK_HOST", "127.0.0.1")
-    app.run(host=host, debug=True, port=5002)
+    port = os.environ.get("FLASK_PORT", 5002)  # Add this line to get the port value
+    app.run(host=host, debug=True, port=port)
