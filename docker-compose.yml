@@ -1,0 +1,14 @@
+services:
+  app:
+    build: .
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - SEARCH_URL=http://app:5000/api/search
+      - FLASK_HOST=0.0.0.0
+    ports:
+      - "5000:5000"
+      - "5001:5001"
+      - "8000:5002"
+
+
+

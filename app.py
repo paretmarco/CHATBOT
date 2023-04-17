@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, send_from_directory
 from flask_cors import CORS
 
@@ -13,5 +14,5 @@ def send_static(path):
     return send_from_directory('static', path)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5002)
-
+    host = os.environ.get("FLASK_HOST", "127.0.0.1")
+    app.run(host=host, debug=True, port=5002)

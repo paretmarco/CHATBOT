@@ -1,0 +1,8 @@
+[
+  {
+    "file": "app.py",
+    "operation": "Replace",
+    "line": 6,
+    "content": "    for line in lines:\n        # ...\n        # Write the chapter to the comprehensive book file\n        with open(os.path.join(output_directory, \"book.txt\"), \"a\") as book_file:\n            book_file.write(f\"# {line}\\n\")\n            book_file.write(chapter)\n            book_file.write(\"\\n\\n\")\n            print(f\"Appended chapter '{line}' to '{os.path.abspath(os.path.join(output_directory, 'book.txt'))}'.\")\n        # ..."
+  }
+]

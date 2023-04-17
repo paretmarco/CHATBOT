@@ -1,0 +1,5 @@
+def create_custom_prompt(previous_chapter, query, current_chapter):
+    custom_prompt = f"We already spoke of {previous_chapter}\n and now complete {current_chapter}"
+    print(f"Custom prompt created: {custom_prompt}")  # Aggiunto logging
+    return custom_prompt
+

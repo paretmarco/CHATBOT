@@ -1,0 +1,22 @@
+FROM python:3.9
+
+WORKDIR /app
+
+# Copia il file config.py nel container
+COPY config.py ./
+
+# Imposta la variabile d'ambiente OPENAI_API_KEY
+ENV OPENAI_API_KEY=${OPENAI_API_KEY}
+
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copia la cartella index/ e il suo contenuto nel container
+COPY index/ index/
+
+# Copia tutti gli altri file nel container
+COPY . .
+
+# Esegui i file Python
+CMD ["sh", "-c", "python search_snippets.py & python chatbot.py & python app.py"]
+

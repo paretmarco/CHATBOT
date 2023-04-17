@@ -1,0 +1,17 @@
+Thank you for providing the output logs. It seems that the chapters are being written to the book.txt file in the book_created directory. If you still cannot see the chapters in the book.txt file, it might be because the file hasn't been properly closed.To make sure the file is properly closed and saved after each chapter is written, modify the code to use the following with statement:Replace this section of the code:pythonCopy code# Create a comprehensive text file for all chapters
+with open(os.path.join(output_directory, "book.txt"), "a") as book_file:
+
+    # Iterate through the lines and generate chapters
+    for line in lines:
+        ...
+withpythonCopy code# Iterate through the lines and generate chapters
+for line in lines:
+    # ...
+    # Write the chapter to the comprehensive book file
+    with open(os.path.join(output_directory, "book.txt"), "a") as book_file:
+        book_file.write(f"# {line}\n")
+        book_file.write(chapter)
+        book_file.write("\n\n")
+        print(f"Appended chapter '{line}' to '{os.path.abspath(os.path.join(output_directory, 'book.txt'))}'.")
+    # ...
+By moving the with statement inside the loop, we ensure that the file is opened, written, and closed for each chapter. This should solve the issue of chapters not appearing in the book.txt file.

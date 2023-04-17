@@ -5,6 +5,7 @@ import os
 import time
 from config import OPENAI_API_KEY
 import logging
+from create_custom_prompt import create_custom_prompt
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -94,15 +95,22 @@ output_directory = "book_created"
 os.makedirs(output_directory, exist_ok=True)
 
 # Create a comprehensive text file for all chapters
-with open(os.path.join(output_directory, "book.txt"), "w") as book_file:
+with open(os.path.join(output_directory, "book.txt"), "a") as book_file:
+
     # Iterate through the lines and generate chapters
     for line in lines:
         line = line.strip()
+
+        previous_chapter = draft_text
+        current_chapter = line
+        custom_prompt_text = create_custom_prompt(previous_chapter, line, current_chapter)
+
         prompt = [
             {"role": "system", "content": "You are an absolute expert in this discipline and you prepare a book. You write sentences full of meanings and crafted with a lot of images."},
             {"role": "assistant", "content": draft_text},
-            {"role": "user", "content": f"Continue {draft_summary} developing in a clear way the specific concept for this chapter {line}. You are the author and you write in the first person most of the times. Please write a detailed text of at least 55 words simple to understand even for a 15 years old, after and provide after in a new paragraph 40 words to what purpose it can be useful, and at the end an example of at least 60 words."},
+            {"role": "user", "content": f"Continue {draft_summary} developing in a clear way the specific concept for this chapter {line}. You are the author and you prefer the first person connecting the concepts to events of your life. Please write a detailed text of at least 55 words, simple to understand even for a 15-year-old. Integrate these instructions {custom_prompt_text} as well."},
         ]
+
         chapter = generate_chapter(prompt)
 
         # Write the chapter to a text file
@@ -113,6 +121,7 @@ with open(os.path.join(output_directory, "book.txt"), "w") as book_file:
         book_file.write(f"# {line}\n")
         book_file.write(chapter)
         book_file.write("\n\n")
+        print(f"Appended chapter '{line}' to '{os.path.join(output_directory, 'book.txt')}'.")  # Added logging
 
         # Append the chapter to the JSON and CSV data structures
         json_data.append({"title": line, "chapter": chapter})
@@ -127,4 +136,3 @@ with open(os.path.join(output_directory, "book_data.json"), "w") as f:
 with open(os.path.join(output_directory, "book_data.csv"), "w", newline='') as f:
     writer = csv.writer(f)
     writer.writerows(csv_data)
-

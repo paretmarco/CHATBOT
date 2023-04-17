@@ -1,4 +1,5 @@
 import logging
+import os
 from llama_index import GPTSimpleVectorIndex
 from flask import Flask, request, render_template, jsonify
 from flask_cors import CORS  # IMPORTANT DONT PUT AWAY THIS LINE CORS HELP COMMUNICATE BETWEEN 5000 and 5001 run before 
@@ -75,4 +76,5 @@ def search_page():
 
 if __name__ == '__main__':
     logging.info('Starting server...')
-    app.run()
+    host = os.environ.get("FLASK_HOST", "127.0.0.1")  # Add this line to get the host value
+    app.run(host=host)  # Update this line to use the host variable

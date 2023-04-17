@@ -16,7 +16,7 @@ documents = SimpleDirectoryReader('C:/D/documenti/AI/program24/uploads').load_da
 
 # construct a simple vector index
 logging.info('Constructing vector index...')
-index = GPTSimpleVectorIndex(documents)
+index = GPTSimpleVectorIndex.from_documents(documents)
 
 # save the index to a file
 logging.info('Saving index to disk...')

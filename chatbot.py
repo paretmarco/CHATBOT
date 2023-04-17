@@ -4,12 +4,19 @@ import requests
 import json
 from flask import Flask, request, jsonify
 import logging
+import re
 from flask_cors import CORS
+
 
 logging.basicConfig(level=logging.INFO)
 
 app = Flask(__name__)
 CORS(app)
+
+# per sentenze complete
+def is_complete_sentence(sentence):
+    # Check if the sentence ends with a punctuation mark
+    return bool(re.search(r'[.!?]\s*$', sentence))
 
 # Set up OpenAI API
 openai.api_key = os.environ["OPENAI_API_KEY"]
@@ -18,7 +25,7 @@ def search_snippets(query):
     # Log the query
     logging.info(f"Searching snippets for query: {query}")
 
-    search_url = "http://127.0.0.1:5000/api/search"
+    search_url = os.environ.get("SEARCH_URL", "http://127.0.0.1:5000/api/search")
 
     response = requests.post(search_url, json={"query": query})
 
@@ -45,13 +52,25 @@ def process_chatbot_request(user_input, max_tokens, user_personality, additional
     # Update the user message to include the query, the words "to answer use", and the retrieved snippets
     user_message_content = f"{user_input}. To answer, use: {context}"
 
+    if not is_complete_sentence(user_input):
+        user_message_content = f"Please complete the following sentence: {user_input}. To answer, consider: {context}"
+
+    # Truncate the context if necessary
+    truncated_context = context[:max_tokens - len(user_message_content) - 100]  # reserve some tokens for the response
+
+    # Find the last complete sentence in the truncated context
+    delimiters = [".", "!", "?"]
+    last_delimiter_index = max([truncated_context.rfind(d) for d in delimiters])
+
+    if last_delimiter_index > 0:
+        truncated_context = truncated_context[:last_delimiter_index + 1]
 
     # Create the message sequence, starting with the system message (user_personality)
     # followed by assistant's message (additional_context) and user's updated message (user_message_content)
     messages = [
         {"role": "system", "content": user_personality},
-        {"role": "assistant", "content": additional_context + " " + context},
-        {"role": "user", "content": user_message_content}
+        {"role": "assistant", "content": additional_context + " " + truncated_context},
+        {"role": "user", "content": user_message_content + " please use and adapt this material for your answer "}
     ]
 
     # Log messages sent to OpenAI API
@@ -125,4 +144,5 @@ def prev_conversations():
     return jsonify({"conversations": loaded_conversations})
 
 if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=5001)
+    host = os.environ.get("FLASK_HOST", "127.0.0.1")  # Add this line to get the host value
+    app.run(host=host, port=5001)

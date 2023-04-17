@@ -6,7 +6,7 @@ from nltk.tokenize import word_tokenize, sent_tokenize
 input_dir = "C:/D/documenti/AI/program24/chunker-upload"
 output_dir = "C:/D/documenti/AI/program24/chunker_split"
 
-target_token_count = 230
+target_token_count = 300
 
 for input_filename in os.listdir(input_dir):
     if not input_filename.endswith(".txt"):
