@@ -1,4 +1,4 @@
-file_list = ["search_snippets-old.py", "app-old.py", "chatbot-old.py", "static/main.js", "templates/search_page.html"]  # Add or modify the file names in this list
+file_list = ["google_sheets_helper.py", "chatbot.py", "web_app.py", "templates/search_page.html"]  # Add or modify the file names in this list
 
 output_file = "all_files.txt"
 

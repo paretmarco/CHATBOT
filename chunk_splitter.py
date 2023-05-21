@@ -19,8 +19,19 @@ for input_filename in os.listdir(input_dir):
         encoding = detect(f.read())['encoding']
 
     # read file using detected encoding
-    with open(input_path, "r", encoding=encoding) as f:
-        text = f.read()
+    try:
+        with open(input_path, "r", encoding=encoding) as f:
+            text = f.read()
+    except UnicodeDecodeError:
+        print(f"Error: Could not decode the file {input_filename} using detected encoding ({encoding}).")
+        print("Trying with 'utf-8' encoding instead.")
+        try:
+            with open(input_path, "r", encoding="utf-8") as f:
+                text = f.read()
+        except UnicodeDecodeError:
+            print(f"Error: Could not decode the file {input_filename} using 'utf-8' encoding.")
+            print("Please provide the correct encoding.")
+            continue
 
     text = re.sub(r"\s+", " ", text)
 

@@ -1,0 +1,1776 @@
+2023-05-12 10:32:07,662 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://100.126.8.115:8001
+2023-05-12 10:32:07,662 - INFO - [33mPress CTRL+C to quit[0m
+2023-05-12 12:43:34,617 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://100.126.8.115:8001
+2023-05-12 12:43:34,617 - INFO - [33mPress CTRL+C to quit[0m
+2023-05-12 12:44:15,128 - INFO - 127.0.0.1 - - [12/May/2023 12:44:15] "GET / HTTP/1.1" 200 -
+2023-05-12 12:44:15,429 - INFO - 127.0.0.1 - - [12/May/2023 12:44:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2023-05-12 12:44:22,476 - ERROR - Exception on /api/submit [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 35, in submit
+    user_input = data['user_input']
+KeyError: 'user_input'
+2023-05-12 12:44:22,499 - INFO - 127.0.0.1 - - [12/May/2023 12:44:22] "[35m[1mPOST /api/submit HTTP/1.1[0m" 500 -
+2023-05-12 12:47:34,982 - ERROR - Exception on /api/submit [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 35, in submit
+    user_input = data['user_input']
+KeyError: 'user_input'
+2023-05-12 12:47:34,983 - INFO - 127.0.0.1 - - [12/May/2023 12:47:34] "[35m[1mPOST /api/submit HTTP/1.1[0m" 500 -
+2023-05-12 12:47:46,205 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://192.168.178.26:8001
+2023-05-12 12:47:46,206 - INFO - [33mPress CTRL+C to quit[0m
+2023-05-12 12:47:51,995 - ERROR - Exception on /api/submit [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 35, in submit
+    user_input = data['user_input']
+KeyError: 'user_input'
+2023-05-12 12:47:51,997 - INFO - 127.0.0.1 - - [12/May/2023 12:47:51] "[35m[1mPOST /api/submit HTTP/1.1[0m" 500 -
+2023-05-12 12:51:23,518 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://100.120.156.232:8001
+2023-05-12 12:51:23,519 - INFO - [33mPress CTRL+C to quit[0m
+2023-05-12 12:51:28,859 - INFO - 127.0.0.1 - - [12/May/2023 12:51:28] "GET / HTTP/1.1" 200 -
+2023-05-12 12:51:34,949 - INFO - Submit request received: what is fascination
+2023-05-12 12:51:44,674 - ERROR - Exception on /api/submit [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\redis\connection.py", line 699, in connect
+    sock = self.retry.call_with_retry(
+  File "C:\Python310\lib\site-packages\redis\retry.py", line 46, in call_with_retry
+    return do()
+  File "C:\Python310\lib\site-packages\redis\connection.py", line 700, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "C:\Python310\lib\site-packages\redis\connection.py", line 970, in _connect
+    for res in socket.getaddrinfo(
+  File "C:\Python310\lib\socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 47, in submit
+    cached_response = cache.get(cache_key)
+  File "C:\Python310\lib\site-packages\flask_caching\__init__.py", line 190, in get
+    return self.cache.get(*args, **kwargs)
+  File "C:\Python310\lib\site-packages\cachelib\redis.py", line 72, in get
+    return self.serializer.loads(self._read_client.get(self.key_prefix + key))
+  File "C:\Python310\lib\site-packages\redis\commands\core.py", line 1801, in get
+    return self.execute_command("GET", name)
+  File "C:\Python310\lib\site-packages\redis\client.py", line 1266, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\Python310\lib\site-packages\redis\connection.py", line 1457, in get_connection
+    connection.connect()
+  File "C:\Python310\lib\site-packages\redis\connection.py", line 705, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 11001 connecting to redis:6379. getaddrinfo failed.
+2023-05-12 12:51:44,755 - INFO - 127.0.0.1 - - [12/May/2023 12:51:44] "[35m[1mPOST /api/submit HTTP/1.1[0m" 500 -
+2023-05-12 13:11:24,635 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://100.120.156.232:8001
+2023-05-12 13:11:24,636 - INFO - [33mPress CTRL+C to quit[0m
+2023-05-12 13:11:30,342 - INFO - Submit request received: what is fascination
+2023-05-12 13:11:40,064 - ERROR - Exception on /api/submit [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\redis\connection.py", line 699, in connect
+    sock = self.retry.call_with_retry(
+  File "C:\Python310\lib\site-packages\redis\retry.py", line 46, in call_with_retry
+    return do()
+  File "C:\Python310\lib\site-packages\redis\connection.py", line 700, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "C:\Python310\lib\site-packages\redis\connection.py", line 970, in _connect
+    for res in socket.getaddrinfo(
+  File "C:\Python310\lib\socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 47, in submit
+    cached_response = cache.get(cache_key)
+  File "C:\Python310\lib\site-packages\flask_caching\__init__.py", line 190, in get
+    return self.cache.get(*args, **kwargs)
+  File "C:\Python310\lib\site-packages\cachelib\redis.py", line 72, in get
+    return self.serializer.loads(self._read_client.get(self.key_prefix + key))
+  File "C:\Python310\lib\site-packages\redis\commands\core.py", line 1801, in get
+    return self.execute_command("GET", name)
+  File "C:\Python310\lib\site-packages\redis\client.py", line 1266, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\Python310\lib\site-packages\redis\connection.py", line 1457, in get_connection
+    connection.connect()
+  File "C:\Python310\lib\site-packages\redis\connection.py", line 705, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 11001 connecting to redis:6379. getaddrinfo failed.
+2023-05-12 13:11:40,092 - INFO - 127.0.0.1 - - [12/May/2023 13:11:40] "[35m[1mPOST /api/submit HTTP/1.1[0m" 500 -
+2023-05-12 14:29:18,893 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://100.126.1.162:8001
+2023-05-12 14:29:18,905 - INFO - [33mPress CTRL+C to quit[0m
+2023-05-13 08:04:53,023 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://100.124.136.18:8001
+2023-05-13 08:04:53,035 - INFO - [33mPress CTRL+C to quit[0m
+2023-05-13 08:05:54,191 - INFO - 127.0.0.1 - - [13/May/2023 08:05:54] "GET / HTTP/1.1" 200 -
+2023-05-13 08:05:54,721 - INFO - 127.0.0.1 - - [13/May/2023 08:05:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2023-05-13 08:06:03,061 - INFO - Submit request received: what is fascination
+2023-05-13 08:06:05,771 - ERROR - Exception on /api/submit [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\redis\connection.py", line 699, in connect
+    sock = self.retry.call_with_retry(
+  File "C:\Python310\lib\site-packages\redis\retry.py", line 46, in call_with_retry
+    return do()
+  File "C:\Python310\lib\site-packages\redis\connection.py", line 700, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "C:\Python310\lib\site-packages\redis\connection.py", line 970, in _connect
+    for res in socket.getaddrinfo(
+  File "C:\Python310\lib\socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 47, in submit
+    cached_response = cache.get(cache_key)
+  File "C:\Python310\lib\site-packages\flask_caching\__init__.py", line 190, in get
+    return self.cache.get(*args, **kwargs)
+  File "C:\Python310\lib\site-packages\cachelib\redis.py", line 72, in get
+    return self.serializer.loads(self._read_client.get(self.key_prefix + key))
+  File "C:\Python310\lib\site-packages\redis\commands\core.py", line 1801, in get
+    return self.execute_command("GET", name)
+  File "C:\Python310\lib\site-packages\redis\client.py", line 1266, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\Python310\lib\site-packages\redis\connection.py", line 1457, in get_connection
+    connection.connect()
+  File "C:\Python310\lib\site-packages\redis\connection.py", line 705, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 11001 connecting to redis:6379. getaddrinfo failed.
+2023-05-13 08:06:05,867 - INFO - 127.0.0.1 - - [13/May/2023 08:06:05] "[35m[1mPOST /api/submit HTTP/1.1[0m" 500 -
+2023-05-13 08:18:48,262 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://100.124.206.19:8001
+2023-05-13 08:18:48,263 - INFO - [33mPress CTRL+C to quit[0m
+2023-05-13 08:19:00,275 - INFO - Submit request received: what is fascination
+2023-05-13 08:19:12,074 - INFO - 127.0.0.1 - - [13/May/2023 08:19:12] "GET / HTTP/1.1" 200 -
+2023-05-13 08:19:34,159 - INFO - 127.0.0.1 - - [13/May/2023 08:19:34] "GET / HTTP/1.1" 200 -
+2023-05-13 08:20:12,187 - INFO - Submit request received: what is fascination
+2023-05-13 08:21:35,138 - INFO - Submit request received: what is fascination
+2023-05-13 08:21:42,447 - INFO - 127.0.0.1 - - [13/May/2023 08:21:42] "GET / HTTP/1.1" 200 -
+2023-05-13 08:21:53,907 - INFO - 127.0.0.1 - - [13/May/2023 08:21:53] "GET / HTTP/1.1" 200 -
+2023-05-13 08:24:18,937 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://100.124.206.19:8001
+2023-05-13 08:24:18,938 - INFO - [33mPress CTRL+C to quit[0m
+2023-05-13 08:24:27,522 - INFO - 127.0.0.1 - - [13/May/2023 08:24:27] "GET / HTTP/1.1" 200 -
+2023-05-13 08:24:35,242 - INFO - Submit request received: what is fascination
+2023-05-13 08:24:37,291 - ERROR - 127.0.0.1 - - [13/May/2023 08:24:37] code 400, message Bad request syntax ('*2')
+2023-05-13 08:24:37,292 - INFO - 127.0.0.1 - - [13/May/2023 08:24:37] "[35m[1m*2[0m" HTTPStatus.BAD_REQUEST -
+2023-05-13 08:24:37,293 - ERROR - Exception on /api/submit [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 50, in submit
+    cached_response = cache.get(cache_key)
+  File "C:\Python310\lib\site-packages\flask_caching\__init__.py", line 190, in get
+    return self.cache.get(*args, **kwargs)
+  File "C:\Python310\lib\site-packages\cachelib\redis.py", line 72, in get
+    return self.serializer.loads(self._read_client.get(self.key_prefix + key))
+  File "C:\Python310\lib\site-packages\redis\commands\core.py", line 1801, in get
+    return self.execute_command("GET", name)
+  File "C:\Python310\lib\site-packages\redis\client.py", line 1269, in execute_command
+    return conn.retry.call_with_retry(
+  File "C:\Python310\lib\site-packages\redis\retry.py", line 49, in call_with_retry
+    fail(error)
+  File "C:\Python310\lib\site-packages\redis\client.py", line 1273, in <lambda>
+    lambda error: self._disconnect_raise(conn, error),
+  File "C:\Python310\lib\site-packages\redis\client.py", line 1259, in _disconnect_raise
+    raise error
+  File "C:\Python310\lib\site-packages\redis\retry.py", line 46, in call_with_retry
+    return do()
+  File "C:\Python310\lib\site-packages\redis\client.py", line 1270, in <lambda>
+    lambda: self._send_command_parse_response(
+  File "C:\Python310\lib\site-packages\redis\client.py", line 1246, in _send_command_parse_response
+    return self.parse_response(conn, command_name, **options)
+  File "C:\Python310\lib\site-packages\redis\client.py", line 1286, in parse_response
+    response = connection.read_response()
+  File "C:\Python310\lib\site-packages\redis\connection.py", line 874, in read_response
+    response = self._parser.read_response(disable_decoding=disable_decoding)
+  File "C:\Python310\lib\site-packages\redis\connection.py", line 347, in read_response
+    result = self._read_response(disable_decoding=disable_decoding)
+  File "C:\Python310\lib\site-packages\redis\connection.py", line 357, in _read_response
+    raw = self._buffer.readline()
+  File "C:\Python310\lib\site-packages\redis\connection.py", line 260, in readline
+    self._read_from_socket()
+  File "C:\Python310\lib\site-packages\redis\connection.py", line 213, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+2023-05-13 08:24:37,298 - INFO - 127.0.0.1 - - [13/May/2023 08:24:37] "[35m[1mPOST /api/submit HTTP/1.1[0m" 500 -
+2023-05-13 08:25:29,291 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://100.124.206.19:8001
+2023-05-13 08:25:29,292 - INFO - [33mPress CTRL+C to quit[0m
+2023-05-13 08:25:40,815 - INFO - 127.0.0.1 - - [13/May/2023 08:25:40] "GET / HTTP/1.1" 200 -
+2023-05-13 08:25:50,025 - INFO - Submit request received: what is fascination
+2023-05-13 08:25:52,046 - ERROR - 127.0.0.1 - - [13/May/2023 08:25:52] code 400, message Bad request syntax ('*2')
+2023-05-13 08:25:52,046 - INFO - 127.0.0.1 - - [13/May/2023 08:25:52] "[35m[1m*2[0m" HTTPStatus.BAD_REQUEST -
+2023-05-13 08:25:52,047 - ERROR - Exception on /api/submit [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 50, in submit
+    cached_response = cache.get(cache_key)
+  File "C:\Python310\lib\site-packages\flask_caching\__init__.py", line 190, in get
+    return self.cache.get(*args, **kwargs)
+  File "C:\Python310\lib\site-packages\cachelib\redis.py", line 72, in get
+    return self.serializer.loads(self._read_client.get(self.key_prefix + key))
+  File "C:\Python310\lib\site-packages\redis\commands\core.py", line 1801, in get
+    return self.execute_command("GET", name)
+  File "C:\Python310\lib\site-packages\redis\client.py", line 1269, in execute_command
+    return conn.retry.call_with_retry(
+  File "C:\Python310\lib\site-packages\redis\retry.py", line 49, in call_with_retry
+    fail(error)
+  File "C:\Python310\lib\site-packages\redis\client.py", line 1273, in <lambda>
+    lambda error: self._disconnect_raise(conn, error),
+  File "C:\Python310\lib\site-packages\redis\client.py", line 1259, in _disconnect_raise
+    raise error
+  File "C:\Python310\lib\site-packages\redis\retry.py", line 46, in call_with_retry
+    return do()
+  File "C:\Python310\lib\site-packages\redis\client.py", line 1270, in <lambda>
+    lambda: self._send_command_parse_response(
+  File "C:\Python310\lib\site-packages\redis\client.py", line 1246, in _send_command_parse_response
+    return self.parse_response(conn, command_name, **options)
+  File "C:\Python310\lib\site-packages\redis\client.py", line 1286, in parse_response
+    response = connection.read_response()
+  File "C:\Python310\lib\site-packages\redis\connection.py", line 874, in read_response
+    response = self._parser.read_response(disable_decoding=disable_decoding)
+  File "C:\Python310\lib\site-packages\redis\connection.py", line 347, in read_response
+    result = self._read_response(disable_decoding=disable_decoding)
+  File "C:\Python310\lib\site-packages\redis\connection.py", line 357, in _read_response
+    raw = self._buffer.readline()
+  File "C:\Python310\lib\site-packages\redis\connection.py", line 260, in readline
+    self._read_from_socket()
+  File "C:\Python310\lib\site-packages\redis\connection.py", line 213, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+2023-05-13 08:25:52,051 - INFO - 127.0.0.1 - - [13/May/2023 08:25:52] "[35m[1mPOST /api/submit HTTP/1.1[0m" 500 -
+2023-05-13 08:28:21,917 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://100.124.196.14:8001
+2023-05-13 08:28:21,918 - INFO - [33mPress CTRL+C to quit[0m
+2023-05-13 08:28:26,411 - INFO - 127.0.0.1 - - [13/May/2023 08:28:26] "GET / HTTP/1.1" 200 -
+2023-05-13 08:28:36,583 - INFO - Submit request received: what is fascination
+2023-05-13 08:28:38,606 - ERROR - 127.0.0.1 - - [13/May/2023 08:28:38] code 400, message Bad request syntax ('*2')
+2023-05-13 08:28:38,607 - INFO - 127.0.0.1 - - [13/May/2023 08:28:38] "[35m[1m*2[0m" HTTPStatus.BAD_REQUEST -
+2023-05-13 08:28:38,608 - ERROR - Exception on /api/submit [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 50, in submit
+    cached_response = cache.get(cache_key)
+  File "C:\Python310\lib\site-packages\flask_caching\__init__.py", line 190, in get
+    return self.cache.get(*args, **kwargs)
+  File "C:\Python310\lib\site-packages\cachelib\redis.py", line 72, in get
+    return self.serializer.loads(self._read_client.get(self.key_prefix + key))
+  File "C:\Python310\lib\site-packages\redis\commands\core.py", line 1801, in get
+    return self.execute_command("GET", name)
+  File "C:\Python310\lib\site-packages\redis\client.py", line 1269, in execute_command
+    return conn.retry.call_with_retry(
+  File "C:\Python310\lib\site-packages\redis\retry.py", line 49, in call_with_retry
+    fail(error)
+  File "C:\Python310\lib\site-packages\redis\client.py", line 1273, in <lambda>
+    lambda error: self._disconnect_raise(conn, error),
+  File "C:\Python310\lib\site-packages\redis\client.py", line 1259, in _disconnect_raise
+    raise error
+  File "C:\Python310\lib\site-packages\redis\retry.py", line 46, in call_with_retry
+    return do()
+  File "C:\Python310\lib\site-packages\redis\client.py", line 1270, in <lambda>
+    lambda: self._send_command_parse_response(
+  File "C:\Python310\lib\site-packages\redis\client.py", line 1246, in _send_command_parse_response
+    return self.parse_response(conn, command_name, **options)
+  File "C:\Python310\lib\site-packages\redis\client.py", line 1286, in parse_response
+    response = connection.read_response()
+  File "C:\Python310\lib\site-packages\redis\connection.py", line 874, in read_response
+    response = self._parser.read_response(disable_decoding=disable_decoding)
+  File "C:\Python310\lib\site-packages\redis\connection.py", line 347, in read_response
+    result = self._read_response(disable_decoding=disable_decoding)
+  File "C:\Python310\lib\site-packages\redis\connection.py", line 357, in _read_response
+    raw = self._buffer.readline()
+  File "C:\Python310\lib\site-packages\redis\connection.py", line 260, in readline
+    self._read_from_socket()
+  File "C:\Python310\lib\site-packages\redis\connection.py", line 213, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+2023-05-13 08:28:38,613 - INFO - 127.0.0.1 - - [13/May/2023 08:28:38] "[35m[1mPOST /api/submit HTTP/1.1[0m" 500 -
+2023-05-13 08:30:26,375 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://100.124.196.14:8001
+2023-05-13 08:30:26,376 - INFO - [33mPress CTRL+C to quit[0m
+2023-05-13 08:30:34,924 - INFO - 127.0.0.1 - - [13/May/2023 08:30:34] "GET / HTTP/1.1" 200 -
+2023-05-13 08:30:41,892 - INFO - Submit request received: what is fascination
+2023-05-13 08:30:43,937 - ERROR - 127.0.0.1 - - [13/May/2023 08:30:43] code 400, message Bad request syntax ('*2')
+2023-05-13 08:30:43,937 - INFO - 127.0.0.1 - - [13/May/2023 08:30:43] "[35m[1m*2[0m" HTTPStatus.BAD_REQUEST -
+2023-05-13 08:30:43,938 - ERROR - Exception on /api/submit [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 55, in submit
+    cached_response = cache.get(cache_key)
+  File "C:\Python310\lib\site-packages\flask_caching\__init__.py", line 190, in get
+    return self.cache.get(*args, **kwargs)
+  File "C:\Python310\lib\site-packages\cachelib\redis.py", line 72, in get
+    return self.serializer.loads(self._read_client.get(self.key_prefix + key))
+  File "C:\Python310\lib\site-packages\redis\commands\core.py", line 1801, in get
+    return self.execute_command("GET", name)
+  File "C:\Python310\lib\site-packages\redis\client.py", line 1269, in execute_command
+    return conn.retry.call_with_retry(
+  File "C:\Python310\lib\site-packages\redis\retry.py", line 49, in call_with_retry
+    fail(error)
+  File "C:\Python310\lib\site-packages\redis\client.py", line 1273, in <lambda>
+    lambda error: self._disconnect_raise(conn, error),
+  File "C:\Python310\lib\site-packages\redis\client.py", line 1259, in _disconnect_raise
+    raise error
+  File "C:\Python310\lib\site-packages\redis\retry.py", line 46, in call_with_retry
+    return do()
+  File "C:\Python310\lib\site-packages\redis\client.py", line 1270, in <lambda>
+    lambda: self._send_command_parse_response(
+  File "C:\Python310\lib\site-packages\redis\client.py", line 1246, in _send_command_parse_response
+    return self.parse_response(conn, command_name, **options)
+  File "C:\Python310\lib\site-packages\redis\client.py", line 1286, in parse_response
+    response = connection.read_response()
+  File "C:\Python310\lib\site-packages\redis\connection.py", line 874, in read_response
+    response = self._parser.read_response(disable_decoding=disable_decoding)
+  File "C:\Python310\lib\site-packages\redis\connection.py", line 347, in read_response
+    result = self._read_response(disable_decoding=disable_decoding)
+  File "C:\Python310\lib\site-packages\redis\connection.py", line 357, in _read_response
+    raw = self._buffer.readline()
+  File "C:\Python310\lib\site-packages\redis\connection.py", line 260, in readline
+    self._read_from_socket()
+  File "C:\Python310\lib\site-packages\redis\connection.py", line 213, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+2023-05-13 08:30:43,948 - INFO - 127.0.0.1 - - [13/May/2023 08:30:43] "[35m[1mPOST /api/submit HTTP/1.1[0m" 500 -
+2023-05-13 08:39:56,546 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://100.124.216.22:8001
+2023-05-13 08:39:56,547 - INFO - [33mPress CTRL+C to quit[0m
+2023-05-13 08:40:01,448 - INFO - 127.0.0.1 - - [13/May/2023 08:40:01] "GET / HTTP/1.1" 200 -
+2023-05-13 08:40:09,287 - INFO - Submit request received: what is fascination
+2023-05-13 08:40:11,335 - ERROR - 127.0.0.1 - - [13/May/2023 08:40:11] code 400, message Bad request syntax ('*2')
+2023-05-13 08:40:11,335 - INFO - 127.0.0.1 - - [13/May/2023 08:40:11] "[35m[1m*2[0m" HTTPStatus.BAD_REQUEST -
+2023-05-13 08:40:11,336 - ERROR - Exception on /api/submit [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 55, in submit
+    cached_response = cache.get(cache_key)
+  File "C:\Python310\lib\site-packages\flask_caching\__init__.py", line 190, in get
+    return self.cache.get(*args, **kwargs)
+  File "C:\Python310\lib\site-packages\cachelib\redis.py", line 72, in get
+    return self.serializer.loads(self._read_client.get(self.key_prefix + key))
+  File "C:\Python310\lib\site-packages\redis\commands\core.py", line 1801, in get
+    return self.execute_command("GET", name)
+  File "C:\Python310\lib\site-packages\redis\client.py", line 1269, in execute_command
+    return conn.retry.call_with_retry(
+  File "C:\Python310\lib\site-packages\redis\retry.py", line 49, in call_with_retry
+    fail(error)
+  File "C:\Python310\lib\site-packages\redis\client.py", line 1273, in <lambda>
+    lambda error: self._disconnect_raise(conn, error),
+  File "C:\Python310\lib\site-packages\redis\client.py", line 1259, in _disconnect_raise
+    raise error
+  File "C:\Python310\lib\site-packages\redis\retry.py", line 46, in call_with_retry
+    return do()
+  File "C:\Python310\lib\site-packages\redis\client.py", line 1270, in <lambda>
+    lambda: self._send_command_parse_response(
+  File "C:\Python310\lib\site-packages\redis\client.py", line 1246, in _send_command_parse_response
+    return self.parse_response(conn, command_name, **options)
+  File "C:\Python310\lib\site-packages\redis\client.py", line 1286, in parse_response
+    response = connection.read_response()
+  File "C:\Python310\lib\site-packages\redis\connection.py", line 874, in read_response
+    response = self._parser.read_response(disable_decoding=disable_decoding)
+  File "C:\Python310\lib\site-packages\redis\connection.py", line 347, in read_response
+    result = self._read_response(disable_decoding=disable_decoding)
+  File "C:\Python310\lib\site-packages\redis\connection.py", line 357, in _read_response
+    raw = self._buffer.readline()
+  File "C:\Python310\lib\site-packages\redis\connection.py", line 260, in readline
+    self._read_from_socket()
+  File "C:\Python310\lib\site-packages\redis\connection.py", line 213, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+2023-05-13 08:40:11,345 - INFO - 127.0.0.1 - - [13/May/2023 08:40:11] "[35m[1mPOST /api/submit HTTP/1.1[0m" 500 -
+2023-05-13 23:52:13,378 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://192.168.218.84:8001
+2023-05-13 23:52:13,380 - INFO - [33mPress CTRL+C to quit[0m
+2023-05-13 23:52:29,640 - INFO - 127.0.0.1 - - [13/May/2023 23:52:29] "GET / HTTP/1.1" 200 -
+2023-05-13 23:52:38,107 - INFO - Submit request received: what is fascination
+2023-05-13 23:52:48,125 - INFO - Submitting request to Google Script
+2023-05-13 23:52:49,086 - INFO - Response from Google Script: <!DOCTYPE html><html><head><link rel="shortcut icon" href="//ssl.gstatic.com/docs/script/images/favicon.ico"><title>Errore</title><style type="text/css" nonce="xyBJjKaDzyBHLR-Xt_IP-g">body {background-color: #fff; margin: 0; padding: 0;}.errorMessage {font-family: Arial,sans-serif; font-size: 12pt; font-weight: bold; line-height: 150%; padding-top: 25px;}</style></head><body style="margin:20px"><div><img alt="Google Apps Script" src="//ssl.gstatic.com/docs/script/images/logo.png"></div><div style="text-align:center;font-family:monospace;margin:50px auto 0;max-width:600px">Funzione script non trovata: doPost</div></body></html>
+2023-05-13 23:52:49,087 - ERROR - Error during external script request: Expecting value: line 1 column 1 (char 0)
+2023-05-13 23:52:49,087 - ERROR - Exception on /api/submit [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 78, in submit
+    response_text = process_request(user_input)
+  File "C:\D\documenti\AI\program24\web_app.py", line 69, in process_request
+    json_response = json.loads(response.text)  # Parse the JSON response
+  File "C:\Python310\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python310\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python310\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-05-13 23:52:49,125 - INFO - 127.0.0.1 - - [13/May/2023 23:52:49] "[35m[1mPOST /api/submit HTTP/1.1[0m" 500 -
+2023-05-14 00:10:32,805 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://192.168.218.84:8001
+2023-05-14 00:10:32,806 - INFO - [33mPress CTRL+C to quit[0m
+2023-05-14 00:10:44,553 - INFO - Submit request received: what is fascination
+2023-05-14 00:10:54,563 - INFO - Submitting request to Google Script
+2023-05-14 00:11:06,946 - INFO - Response from Google Script: {"response":"Error checking status: Unexpected token '<', \"<!doctype \"... is not valid JSON"}
+2023-05-14 00:11:06,947 - INFO - Parsed request JSON: {'user_input': 'what is fascination'}
+2023-05-14 00:11:06,948 - INFO - Received response from process_request: {'response': 'Error checking status: Unexpected token \'<\', "<!doctype "... is not valid JSON'}
+2023-05-14 00:11:06,980 - INFO - Cache miss, storing result for: what is fascination
+2023-05-14 00:11:06,981 - INFO - 127.0.0.1 - - [14/May/2023 00:11:06] "POST /api/submit HTTP/1.1" 200 -
+2023-05-14 00:11:13,093 - INFO - Check status request received: ed8e86dc-4a56-4043-bc5d-0f795046595e
+2023-05-14 00:11:13,105 - INFO - Found completed request for UUID: ed8e86dc-4a56-4043-bc5d-0f795046595e
+2023-05-14 00:11:13,109 - INFO - Sending response: {'response': 'Error checking status: Unexpected token \'<\', "<!doctype "... is not valid JSON'}
+2023-05-14 00:11:13,110 - INFO - 127.0.0.1 - - [14/May/2023 00:11:13] "POST /api/check_status HTTP/1.1" 200 -
+2023-05-14 00:23:17,835 - INFO - Submit request received: what is fascination
+2023-05-14 00:23:30,266 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://192.168.218.84:8001
+2023-05-14 00:23:30,267 - INFO - [33mPress CTRL+C to quit[0m
+2023-05-14 00:23:36,580 - INFO - Submit request received: what is fascination
+2023-05-14 00:23:36,582 - ERROR - Exception on /api/submit [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 63, in submit
+    if response.status_code != 200:
+NameError: name 'response' is not defined
+2023-05-14 00:23:36,595 - INFO - 127.0.0.1 - - [14/May/2023 00:23:36] "[35m[1mPOST /api/submit HTTP/1.1[0m" 500 -
+2023-05-14 00:23:49,141 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://192.168.218.84:8001
+2023-05-14 00:23:49,141 - INFO - [33mPress CTRL+C to quit[0m
+2023-05-14 00:24:02,261 - INFO - 127.0.0.1 - - [14/May/2023 00:24:02] "GET / HTTP/1.1" 200 -
+2023-05-14 00:24:06,736 - INFO - Submit request received: what is fascination
+2023-05-14 00:24:06,739 - ERROR - Exception on /api/submit [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 63, in submit
+    if response.status_code != 200:
+NameError: name 'response' is not defined
+2023-05-14 00:24:06,740 - INFO - 127.0.0.1 - - [14/May/2023 00:24:06] "[35m[1mPOST /api/submit HTTP/1.1[0m" 500 -
+2023-05-14 00:27:09,895 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://192.168.218.84:8001
+2023-05-14 00:27:09,896 - INFO - [33mPress CTRL+C to quit[0m
+2023-05-14 00:27:16,316 - INFO - Submit request received: what is fascination
+2023-05-14 00:27:26,318 - INFO - Submitting request to Google Script
+2023-05-14 00:27:38,371 - INFO - Response from Google Script: {"response":"Error checking status: Unexpected token '<', \"<!doctype \"... is not valid JSON"}
+2023-05-14 00:27:38,372 - INFO - Parsed request JSON: {'user_input': 'what is fascination'}
+2023-05-14 00:27:38,373 - INFO - Received response from process_request: {'response': 'Error checking status: Unexpected token \'<\', "<!doctype "... is not valid JSON'}
+2023-05-14 00:27:38,374 - INFO - Cache miss, storing result for: what is fascination
+2023-05-14 00:27:38,375 - INFO - 127.0.0.1 - - [14/May/2023 00:27:38] "POST /api/submit HTTP/1.1" 200 -
+2023-05-14 00:27:43,798 - INFO - Check status request received: 3f70b6f9-a5ab-48a8-863f-cf2245c75970
+2023-05-14 00:27:43,799 - INFO - Found completed request for UUID: 3f70b6f9-a5ab-48a8-863f-cf2245c75970
+2023-05-14 00:27:43,799 - INFO - Sending response: {'response': 'Error checking status: Unexpected token \'<\', "<!doctype "... is not valid JSON'}
+2023-05-14 00:27:43,801 - INFO - 127.0.0.1 - - [14/May/2023 00:27:43] "POST /api/check_status HTTP/1.1" 200 -
+2023-05-14 00:31:27,623 - INFO - Submit request received: what is fascination
+2023-05-14 00:31:27,624 - INFO - Cache hit for: what is fascination
+2023-05-14 00:31:27,625 - INFO - 127.0.0.1 - - [14/May/2023 00:31:27] "POST /api/submit HTTP/1.1" 200 -
+2023-05-14 00:31:57,264 - INFO - 127.0.0.1 - - [14/May/2023 00:31:57] "GET / HTTP/1.1" 200 -
+2023-05-14 00:32:07,911 - INFO - Submit request received: how to use fascination
+2023-05-14 00:32:17,926 - INFO - Submitting request to Google Script
+2023-05-14 00:32:29,977 - INFO - Response from Google Script: {"response":"Error checking status: Unexpected token '<', \"<!doctype \"... is not valid JSON"}
+2023-05-14 00:32:29,977 - INFO - Parsed request JSON: {'user_input': 'how to use fascination'}
+2023-05-14 00:32:29,979 - INFO - Received response from process_request: {'response': 'Error checking status: Unexpected token \'<\', "<!doctype "... is not valid JSON'}
+2023-05-14 00:32:29,980 - INFO - Cache miss, storing result for: how to use fascination
+2023-05-14 00:32:29,980 - INFO - 127.0.0.1 - - [14/May/2023 00:32:29] "POST /api/submit HTTP/1.1" 200 -
+2023-05-14 00:32:35,787 - INFO - Check status request received: 85878b3d-6c71-4edf-b1f9-df0ace1f028f
+2023-05-14 00:32:35,788 - INFO - Found completed request for UUID: 85878b3d-6c71-4edf-b1f9-df0ace1f028f
+2023-05-14 00:32:35,788 - INFO - Sending response: {'response': 'Error checking status: Unexpected token \'<\', "<!doctype "... is not valid JSON'}
+2023-05-14 00:32:35,789 - INFO - 127.0.0.1 - - [14/May/2023 00:32:35] "POST /api/check_status HTTP/1.1" 200 -
+2023-05-14 08:20:32,845 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://192.168.218.84:8001
+2023-05-14 08:20:32,846 - INFO - [33mPress CTRL+C to quit[0m
+2023-05-14 08:20:53,022 - INFO - Submit request received: how to use fascination
+2023-05-14 08:21:03,036 - INFO - Submitting request to Google Script
+2023-05-14 08:21:15,031 - INFO - Response from Google Script: {"response":"Error checking status: Unexpected token '<', \"<!doctype \"... is not valid JSON"}
+2023-05-14 08:21:15,031 - INFO - Parsed request JSON: {'user_input': 'how to use fascination'}
+2023-05-14 08:21:15,032 - INFO - Received response from process_request: {'response': 'Error checking status: Unexpected token \'<\', "<!doctype "... is not valid JSON'}
+2023-05-14 08:21:15,033 - INFO - Cache miss, storing result for: how to use fascination
+2023-05-14 08:21:15,034 - INFO - 127.0.0.1 - - [14/May/2023 08:21:15] "POST /api/submit HTTP/1.1" 200 -
+2023-05-14 08:21:20,794 - INFO - Check status request received: bfbda153-693b-4774-8c35-47788f3f2c64
+2023-05-14 08:21:20,795 - INFO - Found completed request for UUID: bfbda153-693b-4774-8c35-47788f3f2c64
+2023-05-14 08:21:20,795 - INFO - Sending response: {'response': 'Error checking status: Unexpected token \'<\', "<!doctype "... is not valid JSON'}
+2023-05-14 08:21:20,796 - INFO - 127.0.0.1 - - [14/May/2023 08:21:20] "POST /api/check_status HTTP/1.1" 200 -
+2023-05-14 08:42:53,626 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://192.168.218.84:8001
+2023-05-14 08:42:53,626 - INFO - [33mPress CTRL+C to quit[0m
+2023-05-14 08:43:03,654 - INFO - Submit request received: how to use fascination
+2023-05-14 08:43:03,839 - INFO - Received response from process_request: afcfe7fd-8cb4-4802-9ddd-5441e617445a
+2023-05-14 08:43:03,841 - INFO - Cache miss, storing result for: how to use fascination
+2023-05-14 08:43:03,842 - INFO - 127.0.0.1 - - [14/May/2023 08:43:03] "POST /api/submit HTTP/1.1" 200 -
+2023-05-14 08:43:08,853 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:43:08,853 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:43:08,874 - INFO - 127.0.0.1 - - [14/May/2023 08:43:08] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:43:14,177 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:43:14,178 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:43:14,180 - INFO - 127.0.0.1 - - [14/May/2023 08:43:14] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:43:18,857 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:43:18,857 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:43:18,858 - INFO - 127.0.0.1 - - [14/May/2023 08:43:18] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:43:24,159 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:43:27,513 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:43:27,519 - INFO - 127.0.0.1 - - [14/May/2023 08:43:27] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:43:28,862 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:43:28,862 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:43:28,864 - INFO - 127.0.0.1 - - [14/May/2023 08:43:28] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:43:34,172 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:43:34,172 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:43:34,173 - INFO - 127.0.0.1 - - [14/May/2023 08:43:34] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:43:38,851 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:43:38,852 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:43:38,853 - INFO - 127.0.0.1 - - [14/May/2023 08:43:38] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:43:44,165 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:43:44,166 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:43:44,167 - INFO - 127.0.0.1 - - [14/May/2023 08:43:44] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:43:48,856 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:43:48,857 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:43:48,858 - INFO - 127.0.0.1 - - [14/May/2023 08:43:48] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:43:54,169 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:43:54,170 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:43:54,173 - INFO - 127.0.0.1 - - [14/May/2023 08:43:54] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:43:58,855 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:44:02,854 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:44:02,861 - INFO - 127.0.0.1 - - [14/May/2023 08:44:02] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:44:04,154 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:44:04,155 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:44:04,156 - INFO - 127.0.0.1 - - [14/May/2023 08:44:04] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:44:08,854 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:44:08,854 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:44:08,856 - INFO - 127.0.0.1 - - [14/May/2023 08:44:08] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:44:14,164 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:44:14,165 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:44:14,169 - INFO - 127.0.0.1 - - [14/May/2023 08:44:14] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:44:18,853 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:44:18,854 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:44:18,855 - INFO - 127.0.0.1 - - [14/May/2023 08:44:18] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:44:24,160 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:44:24,160 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:44:24,162 - INFO - 127.0.0.1 - - [14/May/2023 08:44:24] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:44:28,859 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:44:28,860 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:44:28,862 - INFO - 127.0.0.1 - - [14/May/2023 08:44:28] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:44:34,160 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:44:34,160 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:44:34,161 - INFO - 127.0.0.1 - - [14/May/2023 08:44:34] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:44:38,858 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:44:38,858 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:44:38,870 - INFO - 127.0.0.1 - - [14/May/2023 08:44:38] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:44:44,172 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:44:44,172 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:44:44,173 - INFO - 127.0.0.1 - - [14/May/2023 08:44:44] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:44:48,865 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:44:48,866 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:44:48,868 - INFO - 127.0.0.1 - - [14/May/2023 08:44:48] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:44:54,166 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:44:54,166 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:44:54,169 - INFO - 127.0.0.1 - - [14/May/2023 08:44:54] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:44:58,860 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:44:58,860 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:44:58,862 - INFO - 127.0.0.1 - - [14/May/2023 08:44:58] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:45:04,162 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:45:04,163 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:45:04,164 - INFO - 127.0.0.1 - - [14/May/2023 08:45:04] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:45:08,856 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:45:08,857 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:45:08,860 - INFO - 127.0.0.1 - - [14/May/2023 08:45:08] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:45:14,160 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:45:14,160 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:45:14,164 - INFO - 127.0.0.1 - - [14/May/2023 08:45:14] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:45:18,855 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:45:18,856 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:45:18,857 - INFO - 127.0.0.1 - - [14/May/2023 08:45:18] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:45:24,166 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:45:24,166 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:45:24,168 - INFO - 127.0.0.1 - - [14/May/2023 08:45:24] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:45:28,854 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:45:28,855 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:45:28,856 - INFO - 127.0.0.1 - - [14/May/2023 08:45:28] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:45:34,157 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:45:34,158 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:45:34,160 - INFO - 127.0.0.1 - - [14/May/2023 08:45:34] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:45:38,856 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:45:38,857 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:45:38,859 - INFO - 127.0.0.1 - - [14/May/2023 08:45:38] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:45:44,165 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:45:44,166 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:45:44,168 - INFO - 127.0.0.1 - - [14/May/2023 08:45:44] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:45:48,849 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:45:48,849 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:45:48,851 - INFO - 127.0.0.1 - - [14/May/2023 08:45:48] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:45:54,166 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:45:54,167 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:45:54,168 - INFO - 127.0.0.1 - - [14/May/2023 08:45:54] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:45:58,848 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:45:58,849 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:45:58,850 - INFO - 127.0.0.1 - - [14/May/2023 08:45:58] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:46:04,159 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:46:04,159 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:46:04,161 - INFO - 127.0.0.1 - - [14/May/2023 08:46:04] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:46:08,859 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:46:08,860 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:46:08,861 - INFO - 127.0.0.1 - - [14/May/2023 08:46:08] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:46:14,173 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:46:14,174 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:46:14,187 - INFO - 127.0.0.1 - - [14/May/2023 08:46:14] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:46:18,853 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:46:18,853 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:46:18,855 - INFO - 127.0.0.1 - - [14/May/2023 08:46:18] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:46:24,159 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:46:24,160 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:46:24,164 - INFO - 127.0.0.1 - - [14/May/2023 08:46:24] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:46:28,864 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:46:28,865 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:46:28,866 - INFO - 127.0.0.1 - - [14/May/2023 08:46:28] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:46:34,174 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:46:34,175 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:46:34,177 - INFO - 127.0.0.1 - - [14/May/2023 08:46:34] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:46:38,856 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:46:38,856 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:46:38,856 - INFO - 127.0.0.1 - - [14/May/2023 08:46:38] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:46:44,176 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:46:44,177 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:46:44,179 - INFO - 127.0.0.1 - - [14/May/2023 08:46:44] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:46:48,851 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:46:48,851 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:46:48,853 - INFO - 127.0.0.1 - - [14/May/2023 08:46:48] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:46:54,164 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:46:54,165 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:46:54,167 - INFO - 127.0.0.1 - - [14/May/2023 08:46:54] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:46:58,864 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:46:58,865 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task = process_request.AsyncResult(user_uuid)
+NameError: name 'process_request' is not defined
+2023-05-14 08:46:58,867 - INFO - 127.0.0.1 - - [14/May/2023 08:46:58] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:47:04,157 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:47:04,157 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+NameError: name 'process_request' is not defined
+2023-05-14 08:47:04,168 - INFO - 127.0.0.1 - - [14/May/2023 08:47:04] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:47:08,854 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:47:08,854 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+NameError: name 'process_request' is not defined
+2023-05-14 08:47:08,867 - INFO - 127.0.0.1 - - [14/May/2023 08:47:08] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:47:14,171 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:47:14,171 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+NameError: name 'process_request' is not defined
+2023-05-14 08:47:14,172 - INFO - 127.0.0.1 - - [14/May/2023 08:47:14] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:47:18,863 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:47:18,863 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+NameError: name 'process_request' is not defined
+2023-05-14 08:47:18,864 - INFO - 127.0.0.1 - - [14/May/2023 08:47:18] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:47:24,172 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:47:24,173 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+NameError: name 'process_request' is not defined
+2023-05-14 08:47:24,176 - INFO - 127.0.0.1 - - [14/May/2023 08:47:24] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:47:28,856 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:47:28,857 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+NameError: name 'process_request' is not defined
+2023-05-14 08:47:28,859 - INFO - 127.0.0.1 - - [14/May/2023 08:47:28] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:47:34,165 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:47:34,167 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+NameError: name 'process_request' is not defined
+2023-05-14 08:47:34,169 - INFO - 127.0.0.1 - - [14/May/2023 08:47:34] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:47:38,852 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:47:38,853 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+NameError: name 'process_request' is not defined
+2023-05-14 08:47:38,854 - INFO - 127.0.0.1 - - [14/May/2023 08:47:38] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:47:44,169 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:47:44,170 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+NameError: name 'process_request' is not defined
+2023-05-14 08:47:44,171 - INFO - 127.0.0.1 - - [14/May/2023 08:47:44] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:47:48,851 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:47:48,851 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+NameError: name 'process_request' is not defined
+2023-05-14 08:47:48,853 - INFO - 127.0.0.1 - - [14/May/2023 08:47:48] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:47:54,168 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:47:54,168 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+NameError: name 'process_request' is not defined
+2023-05-14 08:47:54,181 - INFO - 127.0.0.1 - - [14/May/2023 08:47:54] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:47:58,856 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:47:58,857 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+NameError: name 'process_request' is not defined
+2023-05-14 08:47:58,859 - INFO - 127.0.0.1 - - [14/May/2023 08:47:58] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:48:04,167 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:48:04,168 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+NameError: name 'process_request' is not defined
+2023-05-14 08:48:04,170 - INFO - 127.0.0.1 - - [14/May/2023 08:48:04] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:48:08,851 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:48:08,851 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+NameError: name 'process_request' is not defined
+2023-05-14 08:48:08,853 - INFO - 127.0.0.1 - - [14/May/2023 08:48:08] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:48:14,159 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:48:14,159 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+NameError: name 'process_request' is not defined
+2023-05-14 08:48:14,161 - INFO - 127.0.0.1 - - [14/May/2023 08:48:14] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:48:18,859 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:48:18,860 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+NameError: name 'process_request' is not defined
+2023-05-14 08:48:18,861 - INFO - 127.0.0.1 - - [14/May/2023 08:48:18] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:48:24,162 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:48:24,163 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+NameError: name 'process_request' is not defined
+2023-05-14 08:48:24,164 - INFO - 127.0.0.1 - - [14/May/2023 08:48:24] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:48:28,856 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:48:28,856 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+NameError: name 'process_request' is not defined
+2023-05-14 08:48:28,859 - INFO - 127.0.0.1 - - [14/May/2023 08:48:28] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:48:34,175 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:48:34,175 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+NameError: name 'process_request' is not defined
+2023-05-14 08:48:34,176 - INFO - 127.0.0.1 - - [14/May/2023 08:48:34] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:48:38,851 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:48:38,851 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task_id = cache.get(user_uuid)  # Get the task ID from cache
+NameError: name 'process_request' is not defined
+2023-05-14 08:48:38,862 - INFO - 127.0.0.1 - - [14/May/2023 08:48:38] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:48:44,172 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:48:44,173 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task_id = cache.get(user_uuid)  # Get the task ID from cache
+NameError: name 'process_request' is not defined
+2023-05-14 08:48:44,175 - INFO - 127.0.0.1 - - [14/May/2023 08:48:44] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:48:48,850 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:48:48,851 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\D\documenti\AI\program24\web_app.py", line 99, in check_status
+    task_id = cache.get(user_uuid)  # Get the task ID from cache
+NameError: name 'process_request' is not defined
+2023-05-14 08:48:48,865 - INFO - 127.0.0.1 - - [14/May/2023 08:48:48] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:48:53,903 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://192.168.218.84:8001
+2023-05-14 08:48:53,904 - INFO - [33mPress CTRL+C to quit[0m
+2023-05-14 08:48:54,168 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:48:54,171 - INFO - 127.0.0.1 - - [14/May/2023 08:48:54] "POST /api/check_status HTTP/1.1" 200 -
+2023-05-14 08:48:58,849 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:48:58,850 - INFO - 127.0.0.1 - - [14/May/2023 08:48:58] "POST /api/check_status HTTP/1.1" 200 -
+2023-05-14 08:49:04,169 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:49:08,861 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:49:13,070 - INFO - Submit request received: how to use fascination
+2023-05-14 08:49:14,163 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:49:19,169 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:49:24,161 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:49:58,586 - INFO - 127.0.0.1 - - [14/May/2023 08:49:58] "POST /api/check_status HTTP/1.1" 200 -
+2023-05-14 08:49:58,592 - INFO - 127.0.0.1 - - [14/May/2023 08:49:58] "POST /api/check_status HTTP/1.1" 200 -
+2023-05-14 08:49:58,593 - INFO - 127.0.0.1 - - [14/May/2023 08:49:58] "POST /api/check_status HTTP/1.1" 200 -
+2023-05-14 08:49:58,593 - INFO - 127.0.0.1 - - [14/May/2023 08:49:58] "POST /api/check_status HTTP/1.1" 200 -
+2023-05-14 08:49:58,594 - INFO - 127.0.0.1 - - [14/May/2023 08:49:58] "POST /api/check_status HTTP/1.1" 200 -
+2023-05-14 08:49:58,637 - INFO - Received response from process_request: 5029cdaf-5a30-4804-b004-9026d47cd2d8
+2023-05-14 08:49:58,637 - INFO - Cache miss, storing result for: how to use fascination
+2023-05-14 08:49:58,638 - INFO - 127.0.0.1 - - [14/May/2023 08:49:58] "POST /api/submit HTTP/1.1" 200 -
+2023-05-14 08:49:58,911 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:49:58,912 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:49:58,912 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:49:58,913 - INFO - 127.0.0.1 - - [14/May/2023 08:49:58] "POST /api/check_status HTTP/1.1" 200 -
+2023-05-14 08:49:58,914 - INFO - Check status request received: 6f748bb6-b298-443d-9ffb-b223129116fe
+2023-05-14 08:49:58,914 - INFO - 127.0.0.1 - - [14/May/2023 08:49:58] "POST /api/check_status HTTP/1.1" 200 -
+2023-05-14 08:49:58,915 - INFO - 127.0.0.1 - - [14/May/2023 08:49:58] "POST /api/check_status HTTP/1.1" 200 -
+2023-05-14 08:49:58,917 - INFO - 127.0.0.1 - - [14/May/2023 08:49:58] "GET / HTTP/1.1" 200 -
+2023-05-14 08:49:58,918 - INFO - 127.0.0.1 - - [14/May/2023 08:49:58] "POST /api/check_status HTTP/1.1" 200 -
+2023-05-14 08:50:14,635 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://192.168.218.84:8001
+2023-05-14 08:50:14,635 - INFO - [33mPress CTRL+C to quit[0m
+2023-05-14 08:50:51,305 - INFO - Submit request received: how tro do hypnosis
+2023-05-14 08:50:51,347 - INFO - Received response from process_request: 8ad2d051-1fc5-4205-90fc-27c5161d2e39
+2023-05-14 08:50:51,348 - INFO - Cache miss, storing result for: how tro do hypnosis
+2023-05-14 08:50:51,351 - INFO - 127.0.0.1 - - [14/May/2023 08:50:51] "POST /api/submit HTTP/1.1" 200 -
+2023-05-14 08:50:56,371 - INFO - Check status request received: dfa5e47e-3d0d-4c64-a516-1d05b06eb215
+2023-05-14 08:50:56,383 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1845, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2137, in make_response
+    raise TypeError(
+TypeError: The view function for 'check_status' did not return a valid response. The function either returned None or ended without a return statement.
+2023-05-14 08:50:56,385 - INFO - 127.0.0.1 - - [14/May/2023 08:50:56] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:51:01,674 - INFO - Check status request received: dfa5e47e-3d0d-4c64-a516-1d05b06eb215
+2023-05-14 08:51:01,688 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1845, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2137, in make_response
+    raise TypeError(
+TypeError: The view function for 'check_status' did not return a valid response. The function either returned None or ended without a return statement.
+2023-05-14 08:51:01,689 - INFO - 127.0.0.1 - - [14/May/2023 08:51:01] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:51:06,366 - INFO - Check status request received: dfa5e47e-3d0d-4c64-a516-1d05b06eb215
+2023-05-14 08:51:11,680 - INFO - Check status request received: dfa5e47e-3d0d-4c64-a516-1d05b06eb215
+2023-05-14 08:51:11,920 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1845, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2137, in make_response
+    raise TypeError(
+TypeError: The view function for 'check_status' did not return a valid response. The function either returned None or ended without a return statement.
+2023-05-14 08:51:11,920 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1845, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2137, in make_response
+    raise TypeError(
+TypeError: The view function for 'check_status' did not return a valid response. The function either returned None or ended without a return statement.
+2023-05-14 08:51:11,921 - INFO - 127.0.0.1 - - [14/May/2023 08:51:11] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:51:11,922 - INFO - 127.0.0.1 - - [14/May/2023 08:51:11] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:51:16,672 - INFO - Check status request received: dfa5e47e-3d0d-4c64-a516-1d05b06eb215
+2023-05-14 08:51:16,683 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1845, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2137, in make_response
+    raise TypeError(
+TypeError: The view function for 'check_status' did not return a valid response. The function either returned None or ended without a return statement.
+2023-05-14 08:51:16,684 - INFO - 127.0.0.1 - - [14/May/2023 08:51:16] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -
+2023-05-14 08:51:21,372 - INFO - Check status request received: dfa5e47e-3d0d-4c64-a516-1d05b06eb215
+2023-05-14 08:51:21,384 - ERROR - Exception on /api/check_status [POST]
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 1845, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Python310\lib\site-packages\flask\app.py", line 2137, in make_response
+    raise TypeError(
+TypeError: The view function for 'check_status' did not return a valid response. The function either returned None or ended without a return statement.
+2023-05-14 08:51:21,385 - INFO - 127.0.0.1 - - [14/May/2023 08:51:21] "[35m[1mPOST /api/check_status HTTP/1.1[0m" 500 -

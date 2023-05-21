@@ -1,0 +1,37 @@
+import requests
+from google_sheets_helper import read_data_from_sheet
+
+sheet_id = "1MsUKGRrrBsr-MCQSpyrethObJZD7HpBO1uhz8CRygfI"
+
+def create_drupal_article(title, body, language_code, base_url, session_token):
+    headers = {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': session_token
+    }
+
+    data = {
+        'type': 'article',
+        'title': title,
+        'body': {'value': body},
+        'language': language_code
+    }
+
+    response = requests.post(f"{base_url}/entity/node", json=data, headers=headers)
+    return response.json()
+
+def create_articles_from_google_sheet():
+    # Set up your Drupal site URL, and the session token
+    base_url = "https://marcoparet.com/marcoparet_api"
+    session_token = "YOUR_SESSION_TOKEN"
+
+    # Read the data from the Google Sheet starting from row 2 to exclude headers
+    data = read_data_from_sheet(sheet_id, "Sheet1!A2:C")
+
+    # Iterate through the rows and create articles on your Drupal site
+    for row in data:
+        title, content, language_code = row
+        response = create_drupal_article(title, content, language_code, base_url, session_token)
+        print(f"Created article with id {response['nid']}")
+
+# Call the function to create articles
+create_articles_from_google_sheet()

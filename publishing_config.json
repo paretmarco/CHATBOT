@@ -1,0 +1,11 @@
+{
+    "drupal": {
+        "base_url": "https://www.marcoparet.com",
+        "api_endpoint": "marcoparet_api",
+        "username": "YOUR_DRUPAL_USERNAME",
+        "password": "YOUR_DRUPAL_PASSWORD"
+    },
+    "google_sheets": {
+        "sheet_id": "1MsUKGRrrBsr-MCQSpyrethObJZD7HpBO1uhz8CRygfI"
+    }
+}

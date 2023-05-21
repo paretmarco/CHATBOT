@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Immergiti nell'Universo del Dr. Paret: Attingi alla Saggezza di un Maestro Esperto</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="/static/main.js"></script>
+    <script src="/static/chatbot.js"></script>
+    <script src="/static/options.js"></script>
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <h1>
+            <img src="https://yt3.ggpht.com/FzQ0LPEsLV60T1LMu4DOC5tn7niVFGjvysjwYa5ezOj0OyJhrfjv-xr6ybvDMta9pNE62VnsrjI=s88-c-k-c0x00ffffff-no-rj-mo" alt="Dr. Paret" class="logo">
+            Tutorial System - Ask dr. Paret - Immergiti nell'Universo del Dr. Paret: Attingi alla Saggezza di un Maestro Esperto
+        </h1>
+        <div class="wrapper">
+            <div class="settings">
+                <form>
+                    <label for="query">Ask me. Wait 30 secs and you will receive a precise answer updated with specific informations from Dr. Paret:</label>
+                    <br>
+                    <textarea id="query" name="query" rows="4" cols="50"></textarea>
+                    <br><br>
+                    <input type="submit" value="Search">
+                    <br><br>
+                    <label for="max_tokens">Response length:</label>
+                    <input type="number" id="max_tokens" name="max_tokens" value="450" min="1">
+                    <label for="num_results">Number of results (top-k):</label>
+                    <input type="number" id="num_results" name="num_results" value="2" min="1">
+                    <br><br>
+                    <label>User personality:</label>
+                    <br>
+                    <div class="option-row" id="user_personality"></div>
+                    <br>
+                    <input type="text" placeholder="User additional input for user personality"><br><br>
+                    <label>Task:</label>
+                    <br>
+                    <div class="option-row" id="task"></div>
+                    <br>
+                    <input type="text" placeholder="User additional input for task"><br><br>
+                    <label>Format:</label>
+                    <br>
+                    <div class="option-row" id="format"></div>
+                    <br>
+                    <input type="text" placeholder="User additional input for format"><br><br>
+                    <label for="chatbot_max_tokens">Chatbot answer length in tokens:</label>
+                    <input type="number" id="chatbot_max_tokens" name="chatbot_max_tokens" value="300" min="1">
+                    <br><br>
+                    <label for="model">Model:</label>
+                    <select id="model" name="model">
+                        <option value="gpt-3.5-turbo">GPT-3.5-turbo</option>
+                        <option value="gpt-4">GPT-4</option>
+                    </select>
+                    <br><br>
+                </form>
+            </div>
+            <div class="results">
+                <h2>Retrieved Snippets</h2>
+                <div id="snippet_list">
+                    <ul id="snippets"></ul>
+                </div>
+                <h2>Chatbot Answer</h2>
+                <div id="chatbot_response"></div>
+                <div id="thinking" class="hidden">Thinking...</div>
+<!-- Add this code right below the <div id="chatbot_response"></div> line in search_page.html -->
+<h2>Edit and Correct Answer</h2>
+<textarea id="edited_answer" rows="10" cols="80"></textarea>
+<button id="save_edited_answer">Save Edited Answer</button>
+<h2>Final Answer</h2>
+<div id="final_answer"></div>
+    <label for="user_id">Conversation ID (if you want the answers to be consequential):</label>
+    <input type="text" id="user_id" name="user_id" value="OWNER">
+    <br><br><div id="messages"></div>
+<script>
+    var socket = io.connect('http://' + document.domain + ':5001');
+    socket.on('connect', function() {
+        console.log('Connected');
+    });
+    socket.on('my response', function(msg) {
+        console.log('Received: ' + msg.data);
+        // Append the message to the div
+        var messagesDiv = document.getElementById('messages');
+        var messageElement = document.createElement('p');
+        messageElement.textContent = msg.data;
+        messagesDiv.appendChild(messageElement);
+    });
+</script>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

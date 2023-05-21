@@ -1,0 +1,92 @@
+import requests
+import json
+import os
+from create_custom_prompt import create_custom_prompt
+
+with open('config.json') as config_file:
+    config = json.load(config_file)
+    author_personality = config['author_personality']
+    max_tokens = config['max_tokens']
+    num_results = config['num_results']
+
+# Use the author_personality variable in your program
+
+def load_draft_summary():
+    try:
+        with open("drafts/draft_summary.txt", "r", encoding="utf-8") as f:
+            return f.read().strip()
+    except FileNotFoundError:
+        print("draft_summary.txt not found.")
+        return ""
+
+# Load the draft summary
+draft_summary = load_draft_summary()
+
+def send_query_to_chatbot(query, summary):
+    chatbot_url = "http://127.0.0.1:5001/api/chatbot"
+    data = {
+        "user_input": query,
+        "max_tokens": 400,
+        "additional_context": summary
+    }
+    response = requests.post(chatbot_url, json=data)  # Send POST request to the chatbot
+    if response.status_code == 200:
+        json_data = response.json()
+        if 'response' in json_data:
+            print(f"Chatbot response received.")
+            print(f"Chatbot RESPONSE: {json_data['response']}")
+            return json_data["response"]
+        else:
+            print("Error: 'response' key is missing in the chatbot JSON data.")
+            return None
+    else:
+        print(f"Error in chatbot response: {response.status_code}")
+        return None
+
+def sanitize_filename(filename):
+    invalid_chars = {'/', '\\', ':', '*', '?', '<', '>', '|'}
+    sanitized_name = ''.join(c if c not in invalid_chars else '_' for c in filename)  # Replace invalid characters
+    return sanitized_name
+
+def process_queries():
+    input_file = os.path.join("book_created", "book_data.json")  # Input file path
+    output_file = os.path.join("book_created", "book.txt")  # Output file path
+    print(f"Input file: {input_file}")
+
+    if not os.path.exists(input_file):
+        print("Input file not found.")
+        return
+
+    with open(input_file, "r") as infile:
+        book_data = json.load(infile)  # Load book data
+
+        for index, record in enumerate(book_data):
+            query = record.get("chapter", "").strip()
+            print(f"Extracted chapter: '{query}'")
+            
+            if query:
+                print(f"Processing query: {query}")
+
+                # Send the query to the chatbot and get the response
+                chatbot_response = send_query_to_chatbot(f"Continue adding concepts to this text with no more than 50 words with an example about ###{query}### after the example write about ###{query}### A) an exercise to do divided step by step in no more than 40 words B) a witty conclusion C) write with conversational style D) use sometimes the first person.", draft_summary)
+
+                if chatbot_response:
+                    record["results"] = {
+                        "chatbot_response": chatbot_response
+                    }
+
+                    with open(output_file, "a", encoding="utf-8") as outfile:
+                        outfile.write(chatbot_response)
+                        outfile.write("\n\n")
+
+                    with open(input_file, "w") as jsonfile:
+                        json.dump(book_data, jsonfile, ensure_ascii=False, indent=2)
+
+                    print(f"JSON file updated with results for query {index + 1}.")
+            else:
+                print(f"Skipping empty query at index {index + 1}.")
+
+    print(f"Finished processing queries.")
+
+if __name__ == "__main__":
+    process_queries()

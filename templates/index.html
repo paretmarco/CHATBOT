@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Chatbot</h1>
+    <form id="chat-form">
+        <label for="userInput">Your question:</label>
+        <input type="text" id="userInput" name="userInput">
+        <button type="submit">Ask</button>
+    </form>
+    <div id="response"></div>
+<script>
+    $("#chat-form").submit(function(event) {
+        event.preventDefault();
+        const userInput = $("#userInput").val();
+
+        $.ajax({
+            url: "/api/submit",
+            type: "POST",
+            data: JSON.stringify({"user_input": userInput}),
+            contentType: "application/json",
+            success: function(data) {
+                if (data.status === 'submitted') {
+                    const uuid = data.uuid;
+                    // Poll the server every 5 seconds to check for the status of the response
+                    const checkStatusInterval = setInterval(function() {
+                        $.ajax({
+                            url: "/api/check_status",
+                            type: "POST",
+                            data: JSON.stringify({uuid: uuid}),
+                            contentType: "application/json",
+                            success: function(statusData) {
+                                if (statusData.status === 'completed') {
+                                    $("#response").text(statusData.response);
+                                    clearInterval(checkStatusInterval);
+                                }
+                            }
+                        });
+                    }, 5000);
+                } else {
+                    $("#response").text(data.response);
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>

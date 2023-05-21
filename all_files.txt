@@ -1,22 +1,110 @@
-File: app.py
+File: chunk_to_smooth.py
+import json
+import logging
+
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+config_file_path = "config.json"
+
+with open(config_file_path, 'r') as config_file:
+    config = json.load(config_file)
+
+input_file_path = config["input_file"]
+output_file_path = "book_created/combined_output.json"
+
+chunks = []
+chapter_counter = 1
+
+def is_title(line):
+    return line.startswith("#") and line.endswith("#\n") and len(line.strip()) > 1
+
+with open(input_file_path, 'r') as input_file:
+    line_buffer = []
+
+    for line in input_file:
+        if is_title(line) and line_buffer:
+            chunks.append(" ".join(line_buffer))
+            line_buffer = []
+
+        if is_title(line):
+            chunks.append(f"#TITLE{chapter_counter}")
+            chapter_counter += 1
+            chunks.append(line.strip())
+        else:
+            line_buffer.append(line.strip())
+
+    if line_buffer:
+        chunks.append(" ".join(line_buffer))
+
+with open(output_file_path, 'w') as output_file:
+    json.dump(chunks, output_file)
+
+logging.info(f'JSON file created: {output_file_path}')
+
+with open(config_file_path, 'r') as config_file:
+    config_data = json.load(config_file)
+
+config_data["json_file"] = output_file_path
+
+with open(config_file_path, 'w') as config_file:
+    json.dump(config_data, config_file)
+
+logging.info(f'Config file updated: {config_file_path}')
+
+File: query_processor_smooth.py
+import json
+import logging
 import os
-from flask import Flask, render_template, send_from_directory
-from flask_cors import CORS
+from chatbot import process_chatbot_request
 
-app = Flask(__name__)
-CORS(app)
+# Configure logging settings
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-@app.route('/')
-def index():
-    return render_template('search_page.html')
+# Load input chunks from a JSON file
+def load_input_chunks(input_file):
+    with open(input_file, "r") as infile:
+        return json.load(infile)
 
-@app.route('/static/<path:path>')
-def send_static(path):
-    return send_from_directory('static', path)
+# Write output chunks in a .txt file
+def write_output_chunk(chunk, response, output_file):
+    with open(output_file, "a") as outfile:
+        outfile.write(response)
+        outfile.write("\n\n")
 
-if __name__ == '__main__':
-    host = os.environ.get("FLASK_HOST", "127.0.0.1")
-    app.run(host=host, debug=True, port=5002)
+# Load configuration from config.json
+with open('config.json', 'r') as config_file:
+    config = json.load(config_file)
+
+input_file = config["json_file"]
+output_file = config["input_file"]
+additional_context = config["additional_context"]
+
+# Load chunks from input file
+chunks = load_input_chunks(input_file)
+
+last_chunk = None
+for chunk in chunks:
+    if chunk.startswith("#") or chunk.startswith("TITLE") or not chunk.strip():  # Skip writing TITLE and treat blank records like records starting with "#".
+        if not chunk.startswith("#TITLE"):
+            write_output_chunk(chunk, chunk, output_file)
+    else:
+        if last_chunk and last_chunk.startswith("#") and not last_chunk.strip():
+            user_input = f'Continua "{last_chunk}" utilizzando questo testo (###{chunk}###) ed aggiungendo spunti interessanti'
+        else:
+            user_input = f"Parafrasa e scrivi con lo stile di Victor Hugo: ###{chunk}### aggiungi spunti interessanti e se ci sono esercizi scrivili in fondo per punti."
+        
+        # Use the author_personality variable from the config
+        author_personality = config['author_personality']
+        max_tokens = config['max_tokens']
+
+        # Send the request to the chatbot and get the response
+        response = process_chatbot_request(user_input, max_tokens, author_personality, additional_context)
+        write_output_chunk(chunk, response, output_file)
+    
+    last_chunk = chunk
+
+# Log completion of the task
+logging.info(f"Task completed: Paraphrased chunks are saved in '{output_file}'")
 
 File: chatbot.py
 import os
@@ -28,11 +116,17 @@ import logging
 import re
 from flask_cors import CORS
 
-
 logging.basicConfig(level=logging.INFO)
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
+
+# Load default values from config.json
+with open("config.json") as config_file:
+    config = json.load(config_file)
+
+default_max_tokens = config["max_tokens"]
+default_author_personality = config["author_personality"]
 
 # per sentenze complete
 def is_complete_sentence(sentence):
@@ -76,21 +170,17 @@ def process_chatbot_request(user_input, max_tokens, user_personality, additional
     if not is_complete_sentence(user_input):
         user_message_content = f"Please complete the following sentence: {user_input}. To answer, consider: {context}"
 
-    # Truncate the context if necessary
-    truncated_context = context[:max_tokens - len(user_message_content) - 100]  # reserve some tokens for the response
+    # Calculate the remaining tokens available for the messages
+    available_tokens = 4097 - max_tokens - 100  # reserve some tokens for the response
 
-    # Find the last complete sentence in the truncated context
-    delimiters = [".", "!", "?"]
-    last_delimiter_index = max([truncated_context.rfind(d) for d in delimiters])
+    # Truncate the user_message_content and context if necessary
+    user_message_content = user_message_content[:available_tokens // 2]
+    context = context[:available_tokens // 2]
 
-    if last_delimiter_index > 0:
-        truncated_context = truncated_context[:last_delimiter_index + 1]
-
-    # Create the message sequence, starting with the system message (user_personality)
-    # followed by assistant's message (additional_context) and user's updated message (user_message_content)
+    # Create the message sequence
     messages = [
         {"role": "system", "content": user_personality},
-        {"role": "assistant", "content": additional_context + " " + truncated_context},
+        {"role": "assistant", "content": additional_context + " " + context},
         {"role": "user", "content": user_message_content + " please use and adapt this material for your answer "}
     ]
 
@@ -130,8 +220,8 @@ def chatbot():
     try:
         data = request.json
         user_input = data["user_input"]
-        max_tokens = data["max_tokens"]
-        user_personality = data.get("user_personality", "You are writing a promotional article.")
+        max_tokens = data.get("max_tokens", default_max_tokens)
+        user_personality = data.get("user_personality", default_author_personality)
         additional_context = data["additional_context"]
 
         logging.info(f"Received chatbot API request with user_input: {user_input}")
@@ -167,224 +257,3 @@ def prev_conversations():
 if __name__ == "__main__":
     host = os.environ.get("FLASK_HOST", "127.0.0.1")  # Add this line to get the host value
     app.run(host=host, port=5001)
-File: Dockerfile
-FROM python:3.9-slim
-
-WORKDIR /app
-
-COPY config.py ./
-
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
-
-COPY index/ index/
-
-COPY . .
-
-CMD ["sh", "-c", "exec python search_snippets.py & exec python chatbot.py & exec python app.py"]
-
-File: docker-compose.yml
-services:
-  app:
-    build: .
-    environment:
-      - OPENAI_API_KEY=${OPENAI_API_KEY}
-      - SEARCH_URL=http://app:5000/api/search
-      - FLASK_HOST=0.0.0.0
-    ports:
-      - "5000:5000"
-      - "5001:5001"
-      - "8000:5002"
-
-
-
-
-File: config.py
-import os
-
-OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
-
-File: templates/search_page.html
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Search Snippets</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="/static/styles.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="/static/main.js"></script>
-    <script src="/static/options.js"></script>
-</head>
-<body>
-    <div id="container">
-        <h1>Search Snippets</h1>
-        <div class="wrapper">
-            <div class="settings">
-                <form>
-                    <label for="query">Enter your query:</label>
-                    <br>
-                    <textarea id="query" name="query" rows="4" cols="50"></textarea>
-                    <br><br>
-                    <input type="submit" value="Search">
-                    <br><br>
-                    <label for="max_tokens">Response length:
-
-
-</label>
-                    <input type="number" id="max_tokens" name="max_tokens" value="300" min="1">
-                    <label for="num_results">Number of results (top-k):</label> 
-<input type="number" id="num_results" name="num_results" value="1" min="1">
-                    <br><br>
-                    <label>User personality:</label>
-                    <br>
-                    <div class="option-row" id="user_personality"></div>
-                    <br>
-                    <input type="text" placeholder="User additional input for user personality"><br><br>
-                    <label>Task:</label>
-                    <br>
-                    <div class="option-row" id="task"></div>
-                    <br>
-                    <input type="text" placeholder="User additional input for task"><br><br>
-                    <label>Format:</label>
-                    <br>
-                    <div class="option-row" id="format"></div>
-                    <br>
-                    <input type="text" placeholder="User additional input for format"><br><br>
-                    <label for="chatbot_max_tokens">Chatbot answer length in tokens:</label>
-                    <input type="number" id="chatbot_max_tokens" name="chatbot_max_tokens" value="50" min="1">
-                    <br><br>
-                </form>
-            </div>
-            <div class="results">
-                <h2>Retrieved Snippets</h2>
-                <div id="snippet_list">
-                    <ul id="snippets"></ul>         
-</div>
-                <h2>Chatbot Answer</h2>
-                <div id="chatbot_response"></div>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
-
-
-
-
-
-
-File: static/main.js
-// main.js
-
-// Function to load previous conversations
-function loadPreviousConversations() {
-    $.ajax({
-        url: "/load_previous_conversations",
-        type: "GET",
-        dataType: "json",
-        success: function(response) {
-            const previousConversations = response.previous_conversations;
-            $("#previous_conversations").html(previousConversations);
-        }
-    });
-}
-
-// Function to load search options
-function loadSearchOptions() {
-  fetch("templates/search_options.html")
-    .then((response) => response.text())
-    .then((html) => {
-      $("#search_page_options").html(html);
-    });
-}
-
-// Document ready function
-$(document).ready(function() {
-  // Load search options
-  loadSearchOptions();
-
-  // Load previous conversations on page load
-  loadPreviousConversations();
-
-  // Form submit event handler
-  $("form").submit(function(event) {
-    event.preventDefault();
-        const formData = new FormData(this);
-        const query = formData.get("query");
-        const max_tokens = parseInt(formData.get("max_tokens"));
-        const user_personality = formData.get("user_personality");
-        const task = formData.get("task");
-        const format = formData.get("format");
-        const additional_context = task + " " + format;
-
-        // Search for relevant snippets
-        $.ajax({
-            url: "/search",
-            type: "POST",
-            data: formData,
-            processData: false,
-            contentType: false,
-            dataType: "json",
-            success: function(response) {
-                const snippets = response.snippets;
-                let resultsHTML = '<ol>';
-                snippets.forEach(snippet => {
-                    resultsHTML += `<li>${snippet.response}</li>`;
-                });
-                resultsHTML += '</ol>';
-                $("#results").html(resultsHTML);
-            }
-        });
-
-        // Get the chatbot's response
-        $.ajax({
-            url: "http://localhost:5001/api/chatbot",
-            type: "POST",
-            contentType: "application/json",
-            dataType: "json",
-            data: JSON.stringify({
-                user_input: query,
-                max_tokens: max_tokens,
-                user_personality: user_personality,
-                additional_context: additional_context
-            }),
-            success: function(response) {
-                $("#chatbot_response").html(response.response);
-            }
-        });
-    });
-});
-
-File: templates/search_page_options.html
-<form>
-    <label for="query">Enter your query:</label>
-    <br>
-    <textarea id="query" name="query" rows="4" cols="50"></textarea>
-    <br><br>
-    <input type="submit" value="Search">
-    <br><br>
-    <label for="max_tokens">Response length:</label>
-    <input type="number" id="max_tokens" name="max_tokens" value="300" min="1">
-    <label for="num_results">Number of results (top-k):</label>
-    <input type="number" id="num_results" name="num_results" value="1" min="1">
-    <br><br>
-    <label>User personality:</label>
-    <br>
-    <div class="option-row" id="user_personality"></div>
-    <br>
-    <input type="text" placeholder="User additional input for user personality"><br><br>
-    <label>Task:</label>
-    <br>
-    <div class="option-row" id="task"></div>
-    <br>
-    <input type="text" placeholder="User additional input for task"><br><br>
-    <label>Format:</label>
-    <br>
-    <div class="option-row" id="format"></div>
-    <br>
-    <input type="text" placeholder="User additional input for format"><br><br>
-    <label for="chatbot_max_tokens">Chatbot answer length in tokens:</label>
-    <input type="number" id="chatbot_max_tokens" name="chatbot_max_tokens" value="50" min="1">
-    <br><br>
-</form>
-

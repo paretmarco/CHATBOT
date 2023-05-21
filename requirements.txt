@@ -1,6 +1,16 @@
 Flask==2.1.1
 flask-cors
+pinecone-client
 gunicorn==20.1.0
 openai==0.27.0
 requests==2.27.1
-llama_index
+llama-index==0.5.13.post1
+transformers
+langchain==0.0.138
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
+google-api-python-client
+gunicorn==20.1.0
+Flask-Caching
+redis>=3.5.3

@@ -1,0 +1,80 @@
+import os
+import re
+import openai
+import logging
+from langdetect import detect
+from langcodes import Language
+from transformers import GPT2Tokenizer
+from retry import retry
+
+logging.basicConfig(level=logging.INFO)
+
+tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
+
+from config import OPENAI_API_KEY
+
+openai.api_key = OPENAI_API_KEY
+
+@retry(tries=5, delay=60, backoff=2)
+def adapt_chunk_transitions(chunk1, chunk2, model="gpt-3.5-turbo", temperature=0.2):
+    try:
+        response = openai.ChatCompletion.create(
+            model=model,
+            messages=[
+                {"role": "system", "content": "You are ChatGPT, a large language model trained by OpenAI. Make a smooth transition between these two texts."},
+                {"role": "user", "content": f"Write in the following language: {language_name}. Merge the end of this First text: ###{chunk1}### with the begin of this Second text.: ###{chunk2}###. "}
+            ],
+            temperature=temperature
+        )
+        return response.choices[0].message['content'].strip()
+    except openai.error.RateLimitError as e:
+        logging.warning("Rate limit error, retrying: " + str(e))
+        raise
+    except Exception as e:
+        logging.error("Unexpected error: " + str(e))
+        return "Error: Unable to adapt chunk transitions."
+
+input_dir = "C:/D/documenti/AI/program24/chunker_processed_transcripts"
+output_dir = "C:/D/documenti/AI/program24/chunker_merged_transcripts"
+
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
+
+input_files = sorted(os.listdir(input_dir), key=lambda x: int(re.findall(r'\d+', x)[0]))
+
+for i in range(len(input_files) - 1):
+    file1 = input_files[i]
+    file2 = input_files[i + 1]
+
+    with open(os.path.join(input_dir, file1), "r", encoding="utf-8") as f1:
+        chunk1 = f1.read()
+
+    with open(os.path.join(input_dir, file2), "r", encoding="utf-8") as f2:
+        chunk2 = f2.read()
+
+    # Detect language from the first 100 characters of the chunk
+    first_characters = chunk1[:100]
+    language_code = detect(first_characters)
+    language_name = Language.make(language=language_code).display_name()  # Convert language code to full language name
+    logging.info(f"Detected language: {language_name}")  # Log detected language
+
+    # Process the end of chunk1 and the beginning of chunk2
+    merged_adapted = adapt_chunk_transitions(chunk1, chunk2)
+
+    # Split the merged_adapted string into two parts at the center
+    center = len(merged_adapted) // 2
+    chunk1_modified = chunk1.strip() + " " + merged_adapted[:center]
+    chunk2_modified = merged_adapted[center:] + " " + chunk2.strip()
+
+    # Save the modified chunks
+    output_file1 = file1.replace(".txt", "_modified.txt")
+    output_file2 = file2.replace(".txt", "_modified.txt")
+
+    with open(os.path.join(output_dir, output_file1), "w", encoding="utf-8") as f1:
+        f1.write(chunk1_modified)
+
+    with open(os.path.join(output_dir, output_file2), "w", encoding="utf-8") as f2:
+        f2.write(chunk2_modified)
+
+    print(f"Processed {file1} and {file2}")
+

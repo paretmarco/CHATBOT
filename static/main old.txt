@@ -1,0 +1,138 @@
+// main.js
+
+$(document).ready(function () {
+    $("form").on("submit", function (e) {
+        e.preventDefault();
+
+        // Show the 'thinking' message
+        $("#thinking").removeClass("hidden");
+
+        // Retrieve search snippets and display them
+        const query = $("#query").val();
+        const num_results = $("#num_results").val();
+        $.post("/api/search", { query: query, num_results: num_results }, function (data) {
+            const snippets = data.response;
+            let snippetsHTML = "";
+            snippets.forEach((snippet, index) => {
+                snippetsHTML += `<li>${snippet.response}</li>`;
+            });
+            $("#snippets").html(snippetsHTML);
+        });
+
+        // Simulate slow chatbot response
+        setTimeout(function () {
+            // Hide the 'thinking' message
+            $("#thinking").addClass("hidden");
+
+            // Display chatbot response
+            const chatbotResponse = "This is the chatbot's response. Replace this with the actual response.";
+            $("#chatbot_response").html(chatbotResponse);
+        }, 30000); // 30 seconds
+    });
+});
+
+
+// Function to load previous conversations
+function loadPreviousConversations() {
+    $.ajax({
+        url: "/load_previous_conversations",
+        type: "GET",
+        dataType: "json",
+        success: function(response) {
+            const previousConversations = response.previous_conversations;
+            $("#previous_conversations").html(previousConversations);
+        }
+    });
+}
+// Function to save to google sheet
+function saveEditedAnswerToSheet(editedAnswer) {
+    $.ajax({
+        url: "/save_edited_answer",
+        type: "POST",
+        data: {
+            edited_answer: editedAnswer
+        },
+        success: function(response) {
+            alert(response.message);
+        },
+        error: function() {
+            alert("An error occurred while saving the edited answer.");
+        }
+    });
+}
+// Function to load search options
+function loadSearchOptions() {
+  fetch("templates/search_options.html")
+    .then((response) => response.text())
+    .then((html) => {
+      $("#search_page_options").html(html);
+    });
+}
+
+// Document ready function
+$(document).ready(function() {
+  // Load search options
+  loadSearchOptions();
+
+  // Load previous conversations on page load
+  loadPreviousConversations();
+
+  // Form submit event handler
+  $("form").submit(function(event) {
+    event.preventDefault();
+        const formData = new FormData(this);
+        const query = formData.get("query");
+        const max_tokens = parseInt(formData.get("max_tokens"));
+        const user_personality = formData.get("user_personality");
+        const task = formData.get("task");
+        const format = formData.get("format");
+        const additional_context = task + " " + format;
+// Add this code right below the // Form submit event handler comment in main.js
+$("#save_edited_answer").click(function() {
+    const editedAnswer = $("#edited_answer").val();
+    $("#final_answer").html(editedAnswer);
+    saveEditedAnswerToSheet(editedAnswer);
+});
+
+        // Get the selected model from the dropdown
+        const model = $("#model").val();
+
+        // Search for relevant snippets
+        $.ajax({
+            url: "/search",
+            type: "POST",
+            data: formData,
+            processData: false,
+            contentType: false,
+            dataType: "json",
+            success: function(response) {
+                const snippets = response.snippets;
+                let resultsHTML = '<ol>';
+                snippets.forEach(snippet => {
+                    resultsHTML += `<li>${snippet.response}</li>`;
+                });
+                resultsHTML += '</ol>';
+                $("#results").html(resultsHTML);
+            }
+        });
+
+        // Get the chatbot's response
+        $.ajax({
+            url: `http://${window.location.hostname}:5001/api/chatbot`,
+            type: "POST",
+            contentType: "application/json",
+            dataType: "json",
+            data: JSON.stringify({
+                user_input: query,
+                max_tokens: max_tokens,
+                user_personality: user_personality,
+                additional_context: additional_context,
+                model: model
+            }),
+            success: function(response) {
+                $("#chatbot_response").html(response.response);
+                $("#edited_answer").val(response.response);
+            }
+        });
+    });
+});

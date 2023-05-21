@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background: #f8f8f8;
 }
 
 #container {
@@ -10,15 +11,31 @@ body {
     padding: 20px;
 }
 
+header {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+h1 {
+    margin-left: 20px;
+    color: #333;
+    font-size: 1.5em;
+}
+
 .wrapper {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    padding-top: 20px;
 }
 
 .settings {
     flex: 1;
     padding: 20px;
+    border-right: 1px solid #e5e5e5;
 }
+
 
 .results {
     flex: 1;
@@ -36,7 +53,6 @@ body {
     display: block;
     margin-bottom: 10px;
 }
-
 
 .option-row > div {
     flex: 1;
@@ -88,7 +104,42 @@ body {
     }
 }
 
-/* Add a new CSS rule for the titles */
 h1, h2 {
     color: blue;
+}
+
+/* New CSS rules */
+h1 {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 15px;
+}
+
+.hidden {
+    display: none;
+}
+
+#thinking {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #777;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+@keyframes scroll {
+  0% { transform: translateY(0); }
+  80% { transform: translateY(-80%); }
+}
+
+.scrolling-text {
+  display: flex;
+  flex-direction: column;
+  animation: scroll 2s linear infinite;
+  line-height: 1.5em;
+  height: 6em;  /* height of the visible area */
+  overflow: hidden;
 }

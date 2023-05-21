@@ -1,14 +1,20 @@
-file_list = ["app.py", "chatbot.py", "Dockerfile", "docker-compose.yml", "config.py", "templates/search_page.html", "static/main.js", "templates/search_page_options.html"]  # Add or modify the file names in this list
+import pyperclip
 
-output_file = "all_files.txt"
+file_list = ["templates/simple_search_page.html", "static/styles.css"]  # Add or modify the file names in this list
 
-with open(output_file, "w") as outfile:
+def combina_contenuti_file(file_list):
+    combined_content = f"Ecco qui i file: {', '.join(file_list)}\n\n"
     for file_name in file_list:
         try:
-            with open(file_name, "r") as infile:
+            with open(file_name, "r", encoding='utf-8') as infile:
                 file_content = infile.read()
-                outfile.write(f"File: {file_name}\n{file_content}\n")
+                combined_content += f"File: {file_name}\n{file_content}\n\n"
         except FileNotFoundError:
-            print(f"Error: {file_name} not found.")
+            print(f"Errore: {file_name} non trovato.")
+    return combined_content
 
-print(f"Combined content of files written to {output_file}")
+if __name__ == "__main__":
+    contenuto_combinato = combina_contenuti_file(file_list)
+    pyperclip.copy(contenuto_combinato)
+    print("Contenuto combinato dei file copiato con successo nel buffer di Windows!")
+

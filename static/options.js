@@ -6,7 +6,7 @@ $(document).ready(function () {
 
 function loadOptions(elementId, fileName) {
     $.ajax({
-        url: 'http://127.0.0.1:5002/static/' + fileName,
+        url: window.location.origin + '/static/' + fileName,
         dataType: 'text',
         success: function (data) {
             var optionsArray = data.split('\n');

@@ -1,0 +1,37 @@
+from flask import Flask, render_template, request, jsonify
+import requests
+from flask_caching import Cache
+import redis
+
+app = Flask(__name__)
+cache = Cache(app, config={'CACHE_TYPE': 'RedisCache', 'CACHE_REDIS_URL': 'redis://redis:6379/0'})
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/chat', methods=['POST'])
+def chat():
+    userInput = request.form.get('userInput')
+
+    app_script_url = "https://script.google.com/macros/s/AKfycbxhJkk6DMNTrhWpGisTMKkcNVPoVeGSg3iUUctRPr66KEzlFVoOXhNg8nLMGb5zJ4U8gg/exec"
+
+    # Define cache_key for the current request
+    cache_key = f"{userInput}"
+
+    # Attempt to retrieve cached response
+    cached_response = cache.get(cache_key)
+
+    # If cached_response is found, return it
+    if cached_response is not None:
+        chatbotResponse = cached_response
+    else:
+        response = requests.post(app_script_url, json={"user_input": userInput})
+        chatbotResponse = response.text
+        # Cache the response for a custom duration (e.g., 1 day = 86400 seconds)
+        cache.set(cache_key, chatbotResponse, timeout=None)
+
+    return jsonify({'response': chatbotResponse})
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=8001)

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Immergiti nell'Universo del Dr. Paret: Attingi alla Saggezza di un Maestro Esperto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="/static/main.js"></script>
+    <script src="/static/chatbot.js"></script>
+    <script src="/static/options.js"></script>
+</head>
+<body>
+    <div id="container">
+        <h1>
+            <img src="https://yt3.ggpht.com/FzQ0LPEsLV60T1LMu4DOC5tn7niVFGjvysjwYa5ezOj0OyJhrfjv-xr6ybvDMta9pNE62VnsrjI=s88-c-k-c0x00ffffff-no-rj-mo" alt="Dr. Paret" class="logo">
+            Ask dr. Paret - Immergiti nell'Universo del Dr. Paret: Attingi alla Saggezza di un Maestro Esperto. TUTORIAL SYSTEM.
+        </h1>
+        <div class="wrapper">
+            <div class="settings">
+                <form>
+                    <label for="query">Ask me. Wait 30 secs and you will receive a precise answer updated with specific informations from Dr. Paret:</label>
+                    <br>
+                    <textarea id="query" name="query" rows="4" cols="50"></textarea>
+                    <br><br>
+                    <input type="submit" value="Search">
+                    <br><br>
+<label for="max_tokens">Response length:</label>
+<input type="range" id="max_tokens" name="max_tokens" min="50" max="900" value="450">
+<span id="slider_value"></span>
+                    <br><br>
+                    <input type="hidden" id="num_results" name="num_results" value="2">
+                    <input type="hidden" id="chatbot_max_tokens" name="chatbot_max_tokens" value="300">
+                    <input type="hidden" id="model" name="model" value="gpt-4">
+                    <input type="hidden" id="user_personality" name="user_personality">
+                    <input type="hidden" id="task" name="task">
+                    <input type="hidden" id="format" name="format">
+                </form>
+            </div>
+            <div class="results">
+                <h2>Retrieved Snippets</h2>
+                <div id="snippet_list">
+                    <ul id="snippets"></ul>
+                </div>
+                <h2>Chatbot Answer</h2>
+                <div id="chatbot_response"></div>
+                <div id="thinking" class="hidden">Thinking...</div>
+                <h2>Edit and Correct Answer</h2>
+                <textarea id="edited_answer" rows="10" cols="80"></textarea>
+                <button id="save_edited_answer">Save Edited Answer</button>
+                <h2>Final Answer</h2>
+                <div id="final_answer"></div>
+                <label for="user_id">Conversation ID (if you want the answers to be consequential):</label>
+                <input type="text" id="user_id" name="user_id" value="OWNER">
+                <br><br>
+            </div>
+        </div>
+    </div>
+<script>
+window.onload = function(){
+    const slider = document.getElementById("max_tokens");
+    const sliderValue = document.getElementById("slider_value");
+
+    // Display the default slider value
+    sliderValue.innerHTML = slider.value;
+
+    // Update the current slider value each time the slider is moved
+    slider.oninput = function() {
+        sliderValue.innerHTML = this.value;
+    }
+}
+</script>
+</body>
+</html>

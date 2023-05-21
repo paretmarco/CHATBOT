@@ -1,0 +1,38 @@
+def load_keywords():
+    try:
+        with open("draft/keyword.txt", "r", encoding="utf-8") as f:
+            return [kw.strip() for kw in f.readlines()]
+    except FileNotFoundError:
+        print("keyword.txt not found.")
+        return []
+
+# Load keywords from the file
+keywords = load_keywords()
+
+categories = {
+    "Sostanza o essenza": "Che cos'è {keyword}?",
+    "Quantità": "Quanto è diffuso {keyword}?",
+    "Qualità": "Quali sono le caratteristiche principali di {keyword}?",
+    "Relazione": "In che modo {keyword} si relaziona con gli altri concetti nel campo?",
+    "Azione": "Quali azioni sono coinvolte in {keyword}?",
+    "Sofferenza": "Quali sfide o problemi possono sorgere con {keyword}?",
+    "Luogo": "Dove si applica o si pratica {keyword}?",
+    "Tempo": "Quando è stato introdotto o scoperto {keyword}?",
+    "Abito": "Quali sono le abitudini o le pratiche associate a {keyword}?",
+    "Posizione": "In che modo {keyword} si posiziona all'interno del contesto generale?"
+}
+
+def generate_questions(keyword):
+    questions = []
+    for category, question_template in categories.items():
+        question = question_template.format(keyword=keyword)
+        questions.append(question)
+    return questions
+
+# Generate questions for each keyword and print them
+for keyword in keywords:
+    print(f"Domande per {keyword}:")
+    questions = generate_questions(keyword)
+    for question in questions:
+        print(f"  {question}")
+    print("\n")
