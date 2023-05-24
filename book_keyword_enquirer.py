@@ -1,3 +1,4 @@
+# BOOK PROCESSING - THIS FILE IS FOR EXTRACTING RELEVANT KEYWORDS
 import openai
 import os
 from config import OPENAI_API_KEY
@@ -25,23 +26,22 @@ keywords = load_keywords()
 target_public = load_target_public()
 
 categories = {
-    "Mito o Leggenda": "Scegliendo tra queste parole: {keyword} di quali miti o leggendo possiamo parlare?",
-    "Storia": "Partendo da {keyword} Quale è la storia più interessante che possiamo dire su alcuni dei seguenti concetti: {keyword}?",
-    "Pratica": "una pratica curiosa relativa a {keyword}?",
-    "Estetica": "cosa significa {keyword} a livello dell'estetica?",
-    "Esercizio": "Sei un chatbot che crea domande relative a quali di questi temi è più interessante parlare: {keyword}?",
-    "Scienze": "Cosa dicono le scienze su {keyword}?",
-    "Personaggi": "Analizza {keyword} e crea domande su personaggi famosi al riguardo?",
-    "Collegamenti": "Che collegamenti sono importanto per i seguenti concetti: {keyword}?",
-    "Citazione": "Quale è una citazione possibile relativa ad uno dei seguenti concetti: {keyword}?",
-    "Emozione": "Quali sono le emozioni collegate ad uno dei seguenti concetti: {keyword} e come vanno vissute?"
+    "Sostanza o essenza": "Che cos'è {keyword}?",
+    "Quantità": "Quanto è diffuso {keyword}?",
+    "Qualità": "Quali sono le caratteristiche principali di {keyword}?",
+    "Relazione": "In che modo {keyword} si relaziona con gli altri concetti nel campo?",
+    "Azione": "Quali azioni sono coinvolte in {keyword}?",
+    "Sofferenza": "Quali sfide o problemi possono sorgere con {keyword}?",
+    "Luogo": "Dove si applica o si pratica {keyword}?",
+    "Tempo": "Quando è stato introdotto o scoperto {keyword}?",
+    "Abito": "Quali sono le abitudini o le pratiche associate a {keyword}?",
+    "Posizione": "In che modo {keyword} si posiziona all'interno del contesto generale?"
 }
 
 def generate_questions(keyword):
     questions = []
     for category, question_template in categories.items():
         question = question_template.format(keyword=keyword)
-        print(f"Generated question: '{question}'")  # Add this line to log generated questions
         questions.append(question)
     return questions
 
@@ -91,7 +91,7 @@ print(f"Le migliori {len(best_questions)} domande sono:")
 for question in best_questions:
     print(f"  {question}")
 
-def save_best_questions(questions, filename="drafts/best_questions_2.txt"):
+def save_best_questions(questions, filename="drafts/best_questions.txt"):
     with open(filename, "w", encoding="utf-8") as f:
         for question in questions:
             f.write(f"{question}\n")

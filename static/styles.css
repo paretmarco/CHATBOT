@@ -143,3 +143,35 @@ h1 {
   height: 6em;  /* height of the visible area */
   overflow: hidden;
 }
+
+.progress-bar {
+    background-color: lightgray !important;
+}
+
+#progress {
+    width: 0;
+    height: 20px;
+    background-color: lightblue;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#progress::before {
+    content: '...Thinking...';
+    position: absolute;
+    animation: blink 3.6s linear infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.hidden {
+    display: none;
+}
+

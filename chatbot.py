@@ -1,3 +1,4 @@
+# main file to process and answer - connects to search_page.html and to search_snippets.py
 import os
 import openai
 import requests
@@ -44,7 +45,7 @@ def search_snippets(query):
 
 import os
 
-def process_chatbot_request(user_input, max_tokens, user_personality, additional_context, model, user_id):
+def process_chatbot_request(user_input, max_tokens, user_personality, additional_context, model, user_id, temperature, frequency_penalty):
     logging.basicConfig(filename='chatbot.log', level=logging.INFO)
 
     # Log the user input
@@ -72,7 +73,7 @@ def process_chatbot_request(user_input, max_tokens, user_personality, additional
     messages = [
         {"role": "system", "content": user_personality},
         {"role": "assistant", "content": additional_context + " " + context},
-        {"role": "user", "content": user_message_content + " please use and adapt this material for your answer being very details"}
+        {"role": "user", "content": user_message_content + " please use and adapt this material for your answer being very detailed"}
     ]
 
     # Log messages sent to OpenAI API
@@ -84,7 +85,8 @@ def process_chatbot_request(user_input, max_tokens, user_personality, additional
         max_tokens=int(max_tokens),
         n=1,
         stop=None,
-        temperature=0.8,
+        temperature=temperature,
+        frequency_penalty=frequency_penalty
     )
 
     assistant_reply = response.choices[0].message['content']
@@ -120,19 +122,19 @@ def chatbot():
     try:
         data = request.json
         user_input = data["user_input"]
-        # Ensure user_input doesn't exceed a certain limit, let's say 1000 tokens for simplicity
-        if len(user_input.split()) > 1000:
-            user_input = ' '.join(user_input.split()[:1000])
-            logging.warning(f"User input was longer than 1000 tokens. It has been trimmed.")
         max_tokens = data.get("max_tokens", default_max_tokens)
         user_personality = data.get("user_personality") or default_author_personality
         additional_context = data["additional_context"]
         model = data.get("model", "gpt-3.5-turbo")
         user_id = data.get("user_id", "OWNER")  # Get user_id from the request, with a default value of "OWNER"
+        temperature = data.get("temperature", 0.8)
+        frequency_penalty = data.get("frequency_penalty", 0.0)
+        if frequency_penalty is None:
+            frequency_penalty = 0.0
 
         logging.info(f"Received chatbot API request with model {model}, user_id {user_id} and user_input: {user_input}")
 
-        response_text = process_chatbot_request(user_input, max_tokens, user_personality, additional_context, model, user_id)
+        response_text = process_chatbot_request(user_input, max_tokens, user_personality, additional_context, model, user_id, temperature, frequency_penalty)
 
         logging.info(f"Generated chatbot response: {response_text}")
 

@@ -4,49 +4,67 @@ function handleFormSubmit(event) {
     const formData = new FormData(event.target);
     const query = formData.get("query");
     const max_tokens = parseInt(formData.get("max_tokens"));
-    const num_results = parseInt(formData.get("num_results")); // Add this line
+    const num_results = parseInt(formData.get("num_results"));
+    const user_id = $("#user_id").val() || "OWNER"; 
     const user_personality = formData.get("user_personality");
     const task = formData.get("task");
     const format = formData.get("format");
     const additional_context = task + " " + format;
-    const user_id = formData.get("user_id");  // Add this line
-    console.log(`User ID in chatbot.js: ${user_id}`); // Add this line
+    const temperature = parseFloat(formData.get("temperature"));
+    const frequency_penalty = parseFloat(formData.get("frequency_penalty"));
+    console.log('Frequency penalty:', frequency_penalty);
+    console.log('Query chatbot:', query);
+    console.log('Num results chatbot:', num_results);
+    console.log('User id chtabot:', user_id);
 
     // Get the selected model from the dropdown
     const model = $("#model").val();
 
+    // Call the searchAndDisplaySnippets function
+    searchAndDisplaySnippets(query, num_results);
+
     // Search for relevant snippets
+    $("#progress-bar").removeClass("hidden");
     $.ajax({
-        url: `http://${window.location.hostname}:5001/api/chatbot`, // dont modify the port as the chatbot is at 5001
+        url: "/api/search",
         type: "POST",
         data: {
             'query': query,
-            'num_results': num_results  // Update this line
+            'num_results': num_results 
         },
         dataType: "json",
         success: function (response) {
             const snippets = response.snippets;
-            displaySnippets(snippets); // Call the function to display snippets on the search page.
+            displaySnippets(snippets); 
         }
     });
 
     // Get the chatbot's response
     $.ajax({
-        url: `/api/chatbot`,
+        url: `http://${window.location.hostname}:5001/api/chatbot`,
         type: "POST",
         contentType: "application/json",
         dataType: "json",
         data: JSON.stringify({
             user_input: query,
-            user_id: user_id,  // Use the user_id from the form
+            user_id: user_id, 
             max_tokens: max_tokens,
             user_personality: user_personality,
             additional_context: additional_context,
-            model: model
+            model: model,
+            temperature: temperature,
+            frequency_penalty: frequency_penalty
         }),
+        beforeSend: function() {
+            showProgressBar();
+        },
         success: function (response) {
             $("#chatbot_response").html(response.response);
             $("#edited_answer").val(response.response);
+            hideProgressBar();
+        },
+        error: function() {
+            hideProgressBar();
         }
     });
 }
@@ -58,6 +76,20 @@ function saveEditedAnswer() {
     saveEditedAnswerToSheet(editedAnswer);
 }
 
+// Function to show the progress bar
+function showProgressBar() {
+    $("#progress").width('100%');
+    $("#waiting-video").removeClass("hidden"); // Show the video
+    document.getElementById('youtube-video').src += "&autoplay=1"; // Autoplay
+}
+
+// Function to hide the progress bar
+function hideProgressBar() {
+    $("#progress").width(0);
+    $("#waiting-video").addClass("hidden"); // Hide the video
+    document.getElementById('youtube-video').src = document.getElementById('youtube-video').src.replace("&autoplay=1",""); // Stop autoplay
+}
+
 // Document ready function
 $(document).ready(function () {
     // Form submit event handler
@@ -66,14 +98,3 @@ $(document).ready(function () {
     // Save edited answer event handler
     $("#save_edited_answer").click(saveEditedAnswer);
 });
-
-// Function to display snippets
-function displaySnippets(snippets) {
-    const snippetsList = $("#snippets");
-    snippetsList.empty(); // Clear the current list of snippets
-
-    snippets.forEach(snippet => {
-        const listItem = $("<li>").text(snippet.response);
-        snippetsList.append(listItem);
-    });
-}

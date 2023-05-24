@@ -1,6 +1,6 @@
 import pyperclip
 
-file_list = ["app.py", "static/chatbot.js", "static/main.js"]  # Add or modify the file names in this list
+file_list = ["app.py", "static/save_edits.js", "templates/simple_search_page.html", "Dockerfile", "docker-compose.yml"]  # Add or modify the file names in this list
 
 def combina_contenuti_file(file_list):
     combined_content = f"Ecco qui i file: {', '.join(file_list)}\n\n"

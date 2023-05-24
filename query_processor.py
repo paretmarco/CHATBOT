@@ -1,3 +1,4 @@
+# BOOK PROCESSING - MAIN PROGRAM - for sending to the chatbot the realized chapters
 import requests
 import json
 import os

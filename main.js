@@ -54,6 +54,8 @@ function handleFormSubmit(event) {
     const max_tokens = parseInt(formData.get("max_tokens"));
     const num_results = parseInt(formData.get("num_results"));
 
+    console.log(`About to send AJAX request with query: ${query}, max_tokens: ${max_tokens}, num_results: ${num_results}`);
+
     // Call the searchAndDisplaySnippets function
     searchAndDisplaySnippets(query, num_results);
 

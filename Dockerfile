@@ -12,5 +12,11 @@ COPY . .
 
 RUN mkdir /logs
 
-CMD ["sh", "-c", "python search_snippets.py 2>&1 | tee /logs/search_snippets.log & python chatbot.py 2>&1 | tee /logs/chatbot.log & python app.py & gunicorn --workers 4 --bind 0.0.0.0:5002 web_app:app 2>&1 | tee /logs/web_app.log"]
+EXPOSE 5000
+EXPOSE 5001
+EXPOSE 5002
+EXPOSE 5003
+EXPOSE 8000
+
+CMD ["sh", "-c", "python search_snippets.py 2>&1 | tee /logs/search_snippets.log & python chatbot.py 2>&1 | tee /logs/chatbot.log & python app.py --port 5002 & gunicorn --workers 4 --bind 0.0.0.0:5003 web_app:app 2>&1 | tee /logs/web_app.log"]
 

@@ -1,3 +1,4 @@
+# old index used to index llamindex in json
 import logging
 import os
 import pinecone

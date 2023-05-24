@@ -1,15 +1,21 @@
-import os
-from chatbot_handler import handle_chat_query
-from query_loader import load_queries_from_file
+import subprocess
 
-# Set up your API key for the language model provider (e.g., OpenAI)
-api_key = os.environ["OPENAI_API_KEY"]
+def run_script(script_name):
+    process = subprocess.Popen(['python', script_name], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    return process
 
-# Read the input_queries.txt file
-queries = load_queries_from_file("input/input_queries.txt")
+if __name__ == "__main__":
+    app_process = run_script('app.py')
+    chatbot_process = run_script('chatbot.py')
+    search_snippets_process = run_script('search_snippets.py')
 
-# Iterate over the queries and process each one
-for query in queries:
-    print(f"Handling query: {query}")
-    response = handle_chat_query(query, api_key)
-    print(f"Response: {response}\n")
+    # If you want main.py to wait until all processes are done, uncomment the following lines
+    # app_process.wait()
+    # chatbot_process.wait()
+    # search_snippets_process.wait()
+
+    # If you want main.py to print output from all scripts, uncomment the following lines
+    # print(app_process.communicate())
+    # print(chatbot_process.communicate())
+    # print(search_snippets_process.communicate())
+

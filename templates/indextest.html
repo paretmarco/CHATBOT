@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        var socket = io();
+        socket.on('newlog', function(msg) {
+            document.getElementById('logs').innerHTML += msg.log + '<br>';
+        });
+    </script>
+</head>
+<body>
+    <div id="logs"></div>
+</body>
+</html>

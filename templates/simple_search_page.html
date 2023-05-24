@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Immergiti nell'Universo del Dr. Paret: Attingi alla Saggezza di un Maestro Esperto</title>
+    <title>Immergiti nell'Universo del Dr. Paret: Attingi alla Saggezza Quantica di un Maestro Esperto</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="/static/styles.css">
+    <script src="/static/show_snippets.js"></script>
     <script src="/static/main.js"></script>
+    <script src="/static/save_edits.js"></script>
     <script src="/static/chatbot.js"></script>
     <script src="/static/options.js"></script>
 </head>
@@ -13,19 +15,19 @@
     <div id="container">
         <h1>
             <img src="https://yt3.ggpht.com/FzQ0LPEsLV60T1LMu4DOC5tn7niVFGjvysjwYa5ezOj0OyJhrfjv-xr6ybvDMta9pNE62VnsrjI=s88-c-k-c0x00ffffff-no-rj-mo" alt="Dr. Paret" class="logo">
-            Ask dr. Paret - Immergiti nell'Universo del Dr. Paret: Attingi alla Saggezza di un Maestro Esperto. TUTORIAL SYSTEM.
+            Ask dr. Paret - Immergiti nell'Universo Quantico del Dr. Paret: Attingi alla Saggezza di un Maestro Esperto.
         </h1>
         <div class="wrapper">
             <div class="settings">
                 <form>
-                    <label for="query">Ask me. Wait 30 secs and you will receive a precise answer updated with specific informations from Dr. Paret:</label>
+                    <label for="query">Chiedimi ad esempio "Cosa è l'ipnosi quantistica?" o qualsiasi cosa vorresti sapere sul Quantum. Aspetta 30 secs. Riceverai informazioni basate sulle innumerevoli opere del Dr. Paret (Quantum Coaching, Fascinazione, il nostro corso quantistico e le moltissime nostre dispense e manuali quantistici):</label>
                     <br>
                     <textarea id="query" name="query" rows="4" cols="50"></textarea>
                     <br><br>
-                    <input type="submit" value="Search">
+                    <input type="submit" value="Metti qui la tua richiesta">
                     <br><br>
-<label for="max_tokens">Response length:</label>
-<input type="range" id="max_tokens" name="max_tokens" min="50" max="900" value="450">
+<label for="max_tokens">Lunghezza della risposta:</label>
+<input type="range" id="max_tokens" name="max_tokens" min="50" max="900" value="150">
 <span id="slider_value"></span>
                     <br><br>
                     <input type="hidden" id="num_results" name="num_results" value="2">
@@ -41,12 +43,15 @@
                 <div id="snippet_list">
                     <ul id="snippets"></ul>
                 </div>
+<div id="progress-bar" class="hidden">
+    <div id="progress"></div>
+</div>
                 <h2>Chatbot Answer</h2>
                 <div id="chatbot_response"></div>
                 <div id="thinking" class="hidden">Thinking...</div>
-                <h2>Edit and Correct Answer</h2>
+                <h2>Ti piace la risposta? Schiaccia Salva per salvarla</h2>
                 <textarea id="edited_answer" rows="10" cols="80"></textarea>
-                <button id="save_edited_answer">Save Edited Answer</button>
+                <button id="save_edited_answer">Salva</button>
                 <h2>Final Answer</h2>
                 <div id="final_answer"></div>
                 <label for="user_id">Conversation ID (if you want the answers to be consequential):</label>

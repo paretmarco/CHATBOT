@@ -1,3 +1,4 @@
+# old index file
 import logging
 import os
 from llama_index import Document, GPTSimpleVectorIndex, SimpleDirectoryReader

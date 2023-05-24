@@ -1,4 +1,4 @@
-# web_app.py
+# web_app.py - its goal is to connect to google sheet
 
 from flask import Flask, render_template, request, jsonify
 import requests

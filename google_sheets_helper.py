@@ -1,4 +1,4 @@
-# google_sheets_helper.py
+# google_sheets_helper.py - THIS FILE IS FOR CONNECTING TO GOOGLE SHEET
 import google.auth
 from google.oauth2 import service_account
 from googleapiclient.discovery import build

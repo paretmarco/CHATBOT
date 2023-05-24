@@ -2,12 +2,14 @@
 <html>
 <head>
     <title>Immergiti nell'Universo del Dr. Paret: Attingi alla Saggezza di un Maestro Esperto</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <link rel="stylesheet" href="/static/styles.css">
     <script src="/static/main.js"></script>
+    <script src="/static/show_snippets.js"></script>
     <script src="/static/chatbot.js"></script>
+    <script src="/static/save_edits.js"></script>
     <script src="/static/options.js"></script>
-    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
 </head>
 <body>
     <div id="container">
@@ -17,7 +19,7 @@
         </h1>
         <div class="wrapper">
             <div class="settings">
-                <form>
+                <form onsubmit="handleFormSubmit(event)">
                     <label for="query">Ask me. Wait 30 secs and you will receive a precise answer updated with specific informations from Dr. Paret:</label>
                     <br>
                     <textarea id="query" name="query" rows="4" cols="50"></textarea>
@@ -25,12 +27,14 @@
                     <input type="submit" value="Search">
                     <br><br>
                     <label for="max_tokens">Response length:</label>
-<input type="range" id="max_tokens" name="max_tokens" min="50" max="900" value="450">
-<span id="max_tokens_value"></span>
+<label for="max_tokens">Max Tokens:</label>
+<input type="range" id="max_tokens" name="max_tokens" min="0" max="1200" value="250">
+<span id="max_tokens_value">250</span>
 <br><br>
-<label for="num_results">Number of results (top-k):</label>
-<input type="range" id="num_results" name="num_results" min="2" max="5" value="2">
-<span id="num_results_value"></span>
+
+<label for="num_results">Number of Results:</label>
+<input type="range" id="num_results" name="num_results" min="0" max="10" value="2">
+<span id="num_results_value">2</span>
 <br><br>
 
                     <label>User personality:</label>
@@ -60,14 +64,23 @@
                 </form>
             </div>
             <div class="results">
+<div id="progress-bar" class="hidden">
+    <div id="progress"></div>
+</div>
+<div id="waiting-video" class="hidden">
+    <iframe id="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/7lHfglT86oI?rel=0&autoplay=1&mute=1&loop=1&playlist=7lHfglT86oI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
                 <h2>Retrieved Snippets</h2>
+
                 <div id="snippet_list">
                     <ul id="snippets"></ul>
                 </div>
                 <h2>Chatbot Answer</h2>
                 <div id="chatbot_response"></div>
-                <div id="thinking" class="hidden">Thinking...</div>
+
+
 <!-- Add this code right below the <div id="chatbot_response"></div> line in search_page.html -->
+
 <h2>Edit and Correct Answer</h2>
 <textarea id="edited_answer" rows="10" cols="80"></textarea>
 <button id="save_edited_answer">Save Edited Answer</button>
@@ -76,29 +89,18 @@
     <label for="user_id">Conversation ID (if you want the answers to be consequential):</label>
     <input type="text" id="user_id" name="user_id" value="OWNER">
     <br><br>
-
+<label for="temperature">Temperature:</label>
+<input type="range" id="temperature" name="temperature" min="0" max="1" step="0.1" value="0.8">
+<span id="temperature_value">0.8</span>
+<br><br>
+<label for="frequency_penalty">Frequency Penalty:</label>
+<input type="range" id="frequency_penalty" name="frequency_penalty" min="0" max="1" step="0.1" value="0">
+<span id="frequency_penalty_value">0.0</span>
+<br><br>
             </div>
         </div>
     </div>
-<script>
-window.onload = function(){
-    const slider1 = document.getElementById("max_tokens");
-    const sliderValue1 = document.getElementById("max_tokens_value");
-    const slider2 = document.getElementById("num_results");
-    const sliderValue2 = document.getElementById("num_results_value");
-
-    // Display the default slider values
-    sliderValue1.innerHTML = slider1.value;
-    sliderValue2.innerHTML = slider2.value;
-
-    // Update the current slider value each time the slider is moved
-    slider1.oninput = function() {
-        sliderValue1.innerHTML = this.value;
-    }
-    slider2.oninput = function() {
-        sliderValue2.innerHTML = this.value;
-    }
-}
-</script>
+// add sliders
+    <script src="/static/sliders.js"></script>
 </body>
 </html>

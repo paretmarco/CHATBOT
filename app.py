@@ -1,24 +1,22 @@
 import os
-from flask import Flask, render_template, send_from_directory, request
+from flask import Flask, render_template, send_from_directory, request, jsonify
+from flask import make_response
 from flask_cors import CORS
-from flask import jsonify
 from search_snippets import search_snippets
 import logging
 import google_sheets_helper
 import google_sheets_helper as gsh
+from user_operations_gsheet import save_edited_answer  # import function from user_operations
 
-def save_edited_answer(user_email, project_name, answer):
-    # Get or create the user spreadsheet
-    user_spreadsheet_id = gsh.get_or_create_user_spreadsheet(user_email)
-
-    # Get or create the project sheet
-    project_sheet_id = gsh.get_or_create_project_sheet(user_spreadsheet_id, project_name)
-
-    # Save the edited answer to the sheet
-    gsh.save_answer_to_sheet(user_spreadsheet_id, project_sheet_id, answer)
+logging.basicConfig(level=logging.INFO)
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}})
+CORS(app, resources={r'/*': {'origins': '*', 'methods': ['GET', 'POST', 'PUT', 'DELETE'], 'allow_headers': '*'}})
+
+@app.route('/api/search', methods=['POST'])
+def api_search():
+    # il tuo codice qui per gestire la richiesta di ricerca API
+    return jsonify({'snippets': []})  # ritorna un array vuoto per ora
 
 @app.route('/simple_search', methods=['GET', 'POST'])
 def simple_search():
@@ -50,8 +48,13 @@ def send_static(path):
 
 @app.route('/save_edited_answer', methods=['POST'])
 def save_edited_answer_route():
+    # Log the host, port, and route
+    host = request.host
+    logging.info("Host: %s", host)
+    logging.info("Route: %s", request.path)
     # Additional log
     logging.info("Save edited answer route requested")
+    logging.info("Request data: %s", request.form)
     edited_answer = request.form['edited_answer']
     user_id = request.form['user_id']
 
@@ -67,7 +70,14 @@ def save_edited_answer_route():
     data_to_write = [[user_id, edited_answer]]
     google_sheets_helper.write_data_to_sheet(sheet_id, range_name, data_to_write)
 
-    return {'message': 'Edited answer saved successfully'}
+    resp = jsonify({'message': 'Edited answer saved successfully'})
+    resp.headers['Access-Control-Allow-Origin'] = '*'
+    resp.headers['Access-Control-Allow-Headers'] = '*'
+    resp.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE'
+
+    return resp
+
+    # return {'message': 'Edited answer saved successfully'} vecchia versione
 
 if __name__ == '__main__':
     host = os.environ.get("FLASK_HOST", "127.0.0.1")
