@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/static/styles.css">
     <script src="/static/show_snippets.js"></script>
     <script src="/static/main.js"></script>
+    <script src="/static/videos.js"></script>
     <script src="/static/save_edits.js"></script>
     <script src="/static/chatbot.js"></script>
     <script src="/static/options.js"></script>
@@ -46,6 +47,15 @@
 <div id="progress-bar" class="hidden">
     <div id="progress"></div>
 </div>
+<div id="waiting-video" class="hidden">
+    <iframe id="youtube-video" width="560" height="315" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen
+            src="">
+    </iframe>
+</div>
+
+
                 <h2>Chatbot Answer</h2>
                 <div id="chatbot_response"></div>
                 <div id="thinking" class="hidden">Thinking...</div>

@@ -20,6 +20,37 @@ function handleFormSubmit(event) {
     // Get the selected model from the dropdown
     const model = $("#model").val();
 
+
+    // Fetch a video to display while waiting for the chatbot's response
+    fetch('http://localhost:5003/api/video', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            query: query  // send the query as request body
+        })
+    })
+
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+    })
+    .then(data => {
+        // extract the video URL from the response
+        const video_url = data.video_url;
+
+        // display the video in the iframe
+        document.getElementById('youtube-video').src = video_url;
+    })
+    .catch(error => {
+        console.error('Fetch Error:', error);
+    });
+
+
+
     // Call the searchAndDisplaySnippets function
     searchAndDisplaySnippets(query, num_results);
 
@@ -76,18 +107,17 @@ function saveEditedAnswer() {
     saveEditedAnswerToSheet(editedAnswer);
 }
 
+
 // Function to show the progress bar
 function showProgressBar() {
     $("#progress").width('100%');
-    $("#waiting-video").removeClass("hidden"); // Show the video
-    document.getElementById('youtube-video').src += "&autoplay=1"; // Autoplay
+    showVideo(); // Show the video
 }
 
 // Function to hide the progress bar
 function hideProgressBar() {
     $("#progress").width(0);
-    $("#waiting-video").addClass("hidden"); // Hide the video
-    document.getElementById('youtube-video').src = document.getElementById('youtube-video').src.replace("&autoplay=1",""); // Stop autoplay
+    hideVideo(); // Hide the video
 }
 
 // Document ready function
