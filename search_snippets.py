@@ -79,6 +79,26 @@ def search_snippets():
 def search_page():
     return render_template('search_page.html')
 
+@app.route('/api/snippets', methods=['GET'])  # for server.js
+def get_snippets():
+    try:
+        query = request.form['query']
+        num_results = int(request.form.get('num_results', 1))
+        logging.info(f'Querying index with "{query}"...')
+        response = index.query(query, similarity_top_k=num_results)
+        logging.info("{response}")
+        if response:
+            snippet = response
+            logging.info(f'Answer is "{response}"...')
+            snippets = [snippet]
+        else:
+            snippets = []
+        return render_template('search_page.html', query=query, snippets=snippets)
+    except Exception as e:
+        logging.error(f"Error searching for '{query}': {str(e)}")
+
+    return jsonify({'snippets': snippets})
+
 @app.route('/simple_search')
 def simple_search_page():
     return render_template('simple_search_page.html')

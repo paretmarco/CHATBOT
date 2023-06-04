@@ -89,6 +89,7 @@ def process_chatbot_request(user_input, max_tokens, user_personality, additional
         frequency_penalty=frequency_penalty
     )
 
+    print(response)
     assistant_reply = response.choices[0].message['content']
 
     # Save the conversation

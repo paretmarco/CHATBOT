@@ -1,0 +1,23 @@
+<!-- snippets.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Snippets</title>
+</head>
+<body>
+  <h1>Snippets</h1>
+  <div id="snippets"></div>
+
+  <script>
+    // Fetch snippets from the API endpoint
+    fetch('/api/snippets')
+      .then(response => response.json())
+      .then(data => {
+        const snippetsDiv = document.getElementById('snippets');
+        snippetsDiv.innerHTML = data.snippets.map(snippet => `<p>${snippet.response}</p>`).join('');
+      })
+      .catch(error => console.error(error));
+  </script>
+</body>
+</html>

@@ -12,7 +12,9 @@ CORS(app, resources={r"/*": {"origins": "*"}})
 logging.basicConfig(level=logging.DEBUG)
 
 api_key = os.getenv('YOUTUBE_API_KEY')  # you should replace it with your actual API key
-youtube = build('youtube', 'v3', developerKey=api_key)
+api_service_name = 'youtube'
+api_version = 'v3'
+youtube = build(api_service_name, api_version, developerKey=api_key)
 
 @app.route('/api/video', methods=['POST', 'OPTIONS'])
 def video_api():
