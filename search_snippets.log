@@ -4416,3 +4416,93 @@ quale Pnl. Sarei interessata alla formazione"...
 2023-06-09 09:33:41,895:INFO:Starting server...
 2023-06-09 09:33:41,914:WARNING: * Debugger is active!
 2023-06-09 09:33:41,921:INFO: * Debugger PIN: 691-848-005
+2023-06-09 10:06:46,121:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-09 10:06:46,122:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-09 10:06:46,240:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-06-09 10:06:46,320:INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5002
+2023-06-09 10:06:46,321:INFO:[33mPress CTRL+C to quit[0m
+2023-06-09 10:06:46,326:INFO: * Restarting with stat
+2023-06-09 10:06:59,429:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-09 10:06:59,429:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-09 10:06:59,530:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-06-09 10:06:59,565:WARNING: * Debugger is active!
+2023-06-09 10:06:59,571:INFO: * Debugger PIN: 691-848-005
+2023-06-09 10:06:59,962:INFO:127.0.0.1 - - [09/Jun/2023 10:06:59] "GET / HTTP/1.1" 200 -
+2023-06-09 10:07:00,274:INFO:127.0.0.1 - - [09/Jun/2023 10:07:00] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2023-06-09 10:07:00,348:INFO:127.0.0.1 - - [09/Jun/2023 10:07:00] "[36mGET /static/chatbot.js HTTP/1.1[0m" 304 -
+2023-06-09 10:07:00,374:INFO:127.0.0.1 - - [09/Jun/2023 10:07:00] "[36mGET /static/main.js HTTP/1.1[0m" 304 -
+2023-06-09 10:07:00,384:INFO:127.0.0.1 - - [09/Jun/2023 10:07:00] "[36mGET /static/show_snippets.js HTTP/1.1[0m" 304 -
+2023-06-09 10:07:00,400:INFO:127.0.0.1 - - [09/Jun/2023 10:07:00] "[36mGET /static/videos.js HTTP/1.1[0m" 304 -
+2023-06-09 10:07:00,401:INFO:127.0.0.1 - - [09/Jun/2023 10:07:00] "[36mGET /static/save_edits.js HTTP/1.1[0m" 304 -
+2023-06-09 10:07:00,650:INFO:127.0.0.1 - - [09/Jun/2023 10:07:00] "[36mGET /static/options.js HTTP/1.1[0m" 304 -
+2023-06-09 10:07:00,862:INFO:127.0.0.1 - - [09/Jun/2023 10:07:00] "[36mGET /static/sliders.js HTTP/1.1[0m" 304 -
+2023-06-09 10:07:01,252:INFO:127.0.0.1 - - [09/Jun/2023 10:07:01] "[36mGET /static/formats.txt HTTP/1.1[0m" 304 -
+2023-06-09 10:07:01,273:INFO:127.0.0.1 - - [09/Jun/2023 10:07:01] "[36mGET /static/userpersonality.txt HTTP/1.1[0m" 304 -
+2023-06-09 10:07:01,282:INFO:127.0.0.1 - - [09/Jun/2023 10:07:01] "[36mGET /static/tasks.txt HTTP/1.1[0m" 304 -
+2023-06-09 10:07:01,477:INFO:127.0.0.1 - - [09/Jun/2023 10:07:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2023-06-09 10:07:35,342:INFO:127.0.0.1 - - [09/Jun/2023 10:07:35] "POST /api/search HTTP/1.1" 200 -
+2023-06-09 10:07:35,646:INFO:127.0.0.1 - - [09/Jun/2023 10:07:35] "POST /api/search HTTP/1.1" 200 -
+2023-06-09 10:07:35,791:INFO:127.0.0.1 - - [09/Jun/2023 10:07:35] "POST /api/search HTTP/1.1" 200 -
+2023-06-09 10:07:35,798:INFO:127.0.0.1 - - [09/Jun/2023 10:07:35] "POST /api/search HTTP/1.1" 200 -
+2023-06-09 10:07:36,057:INFO:function: search_api
+2023-06-09 10:07:36,061:INFO:{'query': 'What is fascination'}
+2023-06-09 10:07:36,062:INFO:Received search API request
+2023-06-09 10:07:36,064:INFO:Querying index with "What is fascination"...
+2023-06-09 10:07:36,217:INFO:function: search_api
+2023-06-09 10:07:36,220:INFO:{'query': 'What is fascination'}
+2023-06-09 10:07:36,222:INFO:Received search API request
+2023-06-09 10:07:36,229:INFO:Querying index with "What is fascination"...
+2023-06-09 10:07:37,858:INFO:> [retrieve] Total LLM token usage: 0 tokens
+2023-06-09 10:07:37,868:INFO:> [retrieve] Total embedding token usage: 6 tokens
+2023-06-09 10:07:37,906:INFO:> [retrieve] Total LLM token usage: 0 tokens
+2023-06-09 10:07:37,907:INFO:> [retrieve] Total embedding token usage: 6 tokens
+2023-06-09 10:07:45,598:INFO:> [get_response] Total LLM token usage: 1759 tokens
+2023-06-09 10:07:45,599:INFO:> [get_response] Total embedding token usage: 0 tokens
+2023-06-09 10:07:45,632:INFO:Response is "Fascination is a technique that involves actively employing the power inherent in the eye to influence and observe others, drawing on principles from quantistic physics. It can confer a scientific basis on the therapeutic ability possessed by healers and has been taught in seminars and through books such as "The Magnetic Gaze of Dr. Paret." Fascination involves a disciplined work on oneself and encompasses self-control, self-development, and self-improvement. The technique was learned from Virgilio T., the last of the fascinators, and Prof. Erminio from Pisa, who used it for healing purposes."...
+2023-06-09 10:07:45,637:INFO:Snippet text is "Fascination is a technique that involves actively employing the power inherent in the eye to influence and observe others, drawing on principles from quantistic physics. It can confer a scientific basis on the therapeutic ability possessed by healers and has been taught in seminars and through books such as "The Magnetic Gaze of Dr. Paret." Fascination involves a disciplined work on oneself and encompasses self-control, self-development, and self-improvement. The technique was learned from Virgilio T., the last of the fascinators, and Prof. Erminio from Pisa, who used it for healing purposes."
+2023-06-09 10:07:45,641:INFO:127.0.0.1 - - [09/Jun/2023 10:07:45] "POST /api/search HTTP/1.1" 200 -
+2023-06-09 10:07:46,428:INFO:> [get_response] Total LLM token usage: 3520 tokens
+2023-06-09 10:07:46,428:INFO:> [get_response] Total embedding token usage: 0 tokens
+2023-06-09 10:07:46,429:INFO:Response is "Fascination is a technique that involves actively employing the power inherent in the eye to influence and observe others, drawing on principles from quantistic physics. It can confer a scientific basis on the therapeutic ability possessed by healers and has been taught in seminars and through books such as "The Magnetic Gaze of Dr. Paret." Fascination involves a disciplined work on oneself and encompasses self-control, self-development, and self-improvement. The technique was learned from the last of the fascinators, Virgilio T., and later from Prof. Erminio di Pisa, who used it for healing purposes."...
+2023-06-09 10:07:46,430:INFO:Snippet text is "Fascination is a technique that involves actively employing the power inherent in the eye to influence and observe others, drawing on principles from quantistic physics. It can confer a scientific basis on the therapeutic ability possessed by healers and has been taught in seminars and through books such as "The Magnetic Gaze of Dr. Paret." Fascination involves a disciplined work on oneself and encompasses self-control, self-development, and self-improvement. The technique was learned from the last of the fascinators, Virgilio T., and later from Prof. Erminio di Pisa, who used it for healing purposes."
+2023-06-09 10:07:46,432:INFO:127.0.0.1 - - [09/Jun/2023 10:07:46] "POST /api/search HTTP/1.1" 200 -
+2023-06-09 10:08:01,274:INFO:Host: localhost:5002
+2023-06-09 10:08:01,274:INFO:Route: /save_edited_answer
+2023-06-09 10:08:01,274:INFO:Save edited answer route requested
+2023-06-09 10:08:01,289:INFO:Request data: ImmutableMultiDict([('edited_answer', "Sure, I'll provide a detailed answer based on the given material.\n\nWhat is fascination? Fascination is a technique that involves actively employing the power"), ('user_id', 'OWNER')])
+2023-06-09 10:08:02,715:INFO:Attempting to write to sheet: 1MsUKGRrrBsr-MCQSpyrethObJZD7HpBO1uhz8CRygfI
+2023-06-09 10:08:04,362:INFO:2 cells updated.
+2023-06-09 10:08:04,363:INFO:127.0.0.1 - - [09/Jun/2023 10:08:04] "POST /save_edited_answer HTTP/1.1" 200 -
+2023-06-09 10:08:11,555:INFO:127.0.0.1 - - [09/Jun/2023 10:08:11] "[33mPOST /api/save_draft HTTP/1.1[0m" 404 -
+2023-06-09 10:08:32,859:INFO:127.0.0.1 - - [09/Jun/2023 10:08:32] "GET /simple_search HTTP/1.1" 200 -
+2023-06-09 10:08:33,008:INFO:127.0.0.1 - - [09/Jun/2023 10:08:33] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2023-06-09 10:08:33,283:INFO:127.0.0.1 - - [09/Jun/2023 10:08:33] "[36mGET /static/show_snippets.js HTTP/1.1[0m" 304 -
+2023-06-09 10:08:33,287:INFO:127.0.0.1 - - [09/Jun/2023 10:08:33] "[36mGET /static/main.js HTTP/1.1[0m" 304 -
+2023-06-09 10:08:33,296:INFO:127.0.0.1 - - [09/Jun/2023 10:08:33] "[36mGET /static/videos.js HTTP/1.1[0m" 304 -
+2023-06-09 10:08:33,299:INFO:127.0.0.1 - - [09/Jun/2023 10:08:33] "[36mGET /static/save_edits.js HTTP/1.1[0m" 304 -
+2023-06-09 10:08:33,301:INFO:127.0.0.1 - - [09/Jun/2023 10:08:33] "[36mGET /static/chatbot.js HTTP/1.1[0m" 304 -
+2023-06-09 10:08:33,314:INFO:127.0.0.1 - - [09/Jun/2023 10:08:33] "[36mGET /static/options.js HTTP/1.1[0m" 304 -
+2023-06-09 10:08:33,714:INFO:127.0.0.1 - - [09/Jun/2023 10:08:33] "[36mGET /static/userpersonality.txt HTTP/1.1[0m" 304 -
+2023-06-09 10:08:33,716:INFO:127.0.0.1 - - [09/Jun/2023 10:08:33] "[36mGET /static/tasks.txt HTTP/1.1[0m" 304 -
+2023-06-09 10:08:33,725:INFO:127.0.0.1 - - [09/Jun/2023 10:08:33] "[36mGET /static/formats.txt HTTP/1.1[0m" 304 -
+2023-06-09 10:08:47,903:INFO:127.0.0.1 - - [09/Jun/2023 10:08:47] "POST /api/search HTTP/1.1" 200 -
+2023-06-09 10:08:48,211:INFO:127.0.0.1 - - [09/Jun/2023 10:08:48] "POST /api/search HTTP/1.1" 200 -
+2023-06-09 10:08:48,526:INFO:function: search_api
+2023-06-09 10:08:48,550:INFO:{'query': 'what is fascination'}
+2023-06-09 10:08:48,551:INFO:Received search API request
+2023-06-09 10:08:48,554:INFO:Querying index with "what is fascination"...
+2023-06-09 10:08:49,426:INFO:> [retrieve] Total LLM token usage: 0 tokens
+2023-06-09 10:08:49,426:INFO:> [retrieve] Total embedding token usage: 3 tokens
+2023-06-09 10:08:58,258:INFO:> [get_response] Total LLM token usage: 1771 tokens
+2023-06-09 10:08:58,258:INFO:> [get_response] Total embedding token usage: 0 tokens
+2023-06-09 10:08:58,267:INFO:Response is "Fascination is a technique that involves actively employing the power inherent in the eye to influence and observe others, drawing on principles from quantistic physics. It can confer a scientific basis on the therapeutic ability possessed by some healers and involves a disciplined work on oneself, encompassing self-control, self-development, and self-improvement. The technique was learned from the last of the fascinators, Virgilio T., and has been taught in seminars and through a book by Dr. Paret. It has been used for healing purposes and was employed by the late Prof. Erminio from Pisa to cure people in a single session lasting ten seconds or so."...
+2023-06-09 10:08:58,269:INFO:Snippet text is "Fascination is a technique that involves actively employing the power inherent in the eye to influence and observe others, drawing on principles from quantistic physics. It can confer a scientific basis on the therapeutic ability possessed by some healers and involves a disciplined work on oneself, encompassing self-control, self-development, and self-improvement. The technique was learned from the last of the fascinators, Virgilio T., and has been taught in seminars and through a book by Dr. Paret. It has been used for healing purposes and was employed by the late Prof. Erminio from Pisa to cure people in a single session lasting ten seconds or so."
+2023-06-09 10:08:58,270:INFO:127.0.0.1 - - [09/Jun/2023 10:08:58] "POST /api/search HTTP/1.1" 200 -
+2023-06-09 10:09:14,073:INFO:Host: localhost:5002
+2023-06-09 10:09:14,073:INFO:Route: /save_edited_answer
+2023-06-09 10:09:14,073:INFO:Save edited answer route requested
+2023-06-09 10:09:14,074:INFO:Request data: ImmutableMultiDict([('edited_answer', 'Fascination is a powerful, non-verbal technique that harnesses the inherent energy of the human gaze to influence and connect with others on a deep, subconscious level, effectively drawing upon principles derived from quantum physics. This advanced approach not only confers'), ('user_id', 'OWNER')])
+2023-06-09 10:09:14,411:INFO:Attempting to write to sheet: 1MsUKGRrrBsr-MCQSpyrethObJZD7HpBO1uhz8CRygfI
+2023-06-09 10:09:14,717:INFO:2 cells updated.
+2023-06-09 10:09:14,717:INFO:127.0.0.1 - - [09/Jun/2023 10:09:14] "POST /save_edited_answer HTTP/1.1" 200 -
