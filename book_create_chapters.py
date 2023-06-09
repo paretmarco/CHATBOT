@@ -21,7 +21,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 
 # Set up API key and model
 openai.api_key = OPENAI_API_KEY
-MODEL = "gpt-3.5-turbo"
+MODEL = "gpt-4"
 
 # Function to generate a chapter
 def generate_chapter(prompt, retries=3, delay=5):

@@ -1,6 +1,6 @@
 import pyperclip
 
-file_list = ["chatbot.py", "search_snippets.py", "app.py"]  # Add or modify the file names in this list
+file_list = ["chatbot.py", "static/chatbot.js"]  # Add or modify the file names in this list
 
 def combina_contenuti_file(file_list):
     combined_content = f"Ecco qui i file: {', '.join(file_list)}\n\n"

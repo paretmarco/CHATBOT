@@ -4,7 +4,7 @@ import os
 from config import OPENAI_API_KEY
 
 openai.api_key = OPENAI_API_KEY
-MODEL = "gpt-3.5-turbo"
+MODEL = "gpt-4"
 
 def load_keywords():
     try:

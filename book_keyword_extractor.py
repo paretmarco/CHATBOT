@@ -12,7 +12,7 @@ def load_draft_text():
         return ""
 
 openai.api_key = OPENAI_API_KEY
-MODEL = "gpt-3.5-turbo"
+MODEL = "gpt-4"
 
 def generate_keywords(prompt, retries=3, delay=5):
     for attempt in range(retries):

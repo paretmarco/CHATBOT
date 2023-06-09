@@ -55,7 +55,12 @@ def process_chatbot_request(user_input, max_tokens, user_personality, additional
     logging.info(f"Search results received: {search_results}")
 
     if search_results and search_results["response"]:
-        context = search_results["response"][0]["response"]
+        if isinstance(search_results["response"], list):
+            context = search_results["response"][0]["response"]
+        elif isinstance(search_results["response"], str):
+            context = search_results["response"]
+        else:
+            context = "I couldn't find any relevant information."
     else:
         context = "I couldn't find any relevant information."
 

@@ -128,27 +128,3 @@ $(document).ready(function () {
     // Save edited answer event handler
     $("#save_edited_answer").click(saveEditedAnswer);
 });
-
-// chatbot.js
-function copyToDraft() {
-    const editedAnswer = $("#edited_answer").val();
-    $.ajax({
-        url: "/api/save_draft",
-        type: "POST",
-        contentType: "application/json",
-        data: JSON.stringify({ text: editedAnswer }),
-        success: function(response) {
-            alert(response.message);
-        },
-        error: function() {
-            alert("An error occurred while saving to draft.");
-        }
-    });
-}
-
-$(document).ready(function () {
-    // ...existing code...
-
-    // New event handler for the "Copy to Draft" button
-    $("#copy_to_draft").click(copyToDraft);
-});

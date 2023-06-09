@@ -11,60 +11,6 @@
     <script src="/static/save_edits.js"></script>
     <script src="/static/chatbot.js"></script>
     <script src="/static/options.js"></script>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
-        }
-
-        #container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .logo {
-            height: 60px;
-            width: 60px;
-        }
-
-        .settings form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .settings form input[type=submit] {
-            margin-top: 10px;
-            background-color: #007BFF;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .settings form input[type=submit]:hover {
-            background-color: #0056b3;
-        }
-
-        .settings form input[type=submit]:disabled {
-            background-color: #ccc;
-            cursor: not-allowed;
-        }
-
-        .text_color {
-            color: red;
-        }
-
-        footer {
-            width: 70%;
-            margin: 0 auto;
-            padding: 30px;
-        }
-    </style>
 </head>
 <body>
     <div id="container">
@@ -79,11 +25,11 @@
                     <br>
                     <textarea id="query" name="query" rows="4" cols="50"></textarea>
                     <br><br>
-                    <input type="submit" id="submit-button" value="Metti qui la tua richiesta">
+                    <input type="submit" value="Metti qui la tua richiesta">
                     <br><br>
-                    <label for="max_tokens">Lunghezza della risposta:</label>
-                    <input type="range" id="max_tokens" name="max_tokens" min="50" max="900" value="150">
-                    <span id="slider_value"></span>
+<label for="max_tokens">Lunghezza della risposta:</label>
+<input type="range" id="max_tokens" name="max_tokens" min="50" max="900" value="150">
+<span id="slider_value"></span>
                     <br><br>
                     <input type="hidden" id="num_results" name="num_results" value="2">
                     <input type="hidden" id="chatbot_max_tokens" name="chatbot_max_tokens" value="300">
@@ -94,24 +40,30 @@
                 </form>
             </div>
             <div class="results">
-            <div id="progress-bar" class="hidden">
-                <div id="progress"></div>
-            </div>
-            <div id="waiting-video" class="hidden">
-                <iframe id="youtube-video" width="560" height="315" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                        src="">
-                </iframe>
-            </div>
+                <h2>Retrieved Snippets</h2>
+                <div id="snippet_list">
+                    <ul id="snippets"></ul>
+                </div>
+<div id="progress-bar" class="hidden">
+    <div id="progress"></div>
+</div>
+<div id="waiting-video" class="hidden">
+    <iframe id="youtube-video" width="560" height="315" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen
+            src="">
+    </iframe>
+</div>
+
+
                 <h2>Chatbot Answer</h2>
-                <div id="chatbot_response" class="text_color"></div>
+                <div id="chatbot_response"></div>
                 <div id="thinking" class="hidden">Thinking...</div>
                 <h2>Ti piace la risposta? Schiaccia Salva per salvarla</h2>
                 <textarea id="edited_answer" rows="10" cols="80"></textarea>
                 <button id="save_edited_answer">Salva</button>
                 <h2>Final Answer</h2>
-                <div id="final_answer" class="text_color"></div>
+                <div id="final_answer"></div>
                 <label for="user_id">Conversation ID (if you want the answers to be consequential):</label>
                 <input type="text" id="user_id" name="user_id" value="OWNER">
                 <br><br>
@@ -132,23 +84,5 @@ window.onload = function(){
     }
 }
 </script>
-<script>
-    const button = document.getElementById('submit-button');
-    let buttonIsDisabled = false;
-
-    button.addEventListener('click', function (event) {
-        if (buttonIsDisabled) {
-            event.preventDefault(); // This prevents the button click from doing anything if the button is disabled
-        } else {
-            buttonIsDisabled = true;
-            setTimeout(function () {
-                buttonIsDisabled = false;
-            }, 5000); // 5000 milliseconds = 5 seconds
-        }
-    });
-</script>
 </body>
-<footer><div><i>Released by the Information Department of BIA Balkan Academy in Bulgaria - We release also custom systems in every language.
-If you need a similar system to search through your materials or something with artificial intelligence please contact us.®
-</i></div></footer>
 </html>

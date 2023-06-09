@@ -1,3 +1,4 @@
+# this file is to create a book index
 import openai
 import os
 import json
@@ -13,7 +14,7 @@ def create_book_index(draft_text, book_structure):
     # Set up OpenAI API
     openai.api_key = os.environ["OPENAI_API_KEY"]
 
-    MODEL = "gpt-3.5-turbo"
+    MODEL = "gpt-4"
 
     response = openai.ChatCompletion.create(
         model=MODEL,

@@ -31,6 +31,7 @@ model = config['model']
 user_id = config['user_id']
 temperature = config['temperature']
 frequency_penalty = config['frequency_penalty']
+language = config['language']
 
 # Reinitialize the output file
 with open(output_file, "w", encoding='utf-8') as outfile:
@@ -51,7 +52,7 @@ for chunk in chunks:
         if last_chunk and last_chunk.startswith("#") and not last_chunk.strip():
             user_input = f'Continua "{last_chunk}" utilizzando questo testo (###{chunk}###) ed aggiungendo spunti interessanti'
         else:
-            user_input = f"Parafrasa e scrivi con lo stile di Victor Hugo: ###{chunk}### aggiungi spunti interessanti e se ci sono esercizi scrivili in fondo per punti."
+            user_input = f"Please write in this language: '''{language} ''' and Increase NLP Perlexity and Burstiness in a random way for each phrase in order it seems written by a human: ###{chunk}### and if possible add also a metaphor to the text."
         
         # Send the request to the chatbot and get the response
         response = process_chatbot_request(user_input, max_tokens, author_personality, additional_context, model, user_id, temperature, frequency_penalty)

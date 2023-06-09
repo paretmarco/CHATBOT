@@ -31,7 +31,7 @@ READ_RANGE = "A2:D"  # Adjust this range based on your sheet's structure
 sheet_data = read_data_from_sheet(sheet_id, READ_RANGE)
 
 openai.api_key = OPENAI_API_KEY
-MODEL = "gpt-3.5-turbo"
+MODEL = "gpt-4"
 
 def generate_slogan(prompt, retries=3, delay=5):
     for attempt in range(retries):
