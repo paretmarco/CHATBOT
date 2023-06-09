@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "complete-agency-270710",
+  "private_key_id": "4c41875347c4f62cb5dd12f014f248b073b152ef",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDE03o/D1kekZ10\nQ1J9JvKBbM4o30d9IQRDHycLYbXjE04bgZw/T4pUk2UffqQ903XdwbKTXQfXUTXv\nbmoaTt+LaTd781a7+H6hwgstU8JQyw2/72lD+lZsjjUmMFkJOUVBNnyTn9DDl+rp\nufET6hHapuwCynJUZvF58LXt4onaB0jUSg3M10Wd2hukNHgPQD8y4AXtLqeirFaD\n7Q5wTh0oXX9RrSQm4SzGMqb7Sh3A0mBBoFY15BlHeXo6AdoBfXJbuq9Ji3+e/rDA\nUlqYNPzqV9Goqxd46ALyJt/ckaL8ESjXxdLw1Y180BiNguPQ6wVPLy9n63xCEFQi\npbDaKiiPAgMBAAECggEAD6HQIrQAWvorrDEwmvn95qOSmBJrphd6NC6ENlYzUO6W\nlH6tvyV9EgyGyoKPXs2tncgle6i217X+d56oVKCRBox7uJ9x8wngXM6Bfr8ZPrtx\nwx2rmZeHR6XfuMG8QIxI4M4IBN17gh1NrfRzniZH9rqtIeecPvHSGeIxQMxuMF+i\nDVRkv2WMgSEaxPwJ8sx5g4oXk2QSwYVhVVdATeZQ2NVUqIBnYrvYxr2vMRCY5rgl\npQLTDiBVeFMtIMRUuWVE3iS7lA3QqZK2Qr7VkVEes0c5Z2KBaW98ac4AaCVoV/Yc\n+BL3U6Y3MpiXAkit6ctuOBrK+xSCzG4wZY0d69TzuQKBgQDpW2BfHTFASx7NQ4Ie\nuGnxGlf+Bea0JgoMWQqQhBdykXzLhVb+n6Tpc87cSQaVv5EHx5bCfhZlclaHKBsL\ntDtpGV4kgTZyaglYR1h6RWp6yUlV9su8V+gQE+tVYeFXsDYfS4GhHXX+83EcmIiN\nThNyLRQNvMY+yYfpvW73e7S3mwKBgQDX7Ks3Ljtx76Vsq5zPVp6dLqJWn1fH7iSI\n4+JcnjorvONI7kUieNzF02yygqohMiQpcxRYToggsT/+oX6pCL7masLCUjktsrO+\nNe8wJAht8b7rghIS+soNEY9KPQWN32IyaQFJDydY/Cz76fnitbrmbHiG2F6917QZ\nWpCbtr/UHQKBgFCpChW2ZHjBvoLa69YsjkoNfg7LAWSRpXWBLZqoXeZ3DXjXvStE\nCV+8bOtNvp3yWnIi9iSCKsGkFO6g2UBhawu3/geGNki0CEjgWF/jMJwCiXvSU7fl\ndsxf5j9cFuUVfo+wrL0BDvEyOo3U15ZoP2Z+2GirMKcxR+5uUTXwJ5YzAoGAJmcp\nbH8Eg5cjzNgY46d8Pmh05wMgEacBSHd/YwmhPvYxVl9KXH8yhNy9kGI87/qDA/w7\nuhj9jRL5VshSRq4PhdunF/iXwtDttv7Qs7c06Jj+Y9SWclm4ZeqhmYqQ2lLInD6g\nw+W2EdWICqXqk6/OtfzE0vbYotsiZP/+iDNQmuECgYEA46/gbMwmEKQQwQNvC6EQ\nnlyCSaSev5hQt+pV27Nf6G4nHdaCjr8uliE7wU3BNgA8K4UGAmW5FDmi5B7aExc5\nP0nLDtgXAT6CHOZ1K6Uxzf6jMICtO8o8HL6V1h6E61P+hD5fSFoYUvuML9C79U98\nohynMJp3BdtFpumfV5E3lik=\n-----END PRIVATE KEY-----\n",
+  "client_email": "book-creation-from-python@complete-agency-270710.iam.gserviceaccount.com",
+  "client_id": "103965508234420225598",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/book-creation-from-python%40complete-agency-270710.iam.gserviceaccount.com"
+}
