@@ -1,12 +1,12 @@
-Flask==2.1.1
+Flask
 flask-cors
 pinecone-client
 gunicorn==20.1.0
 openai==0.27.0
 requests==2.27.1
-llama-index==0.6.21.post1
+llama-index==0.6.18
 transformers
-langchain==0.0.138
+langchain==0.0.189
 google-auth
 google-auth-oauthlib
 google-auth-httplib2

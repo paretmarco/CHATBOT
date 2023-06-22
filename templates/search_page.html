@@ -21,7 +21,7 @@
         <div class="wrapper">
             <div class="settings">
                 <form onsubmit="handleFormSubmit(event)">
-                    <label for="query">Ask me. Wait 30 secs, and you will receive a precise answer updated with specific information from Dr. Pareti:</label>
+                    <label for="query">Ask me. Wait 30 secs, and you will receive a precise answer updated with specific information from Dr. Paret:</label>
                     <br>
                     <textarea id="query" name="query" rows="4" cols="50"></textarea>
                     <br><br>
@@ -37,7 +37,9 @@
                     <input type="range" id="num_results" name="num_results" min="0" max="10" value="2">
                     <span id="num_results_value">2</span>
                     <br><br>
-
+<button onclick="window.open('http://64.226.96.78:5002/', '_blank')">Open again while waiting</button>
+<br>
+<br>
                     <label>User personality:</label>
                     <br>
                     <div class="option-row" id="user_personality"></div>
@@ -58,8 +60,8 @@
                     <br><br>
                     <label for="model">Model:</label>
                     <select id="model" name="model">
-                        <option value="gpt-3.5-turbo">GPT-3.5-turbo</option>
                         <option value="gpt-4">GPT-4</option>
+                        <option value="gpt-3.5-turbo">GPT-3.5-turbo</option>
                     </select>
                     <br><br>
                 </form>

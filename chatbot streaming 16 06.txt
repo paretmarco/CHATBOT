@@ -3,7 +3,7 @@ import os
 import openai
 import requests
 import json
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, Response
 import logging
 import re
 from flask_cors import CORS
@@ -91,14 +91,11 @@ def process_chatbot_request(user_input, max_tokens, user_personality, additional
         n=1,
         stop=None,
         temperature=temperature,
-        frequency_penalty=frequency_penalty,
-# uncomment for streaming  "stream": True  
+        frequency_penalty=frequency_penalty
     )
 
     print(response)
     assistant_reply = response.choices[0].message['content']
-
-######### ADDITIONAL FONCTION
 
     # Save the conversation
     filename = f"{user_id}_conversations.json"
@@ -126,11 +123,11 @@ def process_chatbot_request(user_input, max_tokens, user_personality, additional
 
     return assistant_reply
 
+# new fonction for streaming
 def stream_chatbot_request(user_input, max_tokens, user_personality, additional_context, model, user_id):
     logging.basicConfig(filename='chatbot.log', level=logging.INFO)
 
     logging.info(f"Processing chatbot stream request with user_input: {user_input}")
-    socketio.emit('my response', {'data': f"Processing chatbot stream request with user_input: {user_input}"})
 
     search_results = search_snippets(user_input)
     logging.info(f"Search results received: {search_results}")
@@ -170,10 +167,8 @@ def stream_chatbot_request(user_input, max_tokens, user_personality, additional_
         "n": 1,
         "stop": None,
         "temperature": 0.8,
- #       "stream": True
+        "stream": True
     }
-
-#### this is the difference
 
     try:
         response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=data, stream=True)
@@ -203,12 +198,10 @@ def stream_chatbot_request(user_input, max_tokens, user_personality, additional_
     except JSONDecodeError as e:
         logging.error(f"JSON decode failed: {e}")
 
-##### end difference
-
-
+# new  Route
 @app.route("/api/chatbot_streaming", methods=["POST"])
 def chatbot_streaming():
-    try: 
+    try:
         data = request.json
         user_input = data["user_input"]
         max_tokens = data.get("max_tokens", default_max_tokens)
@@ -218,8 +211,6 @@ def chatbot_streaming():
         user_id = data.get("user_id", "OWNER")  # Get user_id from the request, with a default value of "OWNER"
 
         logging.info(f"Received chatbot API streaming request with model {model}, user_id {user_id} and user_input: {user_input}")
-
-### different
 
         def stream():
             for message in stream_chatbot_request(user_input, max_tokens, user_personality, additional_context, model, user_id):
@@ -248,8 +239,6 @@ def chatbot():
             frequency_penalty = 0.0
 
         logging.info(f"Received chatbot API request with model {model}, user_id {user_id} and user_input: {user_input}")
-
-###
 
         response_text = process_chatbot_request(user_input, max_tokens, user_personality, additional_context, model, user_id, temperature, frequency_penalty)
 

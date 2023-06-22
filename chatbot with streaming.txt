@@ -91,14 +91,11 @@ def process_chatbot_request(user_input, max_tokens, user_personality, additional
         n=1,
         stop=None,
         temperature=temperature,
-        frequency_penalty=frequency_penalty,
-# uncomment for streaming  "stream": True  
+        frequency_penalty=frequency_penalty
     )
 
     print(response)
     assistant_reply = response.choices[0].message['content']
-
-######### ADDITIONAL FONCTION
 
     # Save the conversation
     filename = f"{user_id}_conversations.json"
@@ -126,112 +123,6 @@ def process_chatbot_request(user_input, max_tokens, user_personality, additional
 
     return assistant_reply
 
-def stream_chatbot_request(user_input, max_tokens, user_personality, additional_context, model, user_id):
-    logging.basicConfig(filename='chatbot.log', level=logging.INFO)
-
-    logging.info(f"Processing chatbot stream request with user_input: {user_input}")
-    socketio.emit('my response', {'data': f"Processing chatbot stream request with user_input: {user_input}"})
-
-    search_results = search_snippets(user_input)
-    logging.info(f"Search results received: {search_results}")
-
-    if search_results and search_results["response"]:
-        context = search_results["response"][0]["response"]
-    else:
-        context = "I couldn't find any relevant information."
-
-    user_message_content = f"{user_input}. To answer, use: {context}"
-
-    if not is_complete_sentence(user_input):
-        user_message_content = f"Please complete the following sentence: {user_input}. To answer, consider: {context}"
-
-    available_tokens = 4097 - max_tokens - 100  # reserve some tokens for the response
-
-    user_message_content = user_message_content[:available_tokens // 2]
-    context = context[:available_tokens // 2]
-
-    messages = [
-        {"role": "system", "content": user_personality},
-        {"role": "assistant", "content": additional_context + " " + context},
-        {"role": "user", "content": user_message_content + " please use and adapt this material for your answer being very details"}
-    ]
-
-    logging.info(f"Messages sent to OpenAI API: {messages}")
-
-    headers = {
-        "Content-Type": "application/json",
-        "Authorization": f"Bearer {openai.api_key}"
-    }
-
-    data = {
-        "model": model,
-        "messages": messages,
-        "max_tokens": int(max_tokens),
-        "n": 1,
-        "stop": None,
-        "temperature": 0.8,
- #       "stream": True
-    }
-
-#### this is the difference
-
-    try:
-        response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=data, stream=True)
-
-        buffer = ""  # This is for storing incomplete JSON data
-        for line in response.iter_lines():
-            if line:
-                decoded_line = line.decode('utf-8')
-                logging.info(f"Decoded line: {decoded_line}")
-                if decoded_line.startswith("data: "):
-                    decoded_line = decoded_line[6:]  # remove the "data: " prefix
-                buffer += decoded_line
-                try:
-                    json_line = json.loads(buffer)
-                    buffer = ""  # Clear the buffer once the line is successfully parsed
-                    if 'choices' in json_line:
-                        try:
-                            yield json_line['choices'][0]['delta']['content']
-                        except KeyError:
-                            logging.error(f"KeyError: 'delta' or 'content' not found in JSON response. JSON response: {json_line}")
-                except json.JSONDecodeError:
-                    continue  # If JSON parsing fails, keep the buffer and continue to the next line
-
-    except RequestException as e:
-        logging.error(f"Request failed: {e}")
-
-    except JSONDecodeError as e:
-        logging.error(f"JSON decode failed: {e}")
-
-##### end difference
-
-
-@app.route("/api/chatbot_streaming", methods=["POST"])
-def chatbot_streaming():
-    try: 
-        data = request.json
-        user_input = data["user_input"]
-        max_tokens = data.get("max_tokens", default_max_tokens)
-        user_personality = data.get("user_personality") or default_author_personality
-        additional_context = data["additional_context"]
-        model = data.get("model", "gpt-3.5-turbo")
-        user_id = data.get("user_id", "OWNER")  # Get user_id from the request, with a default value of "OWNER"
-
-        logging.info(f"Received chatbot API streaming request with model {model}, user_id {user_id} and user_input: {user_input}")
-
-### different
-
-        def stream():
-            for message in stream_chatbot_request(user_input, max_tokens, user_personality, additional_context, model, user_id):
-                logging.info(f"Streamed message: {message}")
-                yield message + '\n'
-
-        return Response(stream(), mimetype='text/plain')
-
-    except Exception as e:
-        logging.error(f"Error processing chatbot streaming request: {e}")
-        return jsonify({"error": str(e)}), 500
-
 @app.route("/api/chatbot", methods=["POST"])
 def chatbot():
     try:
@@ -248,8 +139,6 @@ def chatbot():
             frequency_penalty = 0.0
 
         logging.info(f"Received chatbot API request with model {model}, user_id {user_id} and user_input: {user_input}")
-
-###
 
         response_text = process_chatbot_request(user_input, max_tokens, user_personality, additional_context, model, user_id, temperature, frequency_penalty)
 

@@ -4506,3 +4506,730 @@ quale Pnl. Sarei interessata alla formazione"...
 2023-06-09 10:09:14,411:INFO:Attempting to write to sheet: 1MsUKGRrrBsr-MCQSpyrethObJZD7HpBO1uhz8CRygfI
 2023-06-09 10:09:14,717:INFO:2 cells updated.
 2023-06-09 10:09:14,717:INFO:127.0.0.1 - - [09/Jun/2023 10:09:14] "POST /save_edited_answer HTTP/1.1" 200 -
+2023-06-09 16:31:18,591:INFO:127.0.0.1 - - [09/Jun/2023 16:31:18] "[36mGET /static/main.js HTTP/1.1[0m" 304 -
+2023-06-09 16:31:18,615:INFO:127.0.0.1 - - [09/Jun/2023 16:31:18] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2023-06-09 16:31:19,242:INFO:127.0.0.1 - - [09/Jun/2023 16:31:19] "[36mGET /static/show_snippets.js HTTP/1.1[0m" 304 -
+2023-06-09 16:31:19,563:INFO:127.0.0.1 - - [09/Jun/2023 16:31:19] "[36mGET /static/save_edits.js HTTP/1.1[0m" 304 -
+2023-06-09 16:31:19,585:INFO:127.0.0.1 - - [09/Jun/2023 16:31:19] "[36mGET /static/chatbot.js HTTP/1.1[0m" 304 -
+2023-06-09 16:31:19,821:INFO:127.0.0.1 - - [09/Jun/2023 16:31:19] "[36mGET /static/videos.js HTTP/1.1[0m" 304 -
+2023-06-09 16:31:19,905:INFO:127.0.0.1 - - [09/Jun/2023 16:31:19] "[36mGET /static/options.js HTTP/1.1[0m" 304 -
+2023-06-09 16:31:20,266:INFO:127.0.0.1 - - [09/Jun/2023 16:31:20] "[36mGET /static/sliders.js HTTP/1.1[0m" 304 -
+2023-06-09 16:31:20,707:INFO:127.0.0.1 - - [09/Jun/2023 16:31:20] "[36mGET /static/userpersonality.txt HTTP/1.1[0m" 304 -
+2023-06-09 16:31:20,712:INFO:127.0.0.1 - - [09/Jun/2023 16:31:20] "[36mGET /static/formats.txt HTTP/1.1[0m" 304 -
+2023-06-09 16:31:20,714:INFO:127.0.0.1 - - [09/Jun/2023 16:31:20] "[36mGET /static/tasks.txt HTTP/1.1[0m" 304 -
+2023-06-11 12:34:45,715:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-11 12:34:45,715:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-11 12:34:45,816:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-06-11 12:34:45,883:INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5002
+2023-06-11 12:34:45,883:INFO:[33mPress CTRL+C to quit[0m
+2023-06-11 12:34:45,892:INFO: * Restarting with stat
+2023-06-11 12:34:53,996:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-11 12:34:53,996:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-11 12:34:54,043:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-06-11 12:34:54,059:WARNING: * Debugger is active!
+2023-06-11 12:34:54,075:INFO: * Debugger PIN: 691-848-005
+2023-06-11 17:06:47,816:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\search_snippets.py', reloading
+2023-06-11 17:06:47,816:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\search_snippets.py', reloading
+2023-06-11 17:06:49,099:INFO: * Restarting with stat
+2023-06-11 17:06:49,192:INFO: * Restarting with stat
+2023-06-11 17:07:04,310:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-11 17:07:04,310:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-11 17:07:04,389:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-06-11 17:07:04,437:WARNING: * Debugger is active!
+2023-06-11 17:07:04,437:INFO: * Debugger PIN: 691-848-005
+2023-06-11 17:07:09,871:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-11 17:07:09,871:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-11 17:07:09,934:INFO:Starting server...
+2023-06-11 17:07:09,980:INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-06-11 17:07:09,980:INFO:[33mPress CTRL+C to quit[0m
+2023-06-11 17:07:09,980:INFO: * Restarting with stat
+2023-06-11 17:07:17,576:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-11 17:07:17,576:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-11 17:07:17,616:INFO:Starting server...
+2023-06-11 17:07:17,623:WARNING: * Debugger is active!
+2023-06-11 17:07:17,623:INFO: * Debugger PIN: 691-848-005
+2023-06-11 18:15:08,250:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\write.py', reloading
+2023-06-11 18:15:09,131:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\write.py', reloading
+2023-06-11 18:15:09,349:INFO: * Restarting with stat
+2023-06-11 18:15:09,976:INFO: * Restarting with stat
+2023-06-11 18:15:16,411:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-11 18:15:16,411:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-11 18:15:16,411:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-11 18:15:16,427:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-11 18:15:16,505:INFO:Starting server...
+2023-06-11 18:15:16,521:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-06-11 18:15:16,536:WARNING: * Debugger is active!
+2023-06-11 18:15:16,552:INFO: * Debugger PIN: 691-848-005
+2023-06-11 18:15:16,552:WARNING: * Debugger is active!
+2023-06-11 18:15:16,552:INFO: * Debugger PIN: 691-848-005
+2023-06-11 18:20:44,250:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\write.py', reloading
+2023-06-11 18:20:44,250:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\write.py', reloading
+2023-06-11 18:20:44,911:INFO: * Restarting with stat
+2023-06-11 18:20:44,911:INFO: * Restarting with stat
+2023-06-11 18:20:54,902:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-11 18:20:54,902:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-11 18:20:54,917:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-11 18:20:54,917:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-11 18:20:54,965:INFO:Starting server...
+2023-06-11 18:20:54,981:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-06-11 18:20:54,981:WARNING: * Debugger is active!
+2023-06-11 18:20:54,981:INFO: * Debugger PIN: 691-848-005
+2023-06-11 18:20:54,997:WARNING: * Debugger is active!
+2023-06-11 18:20:54,997:INFO: * Debugger PIN: 691-848-005
+2023-06-11 18:21:29,045:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\write.py', reloading
+2023-06-11 18:21:29,045:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\write.py', reloading
+2023-06-11 18:21:29,742:INFO: * Restarting with stat
+2023-06-11 18:21:29,742:INFO: * Restarting with stat
+2023-06-11 18:21:37,195:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-11 18:21:37,195:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-11 18:21:37,261:INFO:Starting server...
+2023-06-11 18:21:37,278:WARNING: * Debugger is active!
+2023-06-11 18:21:37,283:INFO: * Debugger PIN: 691-848-005
+2023-06-11 18:21:37,334:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-11 18:21:37,334:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-11 18:21:37,374:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-06-11 18:21:37,399:WARNING: * Debugger is active!
+2023-06-11 18:21:37,399:INFO: * Debugger PIN: 691-848-005
+2023-06-12 11:27:31,797:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\write.py', reloading
+2023-06-12 11:27:31,798:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\write.py', reloading
+2023-06-12 11:27:33,872:INFO: * Restarting with stat
+2023-06-12 11:27:33,872:INFO: * Restarting with stat
+2023-06-12 11:27:54,179:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-12 11:27:54,179:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-12 11:27:54,305:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-12 11:27:54,305:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-12 11:27:54,363:INFO:Starting server...
+2023-06-12 11:27:54,425:WARNING: * Debugger is active!
+2023-06-12 11:27:54,449:INFO: * Debugger PIN: 691-848-005
+2023-06-12 11:27:54,539:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-06-12 11:27:54,622:WARNING: * Debugger is active!
+2023-06-12 11:27:54,629:INFO: * Debugger PIN: 691-848-005
+2023-06-12 11:29:19,591:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\write.py', reloading
+2023-06-12 11:29:19,646:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\write.py', reloading
+2023-06-12 11:29:21,437:INFO: * Restarting with stat
+2023-06-12 11:29:21,596:INFO: * Restarting with stat
+2023-06-12 11:29:38,944:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-12 11:29:38,945:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-12 11:29:38,958:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-12 11:29:38,959:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-12 11:29:39,019:INFO:Starting server...
+2023-06-12 11:29:39,020:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-06-12 11:29:39,038:WARNING: * Debugger is active!
+2023-06-12 11:29:39,044:INFO: * Debugger PIN: 691-848-005
+2023-06-12 11:29:39,051:WARNING: * Debugger is active!
+2023-06-12 11:29:39,057:INFO: * Debugger PIN: 691-848-005
+2023-06-12 11:33:25,632:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\write.py', reloading
+2023-06-12 11:33:25,644:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\write.py', reloading
+2023-06-12 11:33:27,103:INFO: * Restarting with stat
+2023-06-12 11:33:27,167:INFO: * Restarting with stat
+2023-06-12 11:33:42,297:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-12 11:33:42,297:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-12 11:33:42,331:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-12 11:33:42,331:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-12 11:33:42,361:INFO:Starting server...
+2023-06-12 11:33:42,376:WARNING: * Debugger is active!
+2023-06-12 11:33:42,382:INFO: * Debugger PIN: 691-848-005
+2023-06-12 11:33:42,400:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-06-12 11:33:42,434:WARNING: * Debugger is active!
+2023-06-12 11:33:42,437:INFO: * Debugger PIN: 691-848-005
+2023-06-13 10:46:25,918:INFO:127.0.0.1 - - [13/Jun/2023 10:46:25] "[36mGET /static/show_snippets.js HTTP/1.1[0m" 304 -
+2023-06-13 10:46:25,928:INFO:127.0.0.1 - - [13/Jun/2023 10:46:25] "[36mGET /static/main.js HTTP/1.1[0m" 304 -
+2023-06-13 10:46:25,930:INFO:127.0.0.1 - - [13/Jun/2023 10:46:25] "GET /static/options.js HTTP/1.1" 200 -
+2023-06-13 10:46:25,933:INFO:127.0.0.1 - - [13/Jun/2023 10:46:25] "[36mGET /static/chatbot.js HTTP/1.1[0m" 304 -
+2023-06-13 10:46:25,933:INFO:127.0.0.1 - - [13/Jun/2023 10:46:25] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2023-06-13 10:46:25,933:INFO:127.0.0.1 - - [13/Jun/2023 10:46:25] "[36mGET /static/save_edits.js HTTP/1.1[0m" 304 -
+2023-06-13 10:46:26,260:INFO:127.0.0.1 - - [13/Jun/2023 10:46:26] "[36mGET /static/videos.js HTTP/1.1[0m" 304 -
+2023-06-13 10:46:26,272:INFO:127.0.0.1 - - [13/Jun/2023 10:46:26] "GET /static/sliders.js HTTP/1.1" 200 -
+2023-06-13 10:46:26,690:INFO:127.0.0.1 - - [13/Jun/2023 10:46:26] "[36mGET /static/userpersonality.txt HTTP/1.1[0m" 304 -
+2023-06-13 10:46:26,690:INFO:127.0.0.1 - - [13/Jun/2023 10:46:26] "[36mGET /static/formats.txt HTTP/1.1[0m" 304 -
+2023-06-13 10:46:26,702:INFO:127.0.0.1 - - [13/Jun/2023 10:46:26] "[36mGET /static/tasks.txt HTTP/1.1[0m" 304 -
+2023-06-13 16:18:06,614:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\write.py', reloading
+2023-06-13 16:18:07,882:INFO: * Restarting with stat
+2023-06-13 16:18:07,882:INFO: * Restarting with stat
+2023-06-13 16:18:22,097:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-13 16:18:22,097:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-13 16:18:22,189:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-06-13 16:18:22,192:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-13 16:18:22,192:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-13 16:18:22,224:WARNING: * Debugger is active!
+2023-06-13 16:18:22,224:INFO: * Debugger PIN: 691-848-005
+2023-06-13 16:18:22,240:INFO:Starting server...
+2023-06-13 16:18:22,240:WARNING: * Debugger is active!
+2023-06-13 16:18:22,255:INFO: * Debugger PIN: 691-848-005
+2023-06-13 16:19:10,033:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\write.py', reloading
+2023-06-13 16:19:10,041:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\write.py', reloading
+2023-06-13 16:19:10,751:INFO: * Restarting with stat
+2023-06-13 16:19:10,813:INFO: * Restarting with stat
+2023-06-13 16:19:17,992:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-13 16:19:17,992:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-13 16:19:17,992:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-13 16:19:17,992:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-13 16:19:18,039:INFO:Starting server...
+2023-06-13 16:19:18,039:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-06-13 16:19:18,039:WARNING: * Debugger is active!
+2023-06-13 16:19:18,055:INFO: * Debugger PIN: 691-848-005
+2023-06-13 16:19:18,055:WARNING: * Debugger is active!
+2023-06-13 16:19:18,070:INFO: * Debugger PIN: 691-848-005
+2023-06-13 16:19:38,148:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\write.py', reloading
+2023-06-13 16:19:38,779:INFO: * Restarting with stat
+2023-06-13 16:19:39,254:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\write.py', reloading
+2023-06-13 16:19:39,843:INFO: * Restarting with stat
+2023-06-13 16:19:46,457:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-13 16:19:46,457:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-13 16:19:46,490:INFO:Starting server...
+2023-06-13 16:19:46,496:WARNING: * Debugger is active!
+2023-06-13 16:19:46,496:INFO: * Debugger PIN: 691-848-005
+2023-06-13 16:19:47,277:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-13 16:19:47,277:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-13 16:19:47,308:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-06-13 16:19:47,324:WARNING: * Debugger is active!
+2023-06-13 16:19:47,340:INFO: * Debugger PIN: 691-848-005
+2023-06-13 16:20:38,947:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\write.py', reloading
+2023-06-13 16:20:39,529:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\write.py', reloading
+2023-06-13 16:20:39,535:INFO: * Restarting with stat
+2023-06-13 16:20:40,109:INFO: * Restarting with stat
+2023-06-13 16:20:47,465:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-13 16:20:47,465:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-13 16:20:47,538:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-06-13 16:20:47,554:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-13 16:20:47,554:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-13 16:20:47,562:WARNING: * Debugger is active!
+2023-06-13 16:20:47,562:INFO: * Debugger PIN: 691-848-005
+2023-06-13 16:20:47,587:INFO:Starting server...
+2023-06-13 16:20:47,595:WARNING: * Debugger is active!
+2023-06-13 16:20:47,595:INFO: * Debugger PIN: 691-848-005
+2023-06-13 16:23:39,890:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\write.py', reloading
+2023-06-13 16:23:40,399:INFO: * Restarting with stat
+2023-06-13 16:23:40,480:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\write.py', reloading
+2023-06-13 16:23:41,000:INFO: * Restarting with stat
+2023-06-13 16:23:47,798:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-13 16:23:47,798:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-13 16:23:47,829:INFO:Starting server...
+2023-06-13 16:23:47,845:WARNING: * Debugger is active!
+2023-06-13 16:23:47,845:INFO: * Debugger PIN: 691-848-005
+2023-06-13 16:23:48,285:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-13 16:23:48,285:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-13 16:23:48,324:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-06-13 16:23:48,334:WARNING: * Debugger is active!
+2023-06-13 16:23:48,349:INFO: * Debugger PIN: 691-848-005
+2023-06-13 17:30:25,771:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-13 17:30:25,771:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-13 17:30:25,851:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-06-13 17:30:25,922:INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5002
+2023-06-13 17:30:25,922:INFO:[33mPress CTRL+C to quit[0m
+2023-06-13 17:30:25,930:INFO: * Restarting with stat
+2023-06-13 17:30:34,942:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-13 17:30:34,942:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-13 17:30:35,017:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-06-13 17:30:35,046:WARNING: * Debugger is active!
+2023-06-13 17:30:35,051:INFO: * Debugger PIN: 691-848-005
+2023-06-13 17:30:41,326:INFO:127.0.0.1 - - [13/Jun/2023 17:30:41] "GET / HTTP/1.1" 200 -
+2023-06-13 17:30:41,681:INFO:127.0.0.1 - - [13/Jun/2023 17:30:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2023-06-13 17:30:41,731:INFO:127.0.0.1 - - [13/Jun/2023 17:30:41] "[36mGET /static/main.js HTTP/1.1[0m" 304 -
+2023-06-13 17:30:41,731:INFO:127.0.0.1 - - [13/Jun/2023 17:30:41] "[36mGET /static/show_snippets.js HTTP/1.1[0m" 304 -
+2023-06-13 17:30:41,737:INFO:127.0.0.1 - - [13/Jun/2023 17:30:41] "[36mGET /static/save_edits.js HTTP/1.1[0m" 304 -
+2023-06-13 17:30:41,744:INFO:127.0.0.1 - - [13/Jun/2023 17:30:41] "GET /static/options.js HTTP/1.1" 200 -
+2023-06-13 17:30:41,747:INFO:127.0.0.1 - - [13/Jun/2023 17:30:41] "[36mGET /static/chatbot.js HTTP/1.1[0m" 304 -
+2023-06-13 17:30:42,030:INFO:127.0.0.1 - - [13/Jun/2023 17:30:42] "[36mGET /static/videos.js HTTP/1.1[0m" 304 -
+2023-06-13 17:30:42,130:INFO:127.0.0.1 - - [13/Jun/2023 17:30:42] "GET /static/sliders.js HTTP/1.1" 200 -
+2023-06-13 17:30:42,534:INFO:127.0.0.1 - - [13/Jun/2023 17:30:42] "[36mGET /static/userpersonality.txt HTTP/1.1[0m" 304 -
+2023-06-13 17:30:42,543:INFO:127.0.0.1 - - [13/Jun/2023 17:30:42] "[36mGET /static/tasks.txt HTTP/1.1[0m" 304 -
+2023-06-13 17:30:42,543:INFO:127.0.0.1 - - [13/Jun/2023 17:30:42] "[36mGET /static/formats.txt HTTP/1.1[0m" 304 -
+2023-06-13 17:30:42,729:INFO:127.0.0.1 - - [13/Jun/2023 17:30:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2023-06-13 17:31:03,902:INFO:127.0.0.1 - - [13/Jun/2023 17:31:03] "POST /api/search HTTP/1.1" 200 -
+2023-06-13 17:31:04,219:INFO:127.0.0.1 - - [13/Jun/2023 17:31:04] "POST /api/search HTTP/1.1" 200 -
+2023-06-13 17:31:04,219:INFO:127.0.0.1 - - [13/Jun/2023 17:31:04] "POST /api/search HTTP/1.1" 200 -
+2023-06-13 17:31:04,219:INFO:127.0.0.1 - - [13/Jun/2023 17:31:04] "POST /api/search HTTP/1.1" 200 -
+2023-06-13 17:31:04,536:INFO:function: search_api
+2023-06-13 17:31:04,536:INFO:{'query': ''}
+2023-06-13 17:31:04,536:INFO:Received search API request
+2023-06-13 17:31:04,536:INFO:Querying index with ""...
+2023-06-13 17:31:04,709:INFO:function: search_api
+2023-06-13 17:31:04,709:INFO:{'query': ''}
+2023-06-13 17:31:04,709:INFO:Received search API request
+2023-06-13 17:31:04,713:INFO:Querying index with ""...
+2023-06-13 17:31:05,032:INFO:error_code=None error_message="'$.input' is invalid. Please check the API reference: https://platform.openai.com/docs/api-reference." error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-06-13 17:31:05,089:INFO:error_code=None error_message="'$.input' is invalid. Please check the API reference: https://platform.openai.com/docs/api-reference." error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-06-13 17:31:06,557:INFO:error_code=None error_message="'$.input' is invalid. Please check the API reference: https://platform.openai.com/docs/api-reference." error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-06-13 17:31:06,679:INFO:error_code=None error_message="'$.input' is invalid. Please check the API reference: https://platform.openai.com/docs/api-reference." error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-06-13 17:31:06,898:INFO:error_code=None error_message="'$.input' is invalid. Please check the API reference: https://platform.openai.com/docs/api-reference." error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-06-13 17:31:09,660:INFO:error_code=None error_message="'$.input' is invalid. Please check the API reference: https://platform.openai.com/docs/api-reference." error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-06-13 17:31:10,641:INFO:error_code=None error_message="'$.input' is invalid. Please check the API reference: https://platform.openai.com/docs/api-reference." error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-06-13 17:31:12,747:INFO:error_code=None error_message="'$.input' is invalid. Please check the API reference: https://platform.openai.com/docs/api-reference." error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-06-13 17:31:18,553:INFO:error_code=None error_message="'$.input' is invalid. Please check the API reference: https://platform.openai.com/docs/api-reference." error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-06-13 17:31:18,659:INFO:error_code=None error_message="'$.input' is invalid. Please check the API reference: https://platform.openai.com/docs/api-reference." error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-06-13 17:31:30,101:INFO:error_code=None error_message="'$.input' is invalid. Please check the API reference: https://platform.openai.com/docs/api-reference." error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-06-13 17:31:30,101:ERROR:Error searching for '': RetryError[<Future at 0x196c402f9a0 state=finished raised InvalidRequestError>]
+2023-06-13 17:31:30,107:INFO:127.0.0.1 - - [13/Jun/2023 17:31:30] "[35m[1mPOST /api/search HTTP/1.1[0m" 500 -
+2023-06-13 17:31:55,541:INFO:127.0.0.1 - - [13/Jun/2023 17:31:55] "GET / HTTP/1.1" 200 -
+2023-06-13 17:31:55,632:ERROR:Error searching for '': RetryError[<Future at 0x196c402f7c0 state=finished raised APIConnectionError>]
+2023-06-13 17:31:55,634:INFO:127.0.0.1 - - [13/Jun/2023 17:31:55] "[35m[1mPOST /api/search HTTP/1.1[0m" 500 -
+2023-06-13 17:31:55,799:INFO:127.0.0.1 - - [13/Jun/2023 17:31:55] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2023-06-13 17:31:55,903:INFO:127.0.0.1 - - [13/Jun/2023 17:31:55] "[36mGET /static/main.js HTTP/1.1[0m" 304 -
+2023-06-13 17:31:55,911:INFO:127.0.0.1 - - [13/Jun/2023 17:31:55] "[36mGET /static/save_edits.js HTTP/1.1[0m" 304 -
+2023-06-13 17:31:55,911:INFO:127.0.0.1 - - [13/Jun/2023 17:31:55] "[36mGET /static/show_snippets.js HTTP/1.1[0m" 304 -
+2023-06-13 17:31:55,911:INFO:127.0.0.1 - - [13/Jun/2023 17:31:55] "[36mGET /static/videos.js HTTP/1.1[0m" 304 -
+2023-06-13 17:31:55,911:INFO:127.0.0.1 - - [13/Jun/2023 17:31:55] "[36mGET /static/chatbot.js HTTP/1.1[0m" 304 -
+2023-06-13 17:31:56,119:INFO:127.0.0.1 - - [13/Jun/2023 17:31:56] "[36mGET /static/options.js HTTP/1.1[0m" 304 -
+2023-06-13 17:31:56,274:INFO:127.0.0.1 - - [13/Jun/2023 17:31:56] "[36mGET /static/sliders.js HTTP/1.1[0m" 304 -
+2023-06-13 17:31:56,630:INFO:127.0.0.1 - - [13/Jun/2023 17:31:56] "[36mGET /static/userpersonality.txt HTTP/1.1[0m" 304 -
+2023-06-13 17:31:56,630:INFO:127.0.0.1 - - [13/Jun/2023 17:31:56] "[36mGET /static/tasks.txt HTTP/1.1[0m" 304 -
+2023-06-13 17:31:56,630:INFO:127.0.0.1 - - [13/Jun/2023 17:31:56] "[36mGET /static/formats.txt HTTP/1.1[0m" 304 -
+2023-06-13 17:44:01,576:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\write.py', reloading
+2023-06-13 17:44:01,576:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\write.py', reloading
+2023-06-13 17:44:02,156:INFO: * Restarting with stat
+2023-06-13 17:44:02,399:INFO: * Restarting with stat
+2023-06-13 17:44:10,136:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-13 17:44:10,136:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-13 17:44:10,167:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-06-13 17:44:10,184:WARNING: * Debugger is active!
+2023-06-13 17:44:10,184:INFO: * Debugger PIN: 691-848-005
+2023-06-13 17:44:10,467:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-13 17:44:10,467:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-13 17:44:10,499:INFO:Starting server...
+2023-06-13 17:44:10,499:WARNING: * Debugger is active!
+2023-06-13 17:44:10,508:INFO: * Debugger PIN: 691-848-005
+2023-06-13 17:57:25,058:INFO:127.0.0.1 - - [13/Jun/2023 17:57:25] "POST /api/search HTTP/1.1" 200 -
+2023-06-13 17:57:25,061:INFO:127.0.0.1 - - [13/Jun/2023 17:57:25] "POST /api/search HTTP/1.1" 200 -
+2023-06-13 17:57:25,061:INFO:127.0.0.1 - - [13/Jun/2023 17:57:25] "POST /api/search HTTP/1.1" 200 -
+2023-06-13 17:57:25,061:INFO:127.0.0.1 - - [13/Jun/2023 17:57:25] "POST /api/search HTTP/1.1" 200 -
+2023-06-13 17:57:25,308:INFO:function: search_api
+2023-06-13 17:57:25,308:INFO:{'query': ''}
+2023-06-13 17:57:25,322:INFO:Received search API request
+2023-06-13 17:57:25,330:INFO:Querying index with ""...
+2023-06-13 17:57:25,393:INFO:function: search_api
+2023-06-13 17:57:25,395:INFO:{'query': ''}
+2023-06-13 17:57:25,396:INFO:Received search API request
+2023-06-13 17:57:25,397:INFO:Querying index with ""...
+2023-06-13 17:57:25,765:INFO:error_code=None error_message="'$.input' is invalid. Please check the API reference: https://platform.openai.com/docs/api-reference." error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-06-13 17:57:25,779:INFO:error_code=None error_message="'$.input' is invalid. Please check the API reference: https://platform.openai.com/docs/api-reference." error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-06-13 17:57:26,118:INFO:error_code=None error_message="'$.input' is invalid. Please check the API reference: https://platform.openai.com/docs/api-reference." error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-06-13 17:57:26,510:INFO:error_code=None error_message="'$.input' is invalid. Please check the API reference: https://platform.openai.com/docs/api-reference." error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-06-13 17:57:26,671:INFO:error_code=None error_message="'$.input' is invalid. Please check the API reference: https://platform.openai.com/docs/api-reference." error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-06-13 17:57:26,809:INFO:error_code=None error_message="'$.input' is invalid. Please check the API reference: https://platform.openai.com/docs/api-reference." error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-06-13 17:57:27,301:INFO:error_code=None error_message="'$.input' is invalid. Please check the API reference: https://platform.openai.com/docs/api-reference." error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-06-13 17:57:29,351:INFO:error_code=None error_message="'$.input' is invalid. Please check the API reference: https://platform.openai.com/docs/api-reference." error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-06-13 17:57:30,209:INFO:error_code=None error_message="'$.input' is invalid. Please check the API reference: https://platform.openai.com/docs/api-reference." error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-06-13 17:57:36,084:INFO:error_code=None error_message="'$.input' is invalid. Please check the API reference: https://platform.openai.com/docs/api-reference." error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-06-13 17:57:42,772:INFO:error_code=None error_message="'$.input' is invalid. Please check the API reference: https://platform.openai.com/docs/api-reference." error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-06-13 17:57:42,772:ERROR:Error searching for '': RetryError[<Future at 0x1b0fbac7e80 state=finished raised InvalidRequestError>]
+2023-06-13 17:57:42,772:INFO:127.0.0.1 - - [13/Jun/2023 17:57:42] "[35m[1mPOST /api/search HTTP/1.1[0m" 500 -
+2023-06-13 17:57:47,663:INFO:error_code=None error_message="'$.input' is invalid. Please check the API reference: https://platform.openai.com/docs/api-reference." error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-06-13 17:57:47,663:ERROR:Error searching for '': RetryError[<Future at 0x1b0fbac7940 state=finished raised InvalidRequestError>]
+2023-06-13 17:57:47,663:INFO:127.0.0.1 - - [13/Jun/2023 17:57:47] "[35m[1mPOST /api/search HTTP/1.1[0m" 500 -
+2023-06-15 10:31:43,713:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\convert_txt_to_pdf.py', reloading
+2023-06-15 10:31:44,975:INFO: * Restarting with stat
+2023-06-15 10:31:44,984:INFO: * Restarting with stat
+2023-06-15 10:31:57,751:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-15 10:31:57,751:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-15 10:31:57,799:INFO:Starting server...
+2023-06-15 10:31:57,817:WARNING: * Debugger is active!
+2023-06-15 10:31:57,817:INFO: * Debugger PIN: 691-848-005
+2023-06-15 10:31:57,928:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-15 10:31:57,928:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-15 10:31:57,979:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-06-15 10:31:58,009:WARNING: * Debugger is active!
+2023-06-15 10:31:58,009:INFO: * Debugger PIN: 691-848-005
+2023-06-15 10:35:37,482:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\convert_txt_to_pdf.py', reloading
+2023-06-15 10:35:37,504:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\convert_txt_to_pdf.py', reloading
+2023-06-15 10:35:38,053:INFO: * Restarting with stat
+2023-06-15 10:35:38,071:INFO: * Restarting with stat
+2023-06-15 10:35:45,474:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-15 10:35:45,474:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-15 10:35:45,506:INFO:Starting server...
+2023-06-15 10:35:45,514:WARNING: * Debugger is active!
+2023-06-15 10:35:45,514:INFO: * Debugger PIN: 691-848-005
+2023-06-15 10:35:45,776:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-15 10:35:45,776:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-15 10:35:45,825:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-06-15 10:35:45,837:WARNING: * Debugger is active!
+2023-06-15 10:35:45,837:INFO: * Debugger PIN: 691-848-005
+2023-06-15 10:38:53,046:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\convert_txt_to_pdf.py', reloading
+2023-06-15 10:38:53,054:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\convert_txt_to_pdf.py', reloading
+2023-06-15 10:38:53,580:INFO: * Restarting with stat
+2023-06-15 10:38:53,592:INFO: * Restarting with stat
+2023-06-15 10:39:01,517:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-15 10:39:01,517:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-15 10:39:01,552:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-15 10:39:01,552:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-15 10:39:01,568:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-06-15 10:39:01,581:INFO:Starting server...
+2023-06-15 10:39:01,581:WARNING: * Debugger is active!
+2023-06-15 10:39:01,581:INFO: * Debugger PIN: 691-848-005
+2023-06-15 10:39:01,597:WARNING: * Debugger is active!
+2023-06-15 10:39:01,597:INFO: * Debugger PIN: 691-848-005
+2023-06-15 10:40:09,789:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\convert_txt_to_pdf.py', reloading
+2023-06-15 10:40:09,812:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\convert_txt_to_pdf.py', reloading
+2023-06-15 10:40:10,407:INFO: * Restarting with stat
+2023-06-15 10:40:10,407:INFO: * Restarting with stat
+2023-06-15 10:40:17,900:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-15 10:40:17,900:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-15 10:40:17,955:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-06-15 10:40:17,985:WARNING: * Debugger is active!
+2023-06-15 10:40:17,986:INFO: * Debugger PIN: 691-848-005
+2023-06-15 10:40:18,089:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-15 10:40:18,089:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-15 10:40:18,140:INFO:Starting server...
+2023-06-15 10:40:18,157:WARNING: * Debugger is active!
+2023-06-15 10:40:18,163:INFO: * Debugger PIN: 691-848-005
+2023-06-15 18:08:35,165:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\convert_txt_to_pdf.py', reloading
+2023-06-15 18:08:35,165:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\convert_txt_to_pdf.py', reloading
+2023-06-15 18:08:36,856:INFO: * Restarting with stat
+2023-06-15 18:08:36,840:INFO: * Restarting with stat
+2023-06-15 18:08:52,994:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-15 18:08:52,994:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-15 18:08:52,994:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-15 18:08:52,994:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-15 18:08:53,076:INFO:Starting server...
+2023-06-15 18:08:53,089:WARNING: * Debugger is active!
+2023-06-15 18:08:53,089:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-06-15 18:08:53,105:INFO: * Debugger PIN: 691-848-005
+2023-06-15 18:08:53,142:WARNING: * Debugger is active!
+2023-06-15 18:08:53,142:INFO: * Debugger PIN: 691-848-005
+2023-06-15 18:35:58,736:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\convert_txt_to_pdf.py', reloading
+2023-06-15 18:35:58,738:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\convert_txt_to_pdf.py', reloading
+2023-06-15 18:35:59,402:INFO: * Restarting with stat
+2023-06-15 18:35:59,442:INFO: * Restarting with stat
+2023-06-15 18:36:07,846:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-15 18:36:07,846:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-15 18:36:07,861:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-15 18:36:07,861:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-15 18:36:07,891:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-06-15 18:36:07,891:INFO:Starting server...
+2023-06-15 18:36:07,912:WARNING: * Debugger is active!
+2023-06-15 18:36:07,919:INFO: * Debugger PIN: 691-848-005
+2023-06-15 18:36:07,921:WARNING: * Debugger is active!
+2023-06-15 18:36:07,921:INFO: * Debugger PIN: 691-848-005
+2023-06-16 03:51:04,195:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\chatbot.py', reloading
+2023-06-16 03:51:04,195:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\chatbot.py', reloading
+2023-06-16 03:51:05,635:INFO: * Restarting with stat
+2023-06-16 03:51:05,635:INFO: * Restarting with stat
+2023-06-16 03:51:20,643:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-16 03:51:20,643:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-16 03:51:20,643:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-16 03:51:20,643:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-16 03:51:20,722:INFO:Starting server...
+2023-06-16 03:51:20,738:WARNING: * Debugger is active!
+2023-06-16 03:51:20,738:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-06-16 03:51:20,738:INFO: * Debugger PIN: 691-848-005
+2023-06-16 03:51:20,787:WARNING: * Debugger is active!
+2023-06-16 03:51:20,787:INFO: * Debugger PIN: 691-848-005
+2023-06-16 03:53:21,559:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\write.py', reloading
+2023-06-16 03:53:21,580:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\write.py', reloading
+2023-06-16 03:53:22,251:INFO: * Restarting with stat
+2023-06-16 03:53:22,311:INFO: * Restarting with stat
+2023-06-16 03:53:30,538:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-16 03:53:30,538:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-16 03:53:30,538:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-16 03:53:30,538:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-16 03:53:30,578:INFO:Starting server...
+2023-06-16 03:53:30,590:WARNING: * Debugger is active!
+2023-06-16 03:53:30,595:INFO: * Debugger PIN: 691-848-005
+2023-06-16 03:53:30,595:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-06-16 03:53:30,611:WARNING: * Debugger is active!
+2023-06-16 03:53:30,611:INFO: * Debugger PIN: 691-848-005
+2023-06-16 04:02:10,676:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-16 04:02:10,676:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-16 04:02:10,722:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-06-16 04:02:10,768:INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5002
+2023-06-16 04:02:10,768:INFO:[33mPress CTRL+C to quit[0m
+2023-06-16 04:02:10,768:INFO: * Restarting with stat
+2023-06-16 04:02:18,784:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-16 04:02:18,784:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-16 04:02:18,816:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-06-16 04:02:18,847:WARNING: * Debugger is active!
+2023-06-16 04:02:18,847:INFO: * Debugger PIN: 691-848-005
+2023-06-16 04:02:36,461:INFO:127.0.0.1 - - [16/Jun/2023 04:02:36] "GET / HTTP/1.1" 200 -
+2023-06-16 04:02:36,721:INFO:127.0.0.1 - - [16/Jun/2023 04:02:36] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2023-06-16 04:02:36,887:INFO:127.0.0.1 - - [16/Jun/2023 04:02:36] "GET /static/chatbot.js HTTP/1.1" 200 -
+2023-06-16 04:02:36,904:INFO:127.0.0.1 - - [16/Jun/2023 04:02:36] "GET /static/options.js HTTP/1.1" 200 -
+2023-06-16 04:02:36,904:INFO:127.0.0.1 - - [16/Jun/2023 04:02:36] "[36mGET /static/main.js HTTP/1.1[0m" 304 -
+2023-06-16 04:02:36,915:INFO:127.0.0.1 - - [16/Jun/2023 04:02:36] "[36mGET /static/show_snippets.js HTTP/1.1[0m" 304 -
+2023-06-16 04:02:36,916:INFO:127.0.0.1 - - [16/Jun/2023 04:02:36] "[36mGET /static/save_edits.js HTTP/1.1[0m" 304 -
+2023-06-16 04:02:37,073:INFO:127.0.0.1 - - [16/Jun/2023 04:02:37] "[36mGET /static/videos.js HTTP/1.1[0m" 304 -
+2023-06-16 04:02:37,254:INFO:127.0.0.1 - - [16/Jun/2023 04:02:37] "GET /static/sliders.js HTTP/1.1" 200 -
+2023-06-16 04:02:37,620:INFO:127.0.0.1 - - [16/Jun/2023 04:02:37] "[36mGET /static/tasks.txt HTTP/1.1[0m" 304 -
+2023-06-16 04:02:37,629:INFO:127.0.0.1 - - [16/Jun/2023 04:02:37] "[36mGET /static/formats.txt HTTP/1.1[0m" 304 -
+2023-06-16 04:02:37,629:INFO:127.0.0.1 - - [16/Jun/2023 04:02:37] "[36mGET /static/userpersonality.txt HTTP/1.1[0m" 304 -
+2023-06-16 04:02:46,253:INFO:127.0.0.1 - - [16/Jun/2023 04:02:46] "POST /api/search HTTP/1.1" 200 -
+2023-06-16 04:02:46,575:INFO:127.0.0.1 - - [16/Jun/2023 04:02:46] "POST /api/search HTTP/1.1" 200 -
+2023-06-16 04:02:46,844:INFO:function: search_api
+2023-06-16 04:02:46,844:INFO:{'query': 'what is fascination'}
+2023-06-16 04:02:46,859:INFO:Received search API request
+2023-06-16 04:02:46,859:INFO:Querying index with "what is fascination"...
+2023-06-16 04:02:49,695:INFO:> [retrieve] Total LLM token usage: 0 tokens
+2023-06-16 04:02:49,695:INFO:> [retrieve] Total embedding token usage: 3 tokens
+2023-06-16 04:02:51,665:INFO:127.0.0.1 - - [16/Jun/2023 04:02:51] "POST /api/search HTTP/1.1" 200 -
+2023-06-16 04:02:51,984:INFO:127.0.0.1 - - [16/Jun/2023 04:02:51] "POST /api/search HTTP/1.1" 200 -
+2023-06-16 04:02:51,997:INFO:function: search_api
+2023-06-16 04:02:51,997:INFO:{'query': 'what is fascination'}
+2023-06-16 04:02:52,011:INFO:Received search API request
+2023-06-16 04:02:52,012:INFO:Querying index with "what is fascination"...
+2023-06-16 04:02:52,408:INFO:127.0.0.1 - - [16/Jun/2023 04:02:52] "POST /api/search HTTP/1.1" 200 -
+2023-06-16 04:02:52,410:INFO:127.0.0.1 - - [16/Jun/2023 04:02:52] "POST /api/search HTTP/1.1" 200 -
+2023-06-16 04:02:52,417:INFO:function: search_api
+2023-06-16 04:02:52,418:INFO:{'query': 'what is fascination'}
+2023-06-16 04:02:52,418:INFO:Received search API request
+2023-06-16 04:02:52,418:INFO:Querying index with "what is fascination"...
+2023-06-16 04:02:53,565:INFO:> [retrieve] Total LLM token usage: 0 tokens
+2023-06-16 04:02:53,565:INFO:> [retrieve] Total embedding token usage: 6 tokens
+2023-06-16 04:02:54,099:INFO:> [retrieve] Total LLM token usage: 0 tokens
+2023-06-16 04:02:54,099:INFO:> [retrieve] Total embedding token usage: 6 tokens
+2023-06-16 04:02:55,913:INFO:> [get_response] Total LLM token usage: 1771 tokens
+2023-06-16 04:02:55,915:INFO:> [get_response] Total embedding token usage: 6 tokens
+2023-06-16 04:02:55,916:INFO:Response is "Fascination is a technique that involves actively employing the power inherent in the eye to influence and observe others, drawing on principles from quantistic physics. It can confer a scientific basis on the therapeutic ability possessed by some healers and involves a disciplined work on oneself, encompassing self-control, self-development, and self-improvement. The technique was learned from the last of the fascinators, Virgilio T., and has been taught in seminars and through a book by Dr. Paret. It has been used for healing purposes and was employed by the late Prof. Erminio from Pisa to cure people in a single session lasting ten seconds or so."...
+2023-06-16 04:02:55,916:INFO:Snippet text is "Fascination is a technique that involves actively employing the power inherent in the eye to influence and observe others, drawing on principles from quantistic physics. It can confer a scientific basis on the therapeutic ability possessed by some healers and involves a disciplined work on oneself, encompassing self-control, self-development, and self-improvement. The technique was learned from the last of the fascinators, Virgilio T., and has been taught in seminars and through a book by Dr. Paret. It has been used for healing purposes and was employed by the late Prof. Erminio from Pisa to cure people in a single session lasting ten seconds or so."
+2023-06-16 04:02:55,916:INFO:127.0.0.1 - - [16/Jun/2023 04:02:55] "POST /api/search HTTP/1.1" 200 -
+2023-06-16 04:02:58,871:INFO:> [get_response] Total LLM token usage: 3531 tokens
+2023-06-16 04:02:58,871:INFO:> [get_response] Total embedding token usage: 0 tokens
+2023-06-16 04:02:58,871:INFO:Response is "Fascination is a technique that involves actively employing the power inherent in the eye to influence and observe others, drawing on principles from quantistic physics. It can confer a scientific basis on the therapeutic ability possessed by some healers and involves a disciplined work on oneself, encompassing self-control, self-development, and self-improvement. The technique was learned from the last of the fascinators, Virgilio T., and has been taught in seminars and through a book by Dr. Paret. It has been used for healing purposes and was also practiced by the late Prof. Erminio from Pisa."...
+2023-06-16 04:02:58,871:INFO:Snippet text is "Fascination is a technique that involves actively employing the power inherent in the eye to influence and observe others, drawing on principles from quantistic physics. It can confer a scientific basis on the therapeutic ability possessed by some healers and involves a disciplined work on oneself, encompassing self-control, self-development, and self-improvement. The technique was learned from the last of the fascinators, Virgilio T., and has been taught in seminars and through a book by Dr. Paret. It has been used for healing purposes and was also practiced by the late Prof. Erminio from Pisa."
+2023-06-16 04:02:58,871:INFO:127.0.0.1 - - [16/Jun/2023 04:02:58] "POST /api/search HTTP/1.1" 200 -
+2023-06-16 04:03:00,431:INFO:> [get_response] Total LLM token usage: 5302 tokens
+2023-06-16 04:03:00,431:INFO:> [get_response] Total embedding token usage: 0 tokens
+2023-06-16 04:03:00,447:INFO:Response is "Fascination is a technique that involves actively employing the power inherent in the eye to influence and observe others, drawing on principles from quantistic physics. It can confer a scientific basis on the therapeutic ability possessed by some healers and involves a disciplined work on oneself, encompassing self-control, self-development, and self-improvement. The technique was learned from the last of the fascinators, Virgilio T., and has been taught in seminars and through a book by Dr. Paret. It has been used for healing purposes and was employed by the late Prof. Erminio from Pisa to cure people in a single session lasting ten seconds or so."...
+2023-06-16 04:03:00,450:INFO:Snippet text is "Fascination is a technique that involves actively employing the power inherent in the eye to influence and observe others, drawing on principles from quantistic physics. It can confer a scientific basis on the therapeutic ability possessed by some healers and involves a disciplined work on oneself, encompassing self-control, self-development, and self-improvement. The technique was learned from the last of the fascinators, Virgilio T., and has been taught in seminars and through a book by Dr. Paret. It has been used for healing purposes and was employed by the late Prof. Erminio from Pisa to cure people in a single session lasting ten seconds or so."
+2023-06-16 04:03:00,450:INFO:127.0.0.1 - - [16/Jun/2023 04:03:00] "POST /api/search HTTP/1.1" 200 -
+2023-06-16 04:03:29,545:INFO:127.0.0.1 - - [16/Jun/2023 04:03:29] "POST /api/search HTTP/1.1" 200 -
+2023-06-16 04:03:29,847:INFO:127.0.0.1 - - [16/Jun/2023 04:03:29] "POST /api/search HTTP/1.1" 200 -
+2023-06-16 04:03:30,132:INFO:function: search_api
+2023-06-16 04:03:30,133:INFO:{'query': 'what is fascination'}
+2023-06-16 04:03:30,133:INFO:Received search API request
+2023-06-16 04:03:30,133:INFO:Querying index with "what is fascination"...
+2023-06-16 04:03:31,457:INFO:> [retrieve] Total LLM token usage: 0 tokens
+2023-06-16 04:03:31,457:INFO:> [retrieve] Total embedding token usage: 3 tokens
+2023-06-16 04:03:33,612:INFO:function: search_api
+2023-06-16 04:03:33,614:INFO:{'query': 'what is fascination'}
+2023-06-16 04:03:33,614:INFO:Received search API request
+2023-06-16 04:03:33,636:INFO:Querying index with "what is fascination"...
+2023-06-16 04:03:33,909:INFO:127.0.0.1 - - [16/Jun/2023 04:03:33] "POST /api/search HTTP/1.1" 200 -
+2023-06-16 04:03:33,909:INFO:127.0.0.1 - - [16/Jun/2023 04:03:33] "POST /api/search HTTP/1.1" 200 -
+2023-06-16 04:03:34,966:INFO:> [retrieve] Total LLM token usage: 0 tokens
+2023-06-16 04:03:34,966:INFO:> [retrieve] Total embedding token usage: 3 tokens
+2023-06-16 04:03:39,012:INFO:> [get_response] Total LLM token usage: 1771 tokens
+2023-06-16 04:03:39,012:INFO:> [get_response] Total embedding token usage: 3 tokens
+2023-06-16 04:03:39,065:INFO:Response is "Fascination is a technique that involves actively employing the power inherent in the eye to influence and observe others, drawing on principles from quantistic physics. It can confer a scientific basis on the therapeutic ability possessed by some healers and involves a disciplined work on oneself, encompassing self-control, self-development, and self-improvement. The technique was learned from the last of the fascinators, Virgilio T., and has been taught in seminars and through a book by Dr. Paret. It has been used for healing purposes and was employed by the late Prof. Erminio from Pisa to cure people in a single session lasting ten seconds or so."...
+2023-06-16 04:03:39,065:INFO:Snippet text is "Fascination is a technique that involves actively employing the power inherent in the eye to influence and observe others, drawing on principles from quantistic physics. It can confer a scientific basis on the therapeutic ability possessed by some healers and involves a disciplined work on oneself, encompassing self-control, self-development, and self-improvement. The technique was learned from the last of the fascinators, Virgilio T., and has been taught in seminars and through a book by Dr. Paret. It has been used for healing purposes and was employed by the late Prof. Erminio from Pisa to cure people in a single session lasting ten seconds or so."
+2023-06-16 04:03:39,065:INFO:127.0.0.1 - - [16/Jun/2023 04:03:39] "POST /api/search HTTP/1.1" 200 -
+2023-06-16 04:03:40,794:INFO:> [get_response] Total LLM token usage: 3542 tokens
+2023-06-16 04:03:40,794:INFO:> [get_response] Total embedding token usage: 0 tokens
+2023-06-16 04:03:40,794:INFO:Response is "Fascination is a technique that involves actively employing the power inherent in the eye to influence and observe others, drawing on principles from quantistic physics. It can confer a scientific basis on the therapeutic ability possessed by some healers and involves a disciplined work on oneself, encompassing self-control, self-development, and self-improvement. The technique was learned from the last of the fascinators, Virgilio T., and has been taught in seminars and through a book by Dr. Paret. It has been used for healing purposes and was employed by the late Prof. Erminio from Pisa to cure people in a single session lasting ten seconds or so."...
+2023-06-16 04:03:40,794:INFO:Snippet text is "Fascination is a technique that involves actively employing the power inherent in the eye to influence and observe others, drawing on principles from quantistic physics. It can confer a scientific basis on the therapeutic ability possessed by some healers and involves a disciplined work on oneself, encompassing self-control, self-development, and self-improvement. The technique was learned from the last of the fascinators, Virgilio T., and has been taught in seminars and through a book by Dr. Paret. It has been used for healing purposes and was employed by the late Prof. Erminio from Pisa to cure people in a single session lasting ten seconds or so."
+2023-06-16 04:03:40,794:INFO:127.0.0.1 - - [16/Jun/2023 04:03:40] "POST /api/search HTTP/1.1" 200 -
+2023-06-16 04:07:42,101:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-16 04:07:42,101:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-16 04:07:42,142:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-06-16 04:07:42,181:INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5002
+2023-06-16 04:07:42,181:INFO:[33mPress CTRL+C to quit[0m
+2023-06-16 04:07:42,181:INFO: * Restarting with stat
+2023-06-16 04:07:50,217:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-16 04:07:50,217:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-16 04:07:50,274:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-06-16 04:07:50,282:WARNING: * Debugger is active!
+2023-06-16 04:07:50,290:INFO: * Debugger PIN: 691-848-005
+2023-06-16 04:07:50,445:INFO:127.0.0.1 - - [16/Jun/2023 04:07:50] "GET / HTTP/1.1" 200 -
+2023-06-16 04:07:50,552:INFO:127.0.0.1 - - [16/Jun/2023 04:07:50] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2023-06-16 04:07:50,827:INFO:127.0.0.1 - - [16/Jun/2023 04:07:50] "[36mGET /static/main.js HTTP/1.1[0m" 304 -
+2023-06-16 04:07:50,827:INFO:127.0.0.1 - - [16/Jun/2023 04:07:50] "[36mGET /static/save_edits.js HTTP/1.1[0m" 304 -
+2023-06-16 04:07:50,827:INFO:127.0.0.1 - - [16/Jun/2023 04:07:50] "[36mGET /static/show_snippets.js HTTP/1.1[0m" 304 -
+2023-06-16 04:07:50,827:INFO:127.0.0.1 - - [16/Jun/2023 04:07:50] "GET /static/chatbot.js HTTP/1.1" 200 -
+2023-06-16 04:07:50,833:INFO:127.0.0.1 - - [16/Jun/2023 04:07:50] "[36mGET /static/videos.js HTTP/1.1[0m" 304 -
+2023-06-16 04:07:50,865:INFO:127.0.0.1 - - [16/Jun/2023 04:07:50] "[36mGET /static/options.js HTTP/1.1[0m" 304 -
+2023-06-16 04:07:51,269:INFO:127.0.0.1 - - [16/Jun/2023 04:07:51] "[36mGET /static/sliders.js HTTP/1.1[0m" 304 -
+2023-06-16 04:07:51,509:INFO:127.0.0.1 - - [16/Jun/2023 04:07:51] "[36mGET /static/userpersonality.txt HTTP/1.1[0m" 304 -
+2023-06-16 04:07:51,672:INFO:127.0.0.1 - - [16/Jun/2023 04:07:51] "[36mGET /static/tasks.txt HTTP/1.1[0m" 304 -
+2023-06-16 04:07:51,672:INFO:127.0.0.1 - - [16/Jun/2023 04:07:51] "[36mGET /static/formats.txt HTTP/1.1[0m" 304 -
+2023-06-16 04:08:00,449:INFO:127.0.0.1 - - [16/Jun/2023 04:08:00] "POST /api/search HTTP/1.1" 200 -
+2023-06-16 04:09:17,479:INFO:127.0.0.1 - - [16/Jun/2023 04:09:17] "POST /api/search HTTP/1.1" 200 -
+2023-06-16 04:11:42,445:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\chatbot.py', reloading
+2023-06-16 04:11:42,459:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\chatbot.py', reloading
+2023-06-16 04:11:43,030:INFO: * Restarting with stat
+2023-06-16 04:11:43,061:INFO: * Restarting with stat
+2023-06-16 04:11:51,657:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-16 04:11:51,657:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-16 04:11:51,657:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-16 04:11:51,657:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-16 04:11:51,691:INFO:Starting server...
+2023-06-16 04:11:51,691:WARNING: * Debugger is active!
+2023-06-16 04:11:51,706:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-06-16 04:11:51,706:INFO: * Debugger PIN: 691-848-005
+2023-06-16 04:11:51,723:WARNING: * Debugger is active!
+2023-06-16 04:11:51,723:INFO: * Debugger PIN: 691-848-005
+2023-06-16 04:12:01,107:INFO:127.0.0.1 - - [16/Jun/2023 04:12:01] "POST /api/search HTTP/1.1" 200 -
+2023-06-16 04:12:01,364:INFO:function: search_api
+2023-06-16 04:12:01,364:INFO:{'query': 'what is fascination'}
+2023-06-16 04:12:01,364:INFO:Received search API request
+2023-06-16 04:12:01,374:INFO:Querying index with "what is fascination"...
+2023-06-16 04:12:02,982:INFO:> [retrieve] Total LLM token usage: 0 tokens
+2023-06-16 04:12:02,982:INFO:> [retrieve] Total embedding token usage: 3 tokens
+2023-06-16 04:12:09,181:INFO:> [get_response] Total LLM token usage: 1771 tokens
+2023-06-16 04:12:09,181:INFO:> [get_response] Total embedding token usage: 0 tokens
+2023-06-16 04:12:09,221:INFO:Response is "Fascination is a technique that involves actively employing the power inherent in the eye to influence and observe others, drawing on principles from quantistic physics. It can confer a scientific basis on the therapeutic ability possessed by some healers and involves a disciplined work on oneself, encompassing self-control, self-development, and self-improvement. The technique was learned from the last of the fascinators, Virgilio T., and has been taught in seminars and through a book by Dr. Paret. It has been used for healing purposes and was employed by the late Prof. Erminio from Pisa to cure people in a single session lasting ten seconds or so."...
+2023-06-16 04:12:09,227:INFO:Snippet text is "Fascination is a technique that involves actively employing the power inherent in the eye to influence and observe others, drawing on principles from quantistic physics. It can confer a scientific basis on the therapeutic ability possessed by some healers and involves a disciplined work on oneself, encompassing self-control, self-development, and self-improvement. The technique was learned from the last of the fascinators, Virgilio T., and has been taught in seminars and through a book by Dr. Paret. It has been used for healing purposes and was employed by the late Prof. Erminio from Pisa to cure people in a single session lasting ten seconds or so."
+2023-06-16 04:12:09,237:INFO:127.0.0.1 - - [16/Jun/2023 04:12:09] "POST /api/search HTTP/1.1" 200 -
+2023-06-16 09:46:27,834:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\chatbot.py', reloading
+2023-06-16 09:46:27,850:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\chatbot.py', reloading
+2023-06-16 09:46:29,441:INFO: * Restarting with stat
+2023-06-16 09:46:29,501:INFO: * Restarting with stat
+2023-06-16 09:46:40,529:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-16 09:46:40,529:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-16 09:46:40,529:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-16 09:46:40,529:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-16 09:46:40,592:INFO:Starting server...
+2023-06-16 09:46:40,608:WARNING: * Debugger is active!
+2023-06-16 09:46:40,608:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-06-16 09:46:40,608:INFO: * Debugger PIN: 691-848-005
+2023-06-16 09:46:40,640:WARNING: * Debugger is active!
+2023-06-16 09:46:40,640:INFO: * Debugger PIN: 691-848-005
+2023-06-16 09:48:16,881:INFO:127.0.0.1 - - [16/Jun/2023 09:48:16] "GET / HTTP/1.1" 200 -
+2023-06-16 09:48:17,248:INFO:127.0.0.1 - - [16/Jun/2023 09:48:17] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2023-06-16 09:48:17,295:INFO:127.0.0.1 - - [16/Jun/2023 09:48:17] "[36mGET /static/show_snippets.js HTTP/1.1[0m" 304 -
+2023-06-16 09:48:17,295:INFO:127.0.0.1 - - [16/Jun/2023 09:48:17] "[36mGET /static/save_edits.js HTTP/1.1[0m" 304 -
+2023-06-16 09:48:17,295:INFO:127.0.0.1 - - [16/Jun/2023 09:48:17] "[36mGET /static/main.js HTTP/1.1[0m" 304 -
+2023-06-16 09:48:17,295:INFO:127.0.0.1 - - [16/Jun/2023 09:48:17] "GET /static/chatbot.js HTTP/1.1" 200 -
+2023-06-16 09:48:17,313:INFO:127.0.0.1 - - [16/Jun/2023 09:48:17] "[36mGET /static/options.js HTTP/1.1[0m" 304 -
+2023-06-16 09:48:17,585:INFO:127.0.0.1 - - [16/Jun/2023 09:48:17] "[36mGET /static/videos.js HTTP/1.1[0m" 304 -
+2023-06-16 09:48:17,724:INFO:127.0.0.1 - - [16/Jun/2023 09:48:17] "[36mGET /static/sliders.js HTTP/1.1[0m" 304 -
+2023-06-16 09:48:18,094:INFO:127.0.0.1 - - [16/Jun/2023 09:48:18] "[36mGET /static/userpersonality.txt HTTP/1.1[0m" 304 -
+2023-06-16 09:48:18,094:INFO:127.0.0.1 - - [16/Jun/2023 09:48:18] "[36mGET /static/tasks.txt HTTP/1.1[0m" 304 -
+2023-06-16 09:48:18,094:INFO:127.0.0.1 - - [16/Jun/2023 09:48:18] "[36mGET /static/formats.txt HTTP/1.1[0m" 304 -
+2023-06-16 09:48:25,491:INFO:127.0.0.1 - - [16/Jun/2023 09:48:25] "POST /api/search HTTP/1.1" 200 -
+2023-06-16 09:48:25,500:INFO:127.0.0.1 - - [16/Jun/2023 09:48:25] "POST /api/search HTTP/1.1" 200 -
+2023-06-16 09:48:25,537:INFO:127.0.0.1 - - [16/Jun/2023 09:48:25] "POST /api/search HTTP/1.1" 200 -
+2023-06-16 09:48:25,541:INFO:127.0.0.1 - - [16/Jun/2023 09:48:25] "POST /api/search HTTP/1.1" 200 -
+2023-06-16 09:48:25,809:INFO:function: search_api
+2023-06-16 09:48:25,809:INFO:{'query': 'what is fascination'}
+2023-06-16 09:48:25,809:INFO:Received search API request
+2023-06-16 09:48:25,809:INFO:Querying index with "what is fascination"...
+2023-06-16 09:48:25,857:INFO:function: search_api
+2023-06-16 09:48:25,857:INFO:{'query': 'what is fascination'}
+2023-06-16 09:48:25,857:INFO:Received search API request
+2023-06-16 09:48:25,865:INFO:Querying index with "what is fascination"...
+2023-06-16 09:48:27,437:INFO:> [retrieve] Total LLM token usage: 0 tokens
+2023-06-16 09:48:27,437:INFO:> [retrieve] Total embedding token usage: 6 tokens
+2023-06-16 09:48:27,539:INFO:> [retrieve] Total LLM token usage: 0 tokens
+2023-06-16 09:48:27,540:INFO:> [retrieve] Total embedding token usage: 6 tokens
+2023-06-16 09:48:34,354:INFO:> [get_response] Total LLM token usage: 1771 tokens
+2023-06-16 09:48:34,354:INFO:> [get_response] Total embedding token usage: 0 tokens
+2023-06-16 09:48:34,421:INFO:Response is "Fascination is a technique that involves actively employing the power inherent in the eye to influence and observe others, drawing on principles from quantistic physics. It can confer a scientific basis on the therapeutic ability possessed by some healers and involves a disciplined work on oneself, encompassing self-control, self-development, and self-improvement. The technique was learned from the last of the fascinators, Virgilio T., and has been taught in seminars and through a book by Dr. Paret. It has been used for healing purposes and was employed by the late Prof. Erminio from Pisa to cure people in a single session lasting ten seconds or so."...
+2023-06-16 09:48:34,430:INFO:Snippet text is "Fascination is a technique that involves actively employing the power inherent in the eye to influence and observe others, drawing on principles from quantistic physics. It can confer a scientific basis on the therapeutic ability possessed by some healers and involves a disciplined work on oneself, encompassing self-control, self-development, and self-improvement. The technique was learned from the last of the fascinators, Virgilio T., and has been taught in seminars and through a book by Dr. Paret. It has been used for healing purposes and was employed by the late Prof. Erminio from Pisa to cure people in a single session lasting ten seconds or so."
+2023-06-16 09:48:34,434:INFO:127.0.0.1 - - [16/Jun/2023 09:48:34] "POST /api/search HTTP/1.1" 200 -
+2023-06-16 09:48:35,262:INFO:> [get_response] Total LLM token usage: 3542 tokens
+2023-06-16 09:48:35,262:INFO:> [get_response] Total embedding token usage: 0 tokens
+2023-06-16 09:48:35,270:INFO:Response is "Fascination is a technique that involves actively employing the power inherent in the eye to influence and observe others, drawing on principles from quantistic physics. It can confer a scientific basis on the therapeutic ability possessed by some healers and involves a disciplined work on oneself, encompassing self-control, self-development, and self-improvement. The technique was learned from the last of the fascinators, Virgilio T., and has been taught in seminars and through a book by Dr. Paret. It has been used for healing purposes and was employed by the late Prof. Erminio from Pisa to cure people in a single session lasting ten seconds or so."...
+2023-06-16 09:48:35,273:INFO:Snippet text is "Fascination is a technique that involves actively employing the power inherent in the eye to influence and observe others, drawing on principles from quantistic physics. It can confer a scientific basis on the therapeutic ability possessed by some healers and involves a disciplined work on oneself, encompassing self-control, self-development, and self-improvement. The technique was learned from the last of the fascinators, Virgilio T., and has been taught in seminars and through a book by Dr. Paret. It has been used for healing purposes and was employed by the late Prof. Erminio from Pisa to cure people in a single session lasting ten seconds or so."
+2023-06-16 09:48:35,273:INFO:127.0.0.1 - - [16/Jun/2023 09:48:35] "POST /api/search HTTP/1.1" 200 -
+2023-06-16 10:12:44,875:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\chatbot.py', reloading
+2023-06-16 10:12:44,878:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\chatbot.py', reloading
+2023-06-16 10:12:45,742:INFO: * Restarting with stat
+2023-06-16 10:12:57,430:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-16 10:12:57,430:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-16 10:12:57,494:INFO:Starting server...
+2023-06-16 10:12:57,516:WARNING: * Debugger is active!
+2023-06-16 10:12:57,520:INFO: * Debugger PIN: 691-848-005
+2023-06-17 20:28:25,678:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-17 20:28:25,679:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-17 20:28:25,683:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-17 20:28:25,684:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-17 20:28:25,728:INFO:Starting server...
+2023-06-17 20:28:25,745:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-06-17 20:28:25,750:INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-06-17 20:28:25,751:INFO:[33mPress CTRL+C to quit[0m
+2023-06-17 20:28:25,754:INFO: * Restarting with stat
+2023-06-17 20:28:25,782:INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5002
+2023-06-17 20:28:25,783:INFO:[33mPress CTRL+C to quit[0m
+2023-06-17 20:28:25,784:INFO: * Restarting with stat
+2023-06-17 20:28:32,547:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-17 20:28:32,548:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-17 20:28:32,591:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-06-17 20:28:32,606:WARNING: * Debugger is active!
+2023-06-17 20:28:32,609:INFO: * Debugger PIN: 691-848-005
+2023-06-17 20:28:32,715:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-17 20:28:32,715:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-17 20:28:32,746:INFO:Starting server...
+2023-06-17 20:28:32,754:WARNING: * Debugger is active!
+2023-06-17 20:28:32,758:INFO: * Debugger PIN: 691-848-005
+2023-06-17 20:29:11,468:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\chatbot.py', reloading
+2023-06-17 20:29:11,564:INFO: * Detected change in 'C:\\D\\documenti\\AI\\program24\\chatbot.py', reloading
+2023-06-17 20:29:11,945:INFO: * Restarting with stat
+2023-06-17 20:29:12,073:INFO: * Restarting with stat
+2023-06-17 20:29:18,372:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-17 20:29:18,373:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-17 20:29:18,399:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-17 20:29:18,399:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-17 20:29:18,404:INFO:Starting server...
+2023-06-17 20:29:18,411:WARNING: * Debugger is active!
+2023-06-17 20:29:18,415:INFO: * Debugger PIN: 691-848-005
+2023-06-17 20:29:18,433:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-06-17 20:29:18,449:WARNING: * Debugger is active!
+2023-06-17 20:29:18,452:INFO: * Debugger PIN: 691-848-005
+2023-06-17 20:30:34,835:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-17 20:30:34,835:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-17 20:30:34,838:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-17 20:30:34,838:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-17 20:30:34,865:INFO:Starting server...
+2023-06-17 20:30:34,871:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-06-17 20:30:34,879:INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-06-17 20:30:34,879:INFO:[33mPress CTRL+C to quit[0m
+2023-06-17 20:30:34,881:INFO: * Restarting with stat
+2023-06-17 20:30:34,902:INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5002
+2023-06-17 20:30:34,902:INFO:[33mPress CTRL+C to quit[0m
+2023-06-17 20:30:34,904:INFO: * Restarting with stat
+2023-06-17 20:30:41,143:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-17 20:30:41,143:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-17 20:30:41,177:INFO:> [build_index_from_nodes] Total LLM token usage: 0 tokens
+2023-06-17 20:30:41,177:INFO:> [build_index_from_nodes] Total embedding token usage: 0 tokens
+2023-06-17 20:30:41,178:INFO:file_cache is only supported with oauth2client<4.0.0
+2023-06-17 20:30:41,193:WARNING: * Debugger is active!
+2023-06-17 20:30:41,196:INFO: * Debugger PIN: 691-848-005
+2023-06-17 20:30:41,205:INFO:Starting server...
+2023-06-17 20:30:41,214:WARNING: * Debugger is active!
+2023-06-17 20:30:41,217:INFO: * Debugger PIN: 691-848-005
+2023-06-17 20:30:59,620:INFO:127.0.0.1 - - [17/Jun/2023 20:30:59] "GET / HTTP/1.1" 200 -
+2023-06-17 20:30:59,925:INFO:127.0.0.1 - - [17/Jun/2023 20:30:59] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2023-06-17 20:30:59,998:INFO:127.0.0.1 - - [17/Jun/2023 20:30:59] "[36mGET /static/main.js HTTP/1.1[0m" 304 -
+2023-06-17 20:31:00,002:INFO:127.0.0.1 - - [17/Jun/2023 20:31:00] "[36mGET /static/save_edits.js HTTP/1.1[0m" 304 -
+2023-06-17 20:31:00,003:INFO:127.0.0.1 - - [17/Jun/2023 20:31:00] "[36mGET /static/show_snippets.js HTTP/1.1[0m" 304 -
+2023-06-17 20:31:00,008:INFO:127.0.0.1 - - [17/Jun/2023 20:31:00] "[36mGET /static/chatbot.js HTTP/1.1[0m" 304 -
+2023-06-17 20:31:00,010:INFO:127.0.0.1 - - [17/Jun/2023 20:31:00] "[36mGET /static/videos.js HTTP/1.1[0m" 304 -
+2023-06-17 20:31:00,260:INFO:127.0.0.1 - - [17/Jun/2023 20:31:00] "[36mGET /static/options.js HTTP/1.1[0m" 304 -
+2023-06-17 20:31:00,336:INFO:127.0.0.1 - - [17/Jun/2023 20:31:00] "[36mGET /static/sliders.js HTTP/1.1[0m" 304 -
+2023-06-17 20:31:00,691:INFO:127.0.0.1 - - [17/Jun/2023 20:31:00] "[36mGET /static/tasks.txt HTTP/1.1[0m" 304 -
+2023-06-17 20:31:00,692:INFO:127.0.0.1 - - [17/Jun/2023 20:31:00] "[36mGET /static/formats.txt HTTP/1.1[0m" 304 -
+2023-06-17 20:31:00,693:INFO:127.0.0.1 - - [17/Jun/2023 20:31:00] "[36mGET /static/userpersonality.txt HTTP/1.1[0m" 304 -
+2023-06-17 20:31:00,945:INFO:127.0.0.1 - - [17/Jun/2023 20:31:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2023-06-17 20:32:14,272:INFO:127.0.0.1 - - [17/Jun/2023 20:32:14] "POST /api/search HTTP/1.1" 200 -
+2023-06-17 20:32:14,273:INFO:127.0.0.1 - - [17/Jun/2023 20:32:14] "POST /api/search HTTP/1.1" 200 -
+2023-06-17 20:32:14,323:INFO:127.0.0.1 - - [17/Jun/2023 20:32:14] "POST /api/search HTTP/1.1" 200 -
+2023-06-17 20:32:14,325:INFO:127.0.0.1 - - [17/Jun/2023 20:32:14] "POST /api/search HTTP/1.1" 200 -
+2023-06-17 20:32:14,585:INFO:function: search_api
+2023-06-17 20:32:14,585:INFO:{'query': 'what is fascination?'}
+2023-06-17 20:32:14,586:INFO:Received search API request
+2023-06-17 20:32:14,586:INFO:Querying index with "what is fascination?"...
+2023-06-17 20:32:14,634:INFO:function: search_api
+2023-06-17 20:32:14,635:INFO:{'query': 'what is fascination?'}
+2023-06-17 20:32:14,636:INFO:Received search API request
+2023-06-17 20:32:14,636:INFO:Querying index with "what is fascination?"...
+2023-06-17 20:32:16,070:INFO:> [retrieve] Total LLM token usage: 0 tokens
+2023-06-17 20:32:16,071:INFO:> [retrieve] Total embedding token usage: 8 tokens
+2023-06-17 20:32:16,141:INFO:> [retrieve] Total LLM token usage: 0 tokens
+2023-06-17 20:32:16,142:INFO:> [retrieve] Total embedding token usage: 8 tokens
+2023-06-17 20:32:22,161:INFO:> [get_response] Total LLM token usage: 1761 tokens
+2023-06-17 20:32:22,161:INFO:> [get_response] Total embedding token usage: 0 tokens
+2023-06-17 20:32:22,169:INFO:Response is "Fascination is a technique that involves actively employing the power inherent in the eye to influence and observe others, drawing on principles from quantistic physics. It can confer a scientific basis on the therapeutic ability possessed by some healers and involves a disciplined work on oneself, encompassing self-control, self-development, and self-improvement. The technique was learned from the last of the fascinators, Virgilio T., and has been taught in seminars and through a book by Dr. Paret. It has been used for healing purposes and was also practiced by the late Prof. Erminio from Pisa."...
+2023-06-17 20:32:22,170:INFO:Snippet text is "Fascination is a technique that involves actively employing the power inherent in the eye to influence and observe others, drawing on principles from quantistic physics. It can confer a scientific basis on the therapeutic ability possessed by some healers and involves a disciplined work on oneself, encompassing self-control, self-development, and self-improvement. The technique was learned from the last of the fascinators, Virgilio T., and has been taught in seminars and through a book by Dr. Paret. It has been used for healing purposes and was also practiced by the late Prof. Erminio from Pisa."
+2023-06-17 20:32:22,171:INFO:127.0.0.1 - - [17/Jun/2023 20:32:22] "POST /api/search HTTP/1.1" 200 -
+2023-06-17 20:32:22,247:INFO:> [get_response] Total LLM token usage: 3519 tokens
+2023-06-17 20:32:22,248:INFO:> [get_response] Total embedding token usage: 0 tokens
+2023-06-17 20:32:22,248:INFO:Response is "Fascination is a technique that involves actively employing the power inherent in the eye to influence and observe others, drawing on principles from quantistic physics. It can confer a scientific basis on the therapeutic ability possessed by some healers and involves a disciplined work on oneself, encompassing self-control, self-development, and self-improvement. The technique was learned from the last of the fascinators, Virgilio T., and has been taught in seminars and through a book by Dr. Paret. Prof. Erminio from Pisa also used fascination to cure people in his regular professional activity."...
+2023-06-17 20:32:22,248:INFO:Snippet text is "Fascination is a technique that involves actively employing the power inherent in the eye to influence and observe others, drawing on principles from quantistic physics. It can confer a scientific basis on the therapeutic ability possessed by some healers and involves a disciplined work on oneself, encompassing self-control, self-development, and self-improvement. The technique was learned from the last of the fascinators, Virgilio T., and has been taught in seminars and through a book by Dr. Paret. Prof. Erminio from Pisa also used fascination to cure people in his regular professional activity."
+2023-06-17 20:32:22,249:INFO:127.0.0.1 - - [17/Jun/2023 20:32:22] "POST /api/search HTTP/1.1" 200 -
